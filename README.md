@@ -7,7 +7,7 @@ Be aware that these notes assume the reader is using a Mac OSX or Linux command 
 
 ### Installing node
 
-This site is a ReactJS app so you will need to have NodeJS (verson 6.10.2) installed on your computer to run it.  You can install the node version manager (nvm) with the following command.
+This app uses migrate-mongo for database migrations so you will need NodeJS (verson 7.10.1) installed on your computer to run it.  You can install the node version manager (nvm) with the following command.
 
 ```bash
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
@@ -18,16 +18,16 @@ The program `nvm` will be available from your command line once you source the p
 Now that `nvm` is installed you can install node and set a default node version:
 
 ```bash
-nvm install 6.10.2 && nvm alias default 6.10.2
+nvm install 7.10.1 && nvm alias default 7.10.1
 ```
 
 You will see that you have a successful install of node if you check the versions of `node` & `npm` and see
 
 ```bash
 $ node -v
-v6.10.2
+v7.10.1
 $ npm -v
-3.10.10
+4.2.0
 ```
 
 ### Installing mongo
@@ -71,3 +71,6 @@ You will first need to set up the basic data that the app needs to run in the da
 
 To start the application just run `flask run` from the command line.  The site should start and connect to your local mongo database.
 
+## Adding migrations
+
+Migrations may be added with the `npm run create <migration name>` script. This command will add a file to the "migrations" directory with all of the boilerplate for `migrate-mongo` in place. You just need to add any relevant mongo database operations to the `up` method within `module.exports`. Be sure that you add appropriate database operations to the `down` method that undo whatever your `up` operations do.
