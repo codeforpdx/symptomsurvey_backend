@@ -1,0 +1,25 @@
+{
+  "name": "symptomsurvey_backend",
+  "version": "0.0.0",
+  "description": "An api for the Code for PDX Symptom Survey project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "up": "migrate-mongo up",
+    "down": "migrate-mongo down",
+    "create": "migrate-mongo create"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeForPortland/symptomsurvey_backend.git"
+  },
+  "author": "Code for PDX",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeForPortland/symptomsurvey_backend/issues"
+  },
+  "homepage": "https://github.com/CodeForPortland/symptomsurvey_backend#readme",
+  "dependencies": {
+    "migrate-mongo": "^4.1.2"
+  }
+}
