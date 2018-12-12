@@ -22,7 +22,6 @@ with open('keys/token') as key:
 # the hash result to the hash of the password that's stored in the database.
 def make_hash(password, salt):
   dk = hashlib.pbkdf2_hmac(salt_constants['salt_algorithm'], bytes(password, 'utf-8'), bytes(salt, 'utf-8'), int(salt_constants['salt_iterations']), dklen=int(salt_constants['salt_key_length']))
-  print(binascii.hexlify(dk))
   return binascii.hexlify(dk)
 
 # configure flask app
