@@ -48,7 +48,6 @@ def login():
   body = flask.request.get_json()
   username = body['username']
   password = body['password']
-  print('Request made with username:' + username + ' and password:' + password)
   for user in mongo.db.users.find():
     if ((username == user['profile']['username']) and (make_hash(password, user['password']['salt']) == bytes(user['password']['hash'], 'utf-8'))):
       token = jwt.encode({'profile': user['profile'], 'role': user['role']}, private_key, algorithm='RS256')
