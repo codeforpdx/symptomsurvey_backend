@@ -4,6 +4,7 @@ import flask_pymongo
 import hashlib
 import binascii
 import jwt
+import flask_cors
 
 # Load the values from the constants file.  This file contains the parameters that are used for the
 # hashing algorithim that is applied to the salted passwords.
@@ -26,6 +27,7 @@ def make_hash(password, salt):
 
 # configure flask app
 app = flask.Flask(__name__)
+flask_cors.CORS(app)
 app.config['MONGO_URI'] = 'mongodb://127.0.0.1:27017/social_media_scraper'
 # TODO: add a password to the mongo database so that it's contents are hidden behind this API
 
@@ -43,8 +45,10 @@ def hello_world():
 # returned.
 @app.route('/login', methods=['POST'])
 def login():
-  username = flask.request.form['username']
-  password = flask.request.form['password']
+  body = flask.request.get_json()
+  username = body['username']
+  password = body['password']
+  print('Request made with username:' + username + ' and password:' + password)
   for user in mongo.db.users.find():
     if ((username == user['profile']['username']) and (make_hash(password, user['password']['salt']) == bytes(user['password']['hash'], 'utf-8'))):
       token = jwt.encode({'profile': user['profile'], 'role': user['role']}, private_key, algorithm='RS256')

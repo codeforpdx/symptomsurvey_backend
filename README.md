@@ -7,7 +7,7 @@ Be aware that these notes assume the reader is using a Mac OSX or Linux command 
 
 ### Installing node
 
-This app uses migrate-mongo for database migrations so you will need NodeJS (verson 7.10.1) installed on your computer to run it.  You can install the node version manager (nvm) with the following command.
+This app uses migrate-mongo for database migrations so you will need NodeJS (verson 7.10.1) installed on your computer to complete setup. You can install the node version manager (nvm) with the following command.
 
 ```bash
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
