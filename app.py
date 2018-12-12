@@ -51,6 +51,6 @@ def login():
   for user in mongo.db.users.find():
     if ((username == user['profile']['username']) and (make_hash(password, user['password']['salt']) == bytes(user['password']['hash'], 'utf-8'))):
       token = jwt.encode({'profile': user['profile'], 'role': user['role']}, private_key, algorithm='RS256')
-      return json.dumps({'token': token.decode('utf-8')})
+      return json.dumps({'token': token.decode('utf-8')}), 200, {'Content-Type': 'application/json'}
 
   return json.dumps({'error': 'There is no user with this username and password.'}), 400
