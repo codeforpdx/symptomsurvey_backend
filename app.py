@@ -25,31 +25,38 @@ def make_hash(password, salt):
   return binascii.hexlify(dk)
 
 # configure flask app
-app = flask.Flask(__name__)
-flask_cors.CORS(app)
-app.config['MONGO_URI'] = 'mongodb://127.0.0.1:27017/social_media_scraper'
-# TODO: add a password to the mongo database so that its contents are hidden behind this API
+def create_app():
+  app = flask.Flask(__name__)
+  flask_cors.CORS(app)
+  app.config['MONGO_URI'] = 'mongodb://127.0.0.1:27017/social_media_scraper'
+  # TODO: add a password to the mongo database so that its contents are hidden behind this API
 
-# Create a mongo client that works with the flask configuration.
-mongo = flask_pymongo.PyMongo(app)
+  # Create a mongo client that works with the flask configuration.
+  mongo = flask_pymongo.PyMongo(app)
 
-# Example route
-# TODO: remove this endpoint before this app goes into production
-@app.route('/')
-def hello_world():
-    return 'Hello, World!'
+  # Example route
+  # TODO: remove this endpoint before this app goes into production
+  @app.route('/')
+  def hello_world():
+      return 'Hello, World!'
 
-# Login endpoint.  Checks a submitted username and password against the users in the users collection.
-# If there is a match, the user's profile and role are put into a Json Web Token and that token is
-# returned.
-@app.route('/login', methods=['POST'])
-def login():
-  body = flask.request.get_json()
-  username = body['username']
-  password = body['password']
-  for user in mongo.db.users.find():
-    if ((username == user['profile']['username']) and (make_hash(password, user['password']['salt']) == bytes(user['password']['hash'], 'utf-8'))):
-      token = jwt.encode({'profile': user['profile'], 'role': user['role']}, private_key, algorithm='RS256')
-      return json.dumps({'token': token.decode('utf-8')}), 200, {'Content-Type': 'application/json'}
+  # Login endpoint.  Checks a submitted username and password against the users in the users collection.
+  # If there is a match, the user's profile and role are put into a Json Web Token and that token is
+  # returned.
+  @app.route('/login', methods=['POST'])
+  def login():
+    body = flask.request.get_json()
+    username = body['username']
+    password = body['password']
+    for user in mongo.db.users.find():
+      if ((username == user['profile']['username']) and (make_hash(password, user['password']['salt']) == bytes(user['password']['hash'], 'utf-8'))):
+        token = jwt.encode({'profile': user['profile'], 'role': user['role']}, private_key, algorithm='RS256')
+        return json.dumps({'token': token.decode('utf-8')}), 200, {'Content-Type': 'application/json'}
 
-  return json.dumps({'error': 'There is no user with this username and password.'}), 400
+    return json.dumps({'error': 'There is no user with this username and password.'}), 400
+
+  return app
+
+if __name__ == '__main__':
+  app = create_app()
+  app.run()

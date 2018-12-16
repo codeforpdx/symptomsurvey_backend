@@ -4,6 +4,7 @@
   "description": "A node module that runs database migrations for the Symptom Survey Code for PDX project.",
   "main": "index.js",
   "scripts": {
+    "start": "pipenv run python app.py",
     "test": "mocha",
     "up": "migrate-mongo up",
     "down": "migrate-mongo down",
