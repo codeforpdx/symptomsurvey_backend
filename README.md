@@ -7,7 +7,9 @@ Be aware that these notes assume the reader is using a Mac OSX or Linux command 
 
 ### Installing node
 
-This app uses migrate-mongo for database migrations so you will need NodeJS (verson 7.10.1) installed on your computer to complete setup. You can install the node version manager (nvm) with the following command.
+This app uses migrate-mongo for database migrations so you will need NodeJS (verson 7.10.1) installed on your computer to complete setup. The package.json file in this project also includes scripts that will install the python dependencies and run the flask app.
+
+You can install the node version manager (nvm) with the following command.
 
 ```bash
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
@@ -56,6 +58,18 @@ MongoDB server version: 3.6.2
 
 If the value that you see for "connecting to:..." matches what's present here, then you're ready to set up your app.
 
+### Installing pipenv
+
+Homebrew will install python as part of its dependencies.  If you have both python 2 and 3 installed, you will need to use version 3 for running this project.
+
+First you should install pipenv using pip
+
+```
+pip3 install pipenv
+```
+
+This will allow the postinstall and start scripts in package.json to run.
+
 ## Cloning the repository
 
 Navigate to a repository where you would like to store the source code.  Then run
@@ -67,9 +81,9 @@ cd symptomsurvey_backend
 
 ## Running the site locally
 
-You will first need to set up the basic data that the app needs to run in the database.  This is done via that node commands within the project.  First install the node dependencies with `npm install` and then run the available migrations using the command `npm run up`.
+You will first need to set up the basic data that the app needs to run in the database.  This is done via node commands within the project.  First install the node dependencies with `npm install` and then run the available migrations using the command `npm run up`.
 
-To start the application just run `flask run` from the command line.  The site should start and connect to your local mongo database.
+There are some additional pip dependencies that were installed in the npm postinstall script. This should mean that the app is ready to run. To start the application using the pip dependencies just run `npm start` from the command line.  The site should start and connect to your local mongo database.
 
 ## Adding migrations
 
