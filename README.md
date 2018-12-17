@@ -70,7 +70,7 @@ pip3 install pipenv
 
 This will allow the postinstall and start scripts in package.json to run.
 
-## Cloning the repository
+### Cloning the repository
 
 Navigate to a repository where you would like to store the source code.  Then run
 
@@ -79,12 +79,20 @@ git clone https://github.com/codeforportland/symptomsurvey_backend.git
 cd symptomsurvey_backend
 ```
 
-## Running the site locally
+### Running the site locally
 
 You will first need to set up the basic data that the app needs to run in the database.  This is done via node commands within the project.  First install the node dependencies with `npm install` and then run the available migrations using the command `npm run up`.
 
 There are some additional pip dependencies that were installed in the npm postinstall script. This should mean that the app is ready to run. To start the application using the pip dependencies just run `npm start` from the command line.  The site should start and connect to your local mongo database.
 
-## Adding migrations
+## Updating the project
+
+### Adding migrations
 
 Migrations may be added with the `npm run create <migration name>` script. This command will add a file to the "migrations" directory with all of the boilerplate for `migrate-mongo` in place. You just need to add any relevant mongo database operations to the `up` method within `module.exports`. Be sure that you add appropriate database operations to the `down` method that undo whatever your `up` operations do.
+
+### Code Structure
+
+#### Adding Controllers and Routes
+
+If you want to add a Create, Read, Update, or Delete (CRUD) endpoint for a resource, then it should be added to the controllers directory. To add a new resource create a python file with the resource name, expose a method from it called `add_routes`, and call that method in the `add_routes` method in controllers/routes.
