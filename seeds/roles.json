@@ -1,0 +1,15 @@
+[
+  {
+    "_id": "user",
+    "permissions": [
+      "DATA_READ"
+    ]
+  },
+  {
+    "_id": "administrator",
+    "permissions": [
+      "USER_READ",
+      "DATA_READ"
+    ]
+  }
+]

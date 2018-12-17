@@ -34,26 +34,31 @@ def compare_username_password(user, username, password):
 def make_token(data):
   return jwt.encode(data, private_key, algorithm='RS256').decode('utf-8')
 
-def validate_header(authorization_header, valid_roles):
+def validate_header(authorization_header, valid_permissions, mongo):
+  insufficientPermissionsResponse = {'valid': False, 'error': 'Authorization header is not for user with necessary permissions.'}
   try:
     token = re.search('(?<=Bearer ).+', authorization_header).group(0)
     token_data = jwt.decode(bytes(token, 'utf-8'), public_key, algorithms=['RS256'])
   except:
     return {'valid': False, 'error': 'Authorization header malformed.'}
+  role = mongo.db.roles.find_one({'_id': token_data['role']})
+  if role == None or role['permissions'] == None:
+    return insufficientPermissionsResponse
 
-  if (token_data['role'] in valid_roles):
-    return {'valid': True}
-  else:
-    return {'valid': False, 'error': 'Authorization header is not for user with necessary permissions.'}
+  for permission in role['permissions']:
+    if permission in valid_permissions:
+      return {'valid': True}
 
-def require_role(valid_roles):
+  return insufficientPermissionsResponse
+
+def require_permission(valid_permissions, mongo):
   def wrapped_method(f):
     def check_for_role(**args):
       authorization_header = flask.request.headers.get('Authorization')
       if not 'Authorization' in flask.request.headers:
         return json.dumps({'error': 'Request is missing an authorization header.'}), 401
 
-      auth_result = validate_header(authorization_header, ['administrator'])
+      auth_result = validate_header(authorization_header, valid_permissions, mongo)
       if not auth_result['valid']:
         return json.dumps({'error': auth_result['error']}), 401
       return f(**args)
