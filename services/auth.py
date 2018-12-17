@@ -2,6 +2,7 @@ import json
 import jwt
 import binascii
 import hashlib
+import re
 
 # Load the values from the constants file.  This file contains the parameters that are used for the
 # hashing algorithim that is applied to the salted passwords.
@@ -12,6 +13,11 @@ with open('constants.json') as f:
 # checked into version control.
 with open('keys/token') as key:
     private_key = key.read()
+
+# Read the private key from `./keys/token`. This file is gitignored so that our private key is not
+# checked into version control.
+with open('keys/token.pub') as key:
+    public_key = key.read()
 
 # Passwords will not be stored in the database.  Instead they will be encoded using a common
 # hashing algorithm and a "salt". Each user will have their own salt, which will be a uuid V4.
@@ -26,3 +32,8 @@ def compare_username_password(user, username, password):
 
 def make_token(data):
   return jwt.encode(data, private_key, algorithm='RS256').decode('utf-8')
+
+def validate_header(authorization_header):
+  token = re.search('(?<=Bearer ).+', authorization_header).group(0)
+  token_data = jwt.decode(bytes(token, 'utf-8'), public_key, algorithms=['RS256'])
+  return token_data['role'] in ['user', 'administrator']

@@ -1,4 +1,4 @@
-from controllers import session
+from controllers import session, users
 
 def add_routes(app, mongo):
   # Example route
@@ -8,3 +8,4 @@ def add_routes(app, mongo):
       return 'Hello, World!'
 
   session.add_routes(app, mongo)
+  users.add_routes(app, mongo)
