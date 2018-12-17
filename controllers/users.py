@@ -9,9 +9,9 @@ def add_routes(app, mongo):
     authorization_header = flask.request.headers.get('Authorization')
     if not 'Authorization' in flask.request.headers:
       return json.dumps({'error': 'Request is missing an authorization header.'}), 401
-
-    if not auth.validate_header(authorization_header):
-      return json.dumps({'error': 'Request is missing valid authorization header.'}), 401
+    auth_result = auth.validate_header(authorization_header, ['administrator'])
+    if not auth_result['valid']:
+      return json.dumps({'error': auth_result['error']}), 401
 
     users = []
     for user in mongo.db.users.find():

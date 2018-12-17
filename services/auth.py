@@ -33,7 +33,14 @@ def compare_username_password(user, username, password):
 def make_token(data):
   return jwt.encode(data, private_key, algorithm='RS256').decode('utf-8')
 
-def validate_header(authorization_header):
-  token = re.search('(?<=Bearer ).+', authorization_header).group(0)
-  token_data = jwt.decode(bytes(token, 'utf-8'), public_key, algorithms=['RS256'])
-  return token_data['role'] in ['user', 'administrator']
+def validate_header(authorization_header, valid_roles):
+  try:
+    token = re.search('(?<=Bearer ).+', authorization_header).group(0)
+    token_data = jwt.decode(bytes(token, 'utf-8'), public_key, algorithms=['RS256'])
+  except:
+    return {'valid': False, 'error': 'Authorization header malformed.'}
+
+  if (token_data['role'] in valid_roles):
+    return {'valid': True}
+  else:
+    return {'valid': False, 'error': 'Authorization header is not for user with necessary permissions.'}
