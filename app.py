@@ -1,5 +1,4 @@
 import flask
-import json
 import flask_pymongo
 import flask_cors
 
