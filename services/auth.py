@@ -3,6 +3,7 @@ import jwt
 import binascii
 import hashlib
 import re
+import flask
 
 # Load the values from the constants file.  This file contains the parameters that are used for the
 # hashing algorithim that is applied to the salted passwords.
@@ -44,3 +45,17 @@ def validate_header(authorization_header, valid_roles):
     return {'valid': True}
   else:
     return {'valid': False, 'error': 'Authorization header is not for user with necessary permissions.'}
+
+def require_role(valid_roles):
+  def wrapped_method(f):
+    def check_for_role(**args):
+      authorization_header = flask.request.headers.get('Authorization')
+      if not 'Authorization' in flask.request.headers:
+        return json.dumps({'error': 'Request is missing an authorization header.'}), 401
+
+      auth_result = validate_header(authorization_header, ['administrator'])
+      if not auth_result['valid']:
+        return json.dumps({'error': auth_result['error']}), 401
+      return f(**args)
+    return check_for_role
+  return wrapped_method

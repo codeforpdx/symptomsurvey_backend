@@ -1,18 +1,11 @@
-import flask
 import json
 
 from services import auth
 
 def add_routes(app, mongo):
   @app.route('/users')
+  @auth.require_role(['administrator'])
   def get_users():
-    authorization_header = flask.request.headers.get('Authorization')
-    if not 'Authorization' in flask.request.headers:
-      return json.dumps({'error': 'Request is missing an authorization header.'}), 401
-    auth_result = auth.validate_header(authorization_header, ['administrator'])
-    if not auth_result['valid']:
-      return json.dumps({'error': auth_result['error']}), 401
-
     users = []
     for user in mongo.db.users.find():
       users.append({'profile': user['profile'], 'role': user['role']})
