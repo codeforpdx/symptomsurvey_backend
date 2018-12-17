@@ -6,13 +6,10 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-flask = "*"
-json = "*"
-flask-pymongo = "*"
-hashlib = "*"
-binascii = "*"
 flask-cors = "*"
 pyjwt = "*"
+flask-pymongo = "*"
+cryptography = "*"
 
 [requires]
 python_version = "3.6"
