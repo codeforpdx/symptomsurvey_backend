@@ -54,7 +54,7 @@ def validate_header(authorization_header, valid_permissions, mongo):
   return insufficientPermissionsResponse
 
 def require_permission(valid_permissions):
-  mongo = database.MongoSession().get_mongo_client()
+  mongo = database.get_mongo_client()
   def wrapped_method(f):
     def check_for_role(**args):
       authorization_header = flask.request.headers.get('Authorization')

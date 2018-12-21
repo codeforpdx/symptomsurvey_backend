@@ -11,7 +11,7 @@ def create_app():
   # TODO: add a password to the mongo database so that its contents are hidden behind this API
 
   # Create a mongo client that works with the flask configuration.
-  database.MongoSession().create_instance(app)
+  database.start_session(app)
 
   router.add_routes(app)
   return app

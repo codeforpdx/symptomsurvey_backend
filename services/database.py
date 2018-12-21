@@ -17,3 +17,9 @@ class MongoSession:
 
   def get_mongo_client(self):
     return MongoSession.instance.mongo
+
+def start_session(app):
+  MongoSession().create_instance(app)
+
+def get_mongo_client():
+  return MongoSession().get_mongo_client()
