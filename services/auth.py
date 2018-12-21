@@ -5,6 +5,8 @@ import hashlib
 import re
 import flask
 
+from services import database
+
 # Load the values from the constants file.  This file contains the parameters that are used for the
 # hashing algorithim that is applied to the salted passwords.
 with open('constants.json') as f:
@@ -51,7 +53,8 @@ def validate_header(authorization_header, valid_permissions, mongo):
 
   return insufficientPermissionsResponse
 
-def require_permission(valid_permissions, mongo):
+def require_permission(valid_permissions):
+  mongo = database.MongoSession().get_mongo_client()
   def wrapped_method(f):
     def check_for_role(**args):
       authorization_header = flask.request.headers.get('Authorization')

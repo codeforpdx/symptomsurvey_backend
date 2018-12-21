@@ -1,9 +1,10 @@
 import json
 import flask
 
-from services import auth
+from services import auth, database
 
-def add_routes(app, mongo):
+def add_routes(app):
+  mongo = database.MongoSession().get_mongo_client()
   # Login endpoint.  Checks a submitted username and password against the users in the users collection.
   # If there is a match, the user's profile and role are put into a Json Web Token and that token is
   # returned.
