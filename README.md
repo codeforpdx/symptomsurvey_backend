@@ -79,6 +79,12 @@ git clone https://github.com/codeforportland/symptomsurvey_backend.git
 cd symptomsurvey_backend
 ```
 
+### Private key
+
+The private key is intentionally not checked into version control so that it will remain a secret.
+
+Get the private key for the app from me and create a file to contain it at `keys/token`.
+
 ### Running the site locally
 
 You will first need to set up the basic data that the app needs to run in the database.  This is done via node commands within the project.  First install the node dependencies with `npm install` and then run the available migrations using the command `npm run up`.
