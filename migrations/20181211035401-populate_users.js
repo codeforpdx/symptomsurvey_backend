@@ -1,7 +1,7 @@
 const {pbkdf2} = require('crypto');
 const uuidv4 = require('uuid/v4');
 const pick = require('lodash/pick');
-const {salt_iterations, salt_key_length, salt_algorithm} = require('../constants');
+const {salt: {iterations, key_length, algorithm}} = require('../constants');
 const userSeeds = require('../seeds/users');
 
 /**
@@ -10,7 +10,7 @@ const userSeeds = require('../seeds/users');
  * @param {string} salt - The randomly generated salt.
  * @returns {Promise<String>} A promise that resolves to a hex string of the password hash
  */
-const makeHash = (password, salt) => new Promise((resolve, reject) => pbkdf2(password, salt, Number(salt_iterations), Number(salt_key_length), salt_algorithm, (err, result) => {
+const makeHash = (password, salt) => new Promise((resolve, reject) => pbkdf2(password, salt, Number(iterations), Number(key_length), algorithm, (err, result) => {
   if (err) {
     reject(err);
     return;

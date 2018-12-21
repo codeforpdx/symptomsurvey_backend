@@ -1,9 +1,10 @@
 import json
 import flask
 
-from services import auth
+from services import auth_service, database_service
 
-def add_routes(app, mongo):
+def add_routes(app):
+  mongo = database_service.get_mongo_client()
   # Login endpoint.  Checks a submitted username and password against the users in the users collection.
   # If there is a match, the user's profile and role are put into a Json Web Token and that token is
   # returned.
@@ -12,9 +13,9 @@ def add_routes(app, mongo):
     body = flask.request.get_json()
     username = body['username']
     password = body['password']
-    for user in mongo.db.users.find():
-      if (auth.compare_username_password(user, username, password)):
-        token = auth.make_token({'profile': user['profile'], 'role': user['role']})
-        return json.dumps({'token': token}), 200, {'Content-Type': 'application/json'}
+    result = auth_service.login_attempt(username, password)
+
+    if result['valid']:
+      return json.dumps({'token': result['token']}), 200, {'Content-Type': 'application/json'}
 
     return json.dumps({'error': 'There is no user with this username and password.'}), 400

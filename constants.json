@@ -1,5 +1,8 @@
 {
-  "salt_iterations": 100000,
-  "salt_key_length": 256,
-  "salt_algorithm": "sha256"
+  "salt": {
+    "iterations": 100000,
+    "key_length": 256,
+    "algorithm": "sha256"
+  },
+  "database_name": "social_media_scraper"
 }
