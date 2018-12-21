@@ -89,7 +89,7 @@ def require_permission(valid_permissions):
 def login_attempt(username, password):
   mongo = database_service.get_mongo_client()
   token = None
-  for user in mongo.db.users.find():
+  for user in mongo.db.users.find({'profile.username': username}):
     if (AuthSession().compare_username_password(user, username, password)):
       token = AuthSession().make_token({'profile': user['profile'], 'role': user['role']})
 
