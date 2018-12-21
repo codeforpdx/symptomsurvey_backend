@@ -1,15 +1,9 @@
 import json
 
-from services import auth, database
+from services import auth_service, users_service
 
 def add_routes(app):
-  mongo = database.get_mongo_client()
-
   @app.route('/users')
-  @auth.require_permission(['USER_READ'])
+  @auth_service.require_permission(['USER_READ'])
   def get_users():
-    users = []
-    for user in mongo.db.users.find():
-      users.append({'profile': user['profile'], 'role': user['role']})
-
-    return json.dumps(users), 200, {'Content-Type': 'application/json'}
+    return json.dumps(users_service.get_all()), 200, {'Content-Type': 'application/json'}
