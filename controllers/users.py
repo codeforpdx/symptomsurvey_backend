@@ -4,7 +4,7 @@ from services import auth
 
 def add_routes(app, mongo):
   @app.route('/users')
-  @auth.require_role(['administrator'])
+  @auth.require_permission(['USER_READ'], mongo)
   def get_users():
     users = []
     for user in mongo.db.users.find():
