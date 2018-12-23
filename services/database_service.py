@@ -9,11 +9,14 @@ class MongoSession:
     def __init__(self):
       self.mongo = None
 
-  def __init__(self):
+  def __init__(self, instance=None):
     if not MongoSession.instance:
-      MongoSession.instance = MongoSession.__MongoSession()
+      if instance:
+        MongoSession.instance = instance
+      else:
+        MongoSession.instance = MongoSession.__MongoSession()
 
-  def create_instance(self, app):
+  def configure_instance(self, app):
     mongo_host = os.environ.get('MONGO_HOST')
     if mongo_host is None:
       mongo_host = 'localhost'
@@ -33,7 +36,7 @@ class MongoSession:
     return MongoSession.instance.mongo
 
 def start_session(app):
-  MongoSession().create_instance(app)
+  MongoSession().configure_instance(app)
 
 def get_mongo_client():
   return MongoSession().get_mongo_client()
