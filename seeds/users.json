@@ -1,0 +1,20 @@
+[
+  {
+    "profile": {
+      "username": "bob",
+      "firstName": "Robert",
+      "lastName": "Smith"
+    },
+    "password": "pw",
+    "role": "user"
+  },
+  {
+    "profile": {
+      "username": "grand_magus",
+      "firstName": "Reginald",
+      "lastName": "McFancypants"
+    },
+    "password": "superC0Mp13x",
+    "role": "administrator"
+  }
+]
