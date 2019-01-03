@@ -1,6 +1,6 @@
 const {database_name} = require('./constants');
 
-const mongoHost = process.env.MONGO_HOST || 'localhost';
+const mongoHost = process.env.MONGO_HOST || 'mongo';
 const mongoPort = process.env.MONGO_PORT || 27017;
 
 module.exports = {

@@ -6,9 +6,6 @@
   "scripts": {
     "create": "migrate-mongo create",
     "down": "migrate-mongo down",
-    "postinstall": "pipenv install --skip-lock",
-    "start": "pipenv run python app.py",
-    "test": "mocha",
     "up": "migrate-mongo up"
   },
   "repository": {
