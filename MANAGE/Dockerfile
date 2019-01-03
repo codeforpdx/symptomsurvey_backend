@@ -1,6 +1,6 @@
 FROM node:7.10.1-slim
-ADD . /manage
-WORKDIR /manage
+ADD . /config
+WORKDIR /config
 #COPY migrations /manage/migrations
 #COPY packages.json /manage/
 #COPY migrate-mongo-config.js /manage/
