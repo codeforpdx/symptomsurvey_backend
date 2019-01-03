@@ -21,7 +21,7 @@ cd symptomsurvey_backend
 
 The private key is intentionally not checked into version control so that it will remain a secret.
 
-Get the private key for the app from me and create a file to contain it at `keys/token`.
+Get the private key for the app from me and create a file to contain it at `WEB/keys/token`.
 
 ### Building the container
 
@@ -45,7 +45,21 @@ docker-compose up
 
 ### Adding migrations
 
-Currently migrations are not properly supported by the docker setup. In the future, management will be an independently launched service, with tools for cloning its migrations to and from a docker container running node.
+While the project is running, you can manage mongodb through the MANAGE service, which runs idle with the appropriate node files. You can access this via
+```bash
+docker-compose exec manage sh
+```
+which will open a shell running in the container.
+
+You can then run migrations with either
+```bash
+npm run up
+npm run down
+npm run create
+```
+
+which will perform migrations as per usual.
+The migrations folder is synced between the repo and container, so any new migrations will be duplicated either way. This allows you to create a migration in the container, edit it locally, and sync it to mongo without starting and stopping any containers.
 
 ### Code Structure
 
