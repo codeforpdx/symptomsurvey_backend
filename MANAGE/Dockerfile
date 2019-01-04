@@ -1,4 +1,8 @@
 FROM node:7.10.1-slim
-ADD . /config
-WORKDIR /config
+
+WORKDIR /usr/src/app
+
+ADD ./MANAGE .
+ADD ./SHARED .
+
 RUN npm install

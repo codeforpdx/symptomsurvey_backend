@@ -2,7 +2,8 @@ version: '3.2'
 services:
   web:
     build:
-      context: ./WEB
+      context: ./
+      dockerfile: ./WEB/Dockerfile
     ports:
       - 5000:5000
     depends_on:
@@ -12,7 +13,9 @@ services:
       MONGO_HOST: mongo
       MONGO_PORT: 27017
   manage:
-    build: ./MANAGE
+    build: 
+      context: ./
+      dockerfile: ./MANAGE/Dockerfile
     depends_on:
       - mongo
     environment:

@@ -25,7 +25,7 @@ Get the private key for the app from me and create a file to contain it at `WEB/
 
 ### Building the container
 
-From the cloned repo, run
+From the cloned repo and with docker running, run
 
 ```bash
 docker-compose build
@@ -35,7 +35,7 @@ This may take a while.
 
 ### Running the site locally
 
-From the cloned repo, run
+From the cloned repo and with docker running, run
 
 ```bash
 docker-compose up
@@ -55,7 +55,7 @@ You can then run migrations with either
 ```bash
 npm run up
 npm run down
-npm run create
+npm run create <migration-name>
 ```
 
 which will perform migrations as per usual.
