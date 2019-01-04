@@ -12,6 +12,12 @@ services:
     environment:
       MONGO_HOST: mongo
       MONGO_PORT: 27017
+      FLASK_DEBUG: 1
+      FLASK_APP: app.py
+    #volumes:
+    #  - ./WEB:/usr/src/app
+
+    #command: tail -F anything
   manage:
     build: 
       context: ./
@@ -23,7 +29,7 @@ services:
       MONGO_PORT: 27017
     command: tail -F anything
     volumes:
-      - ./MANAGE/migrations:/config/migrations
+      - ./MANAGE/migrations:/usr/src/app/migrations
   mongo:
     image: mongo:latest
     restart: always

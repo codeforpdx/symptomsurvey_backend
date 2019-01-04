@@ -31,7 +31,7 @@ From the cloned repo and with docker running, run
 docker-compose build
 ```
 
-This may take a while.
+This may take a while. If it seems to freeze on windows, pressing enter seems to cause the output to update.
 
 ### Running the site locally
 
@@ -66,3 +66,7 @@ The migrations folder is synced between the repo and container, so any new migra
 #### Adding Controllers and Routes
 
 If you want to add a Create, Read, Update, or Delete (CRUD) endpoint for a resource, then it should be added to the controllers directory. To add a new resource create a python file with the resource name, expose a method from it called `add_routes`, and call that method in the `add_routes` method in controllers/routes.
+
+#### Adding python dependencies
+
+Add the dependency you need to `requirements.txt` and rebuild and launch the docker container with `docker-compose build web` - `docker-compose up`. The new dependency will then be available in the contained project.

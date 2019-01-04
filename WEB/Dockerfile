@@ -5,7 +5,6 @@ WORKDIR /usr/src/app
 ADD ./WEB .
 ADD ./SHARED .
 
-RUN pip3 install pipenv
-RUN pipenv install --skip-lock
+RUN pip3 install -r requirements.txt
 
-CMD ["pipenv", "run", "python", "app.py"]
+CMD ["flask", "run", "--host=0.0.0.0"]
