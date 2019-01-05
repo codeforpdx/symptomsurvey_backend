@@ -23,8 +23,8 @@ services:
       
     #Mounts the app image to the source, to allow dynamic updates of the flask app.
     #Should only be used for debugging.
-    volumes:
-      - ./WEB:/usr/src/app
+    #volumes:
+    #  - ./WEB:/usr/src/app
     #End of debugging config
 
 
