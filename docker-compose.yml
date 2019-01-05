@@ -1,5 +1,5 @@
 #docker-compose version
-version: '3.2'
+version: '2.4'
 
 
 services:
@@ -50,13 +50,14 @@ services:
 
 
   mongo: #defines the mongoDB enclosure
-    image: mongo:latest
+    image: mongo:4.0.5
     restart: always
     volumes:
       #allows the database to persist when shutdown / across builds
-      - type: volume
-        target: /data/db
-        source: symptomsurvey_db_volume   
+      - symptomsurvey_db_volume:/data/db
+      #- type: volume
+      #  target: /data/db
+      #  source: symptomsurvey_db_volume   
 
 volumes:
   symptomsurvey_db_volume:

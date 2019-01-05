@@ -1,4 +1,4 @@
-flask-cors
-pyjwt
-flask-pymongo
-cryptography
+flask-cors == 3.0.7
+pyjwt == 1.7.1
+flask-pymongo == 2.2.0
+cryptography == 2.4.2
