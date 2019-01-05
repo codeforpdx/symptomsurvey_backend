@@ -3,6 +3,7 @@ import tempfile
 import flask_pymongo
 import json
 import hashlib
+import binascii
 
 import pytest
 from unittest.mock import create_autospec
@@ -44,7 +45,8 @@ class UsersCollection:
     for user in base_data:
       new_user = user
       salt = 'thing'
-      new_user['password'] = {'salt': salt, 'hash': hashlib.pbkdf2_hmac(salt_constants['algorithm'], bytes(user['password'], 'utf-8'), bytes(salt, 'utf-8'), int(salt_constants['iterations']), dklen=int(salt_constants['key_length']))}
+      new_user['password'] = {'salt': salt, 'hash': binascii.hexlify(hashlib.pbkdf2_hmac(salt_constants['algorithm'], bytes(user['password'], 'utf-8'), bytes(salt, 'utf-8'), int(salt_constants['iterations']), dklen=int(salt_constants['key_length']))).decode('utf-8')}
+      self.data.append(new_user)
 
   def find(self, search):
     if not search:
@@ -97,5 +99,6 @@ def client():
   return create_app(testconfig = TestConfig()).test_client()
 
 def test_root_path(client):
-  assert client.get('/').data == b'Hello, World!'
-  assert client.get('/').status == '200 OK'
+  result = client.get('/')
+  assert result.data == b'Hello, World!'
+  assert result.status == '200 OK'
