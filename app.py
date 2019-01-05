@@ -13,7 +13,7 @@ def create_app(testconfig = None):
   if testconfig is None:
     database_service.start_session(app)
   else:
-    testconfig.start_test_session(app)
+    testconfig.start_test_session()
 
   router.add_routes(app)
   return app

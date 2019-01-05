@@ -56,7 +56,7 @@ class AuthSession:
       return insufficientPermissionsResponse
 
     def compare_username_password(self, user, username, password):
-        return (username == user['profile']['username']) and (self.make_hash(password, user['password']['salt']) == bytes(user['password']['hash'], 'utf-8'))
+      return (username == user['profile']['username']) and (self.make_hash(password, user['password']['salt']) == bytes(user['password']['hash'], 'utf-8'))
 
   def __init__(self):
     if not AuthSession.instance:
