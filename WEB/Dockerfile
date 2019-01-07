@@ -6,6 +6,6 @@ WORKDIR /usr/src/app
 COPY ./WEB/requirements.txt ./requirements.txt
 RUN pip3 install -r requirements.txt
 
-COPY ./WEB ./SHARED ./
+COPY ./WEB ./SHARED/constants.json ./
 
 CMD ["flask", "run", "--host=0.0.0.0"]

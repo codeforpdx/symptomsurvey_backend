@@ -6,4 +6,4 @@ WORKDIR /usr/src/app
 COPY ./MANAGE/package.json ./package.json
 RUN npm install
 
-COPY ./MANAGE ./SHARED ./
+COPY ./MANAGE ./SHARED/constants.json ./
