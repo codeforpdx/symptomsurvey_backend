@@ -6,5 +6,4 @@ WORKDIR /usr/src/app
 ADD ./MANAGE/package.json ./package.json
 RUN npm install
 
-ADD ./MANAGE .
-ADD ./SHARED .
+ADD ./MANAGE ./SHARED ./
