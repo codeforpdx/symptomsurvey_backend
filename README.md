@@ -8,6 +8,8 @@ This repository is the API for a website for use by Clackamas County.  These are
 
 Download Docker for your system at https://www.docker.com/ and install.
 
+If your OS does not support native docker, you can install docker-toolbox at https://docs.docker.com/toolbox/toolbox_install_windows/. In this case, all commands will be run from the docker-toolbox command line, access to the site is done through 192.168.99.100 instead of localhost.
+
 ### Cloning the repository
 
 Navigate to a repository where you would like to store the source code.  Then run
