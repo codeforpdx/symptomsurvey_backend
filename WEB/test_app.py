@@ -14,7 +14,7 @@ from services import auth_service, database_service
 
 # Load the values from the constants file.  This file contains the parameters that are used for the
 # hashing algorithim that is applied to the salted passwords.
-with open('constants.json') as f:
+with open('../SHARED/constants.json') as f:
     salt_constants = json.load(f)['salt']
 
 def get_nested_key(dictionary, key_list):
@@ -38,7 +38,7 @@ class UsersCollection:
   def __init__(self, name):
     self.name = name
     
-    with open('seeds/{0}.json'.format(name)) as seed:
+    with open('../MANAGE/seeds/{0}.json'.format(name)) as seed:
       base_data = json.load(seed)
     
     self.data = []
@@ -63,7 +63,7 @@ class Collection:
   def __init__(self, name):
     self.name = name
     
-    with open('seeds/{0}.json'.format(name)) as seed:
+    with open('../MANAGE/seeds/{0}.json'.format(name)) as seed:
       self.data = json.load(seed)
 
   def find(self, search):
@@ -83,6 +83,7 @@ class Database:
     self.roles = Collection('roles')
 
 class TestConfig:
+  # TODO: add config for auth service to use for getting constants/keys during testing
   class __MongoSession:
     class __MongoClient:
       def __init__(self):
