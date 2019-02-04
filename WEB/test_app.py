@@ -15,7 +15,13 @@ from services import auth_service, database_service
 # Load the values from the constants file.  This file contains the parameters that are used for the
 # hashing algorithim that is applied to the salted passwords.
 with open('../SHARED/constants.json') as f:
-    salt_constants = json.load(f)['salt']
+  salt_constants = json.load(f)['salt']
+
+with open('keys/token') as key:
+  private_key = key.read()
+
+with open('keys/token.pub') as key:
+  public_key = key.read()
 
 def get_nested_key(dictionary, key_list):
   result = dictionary
@@ -94,6 +100,7 @@ class TestConfig:
 
   def start_test_session(self):
     database_service.MongoSession(self.__MongoSession())
+    auth_service.AuthSession(salt_constants, private_key, public_key)
 
 @pytest.fixture(scope='session')
 def client():
