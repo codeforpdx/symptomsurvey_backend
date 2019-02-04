@@ -40,53 +40,53 @@ def search_datum(search, datum):
   
   return True
 
-class UsersCollection:
-  def __init__(self, name):
-    self.name = name
+class Collection:
+  def __init__(self, data):
+    self.data = data
+
+  def find(self, search = None):
+    if not search:
+      return self.data
+
+    result = []
+    for datum in self.data:
+      if search_datum(search, datum):
+        result.append(datum)
     
-    with open('../MANAGE/seeds/{0}.json'.format(name)) as seed:
+    return result
+
+  def find_one(self, search):
+    for datum in self.data:
+      if search_datum(search, datum):
+        return datum
+
+class UsersCollection(Collection):
+  def __init__(self):
+    with open('../MANAGE/seeds/users.json') as seed:
       base_data = json.load(seed)
     
-    self.data = []
+    data = []
     for user in base_data:
       new_user = user
       salt = 'thing'
       new_user['password'] = {'salt': salt, 'hash': binascii.hexlify(hashlib.pbkdf2_hmac(salt_constants['algorithm'], bytes(user['password'], 'utf-8'), bytes(salt, 'utf-8'), int(salt_constants['iterations']), dklen=int(salt_constants['key_length']))).decode('utf-8')}
-      self.data.append(new_user)
+      data.append(new_user)
+  
+    Collection.__init__(self, data)
 
-  def find(self, search):
-    if not search:
-      return self.data
 
-    result = []
-    for datum in self.data:
-      if search_datum(search, datum):
-        result.append(datum)
+class RolesCollection(Collection):
+  def __init__(self):
+    with open('../MANAGE/seeds/roles.json') as seed:
+      data = json.load(seed)
     
-    return result
+    Collection.__init__(self, data)
 
-class Collection:
-  def __init__(self, name):
-    self.name = name
-    
-    with open('../MANAGE/seeds/{0}.json'.format(name)) as seed:
-      self.data = json.load(seed)
-
-  def find(self, search):
-    if not search:
-      return self.data
-
-    result = []
-    for datum in self.data:
-      if search_datum(search, datum):
-        result.append(datum)
-    
-    return result
 
 class Database:
   def __init__(self):
-    self.users = UsersCollection('users')
-    self.roles = Collection('roles')
+    self.users = UsersCollection()
+    self.roles = RolesCollection()
 
 class TestConfig:
   # TODO: add config for auth service to use for getting constants/keys during testing
