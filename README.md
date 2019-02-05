@@ -76,3 +76,23 @@ The migrations folder is synced between the repo and container, so any new migra
 #### Adding Controllers and Routes
 
 If you want to add a Create, Read, Update, or Delete (CRUD) endpoint for a resource, then it should be added to the controllers directory. To add a new resource create a python file with the resource name, expose a method from it called `add_routes`, and call that method in the `add_routes` method in controllers/routes.
+
+### Testing
+
+#### Running the tests
+
+You will need to have python 3 installed along with all of the project dependencies listed in the Pipfile to run these tests locally.
+
+All tests should be run from the WEB/ directory. They can be run all together with `python -m pytest` or you can run a single test by specifying the file (eg `python -m pytest tests/login_test.py`).
+
+#### Adding new tests
+
+New pytest tests should be added to the WEB/tests/ directory using file names that look like "test_" followed by the topic of the test (eg "test_login.py"). This naming convention will keep our code organized and will allow pytest to discover our test files.
+
+You should start all test files with
+
+```
+from test_app import client
+```
+
+which will provide a version of the app with all database calls and rsa keys mocked.

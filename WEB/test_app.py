@@ -12,16 +12,38 @@ from app import create_app
 from services import auth_service, database_service
 
 
-# Load the values from the constants file.  This file contains the parameters that are used for the
-# hashing algorithim that is applied to the salted passwords.
-with open('../SHARED/constants.json') as f:
-  salt_constants = json.load(f)['salt']
+salt_constants = {
+  "iterations": 100000,
+  "key_length": 256,
+  "algorithm": "sha256"
+}
 
-with open('keys/token') as key:
-  private_key = key.read()
+private_key = """
+-----BEGIN RSA PRIVATE KEY-----
+MIICXgIBAAKBgQCnao6N6Tzfduky0K0kdQTMBtTcjaMG4o7qDc+EeoM4c6rW6dck
+jKMpfEoSuERfMLY5dENDMcemZYnKtu9AZmK0HSiyOFbkrpRkTmrTLoFq4btkgTAv
+lY+yIJLEzQIuGN6HsrPtzcqmznFo2HpGva4pIO+cFt2jc3objJTx1jToLwIDAQAB
+AoGBAJkzRWhPe0jyw8ugchDelJkv1zJM2la+lBFSugd9JP9PuZIZQqtLlzOrbQ1c
+WhTRuq8w2SxwLUbzu/gpFx9TkhXNOY4CyknE9Vv8Z6IniMjEX4G6zM070yHHuii5
+L8S08wtljNXTlfu6qPbTs53TprkWfgdJcZpfkho44n8lFLABAkEA11CXemX1vHsY
+4xRCvnn+Wr3SyHIywpljrh/1fVY977xTchAGHoXGKN3BL55SoJfbuc6IPf4D5Uh+
+2o1WWNIiLwJBAMcM+IXd5IzrEc1MBKsPf7s4fBzFiND628dYBI1/LWvhIZZe+jV1
+nIiHpSWUN2zKBtzCmJIPrAyPpsp14BA2GgECQQCO0BC5CZnVm1xledHPX0E7VL7T
+XxOWCYGZQ+9jY+mO8r3yYPh+FELcZkG14PBzPmZqNrgdTjetQ8mIEskb/rzXAkEA
+pUCefzzlxxxNbjxjT8URTVSqrZRNbvolRo1LUlG4WuzQXq/BWGqpJyw+LkGr9hSP
+t+2SjwiV1OPaHBHakHrqAQJAfzW4FWcznhPESMJp8ikjucZOJfW9zOZ2WlP/mYQY
+/qwE+BBGNlDkLp0RcARdpBOPSJAERL+eEX6MIosX1iJfBA==
+-----END RSA PRIVATE KEY-----
+"""
 
-with open('keys/token.pub') as key:
-  public_key = key.read()
+public_key = """
+-----BEGIN PUBLIC KEY-----
+MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCnao6N6Tzfduky0K0kdQTMBtTc
+jaMG4o7qDc+EeoM4c6rW6dckjKMpfEoSuERfMLY5dENDMcemZYnKtu9AZmK0HSiy
+OFbkrpRkTmrTLoFq4btkgTAvlY+yIJLEzQIuGN6HsrPtzcqmznFo2HpGva4pIO+c
+Ft2jc3objJTx1jToLwIDAQAB
+-----END PUBLIC KEY-----
+"""
 
 def get_nested_key(dictionary, key_list):
   result = dictionary
