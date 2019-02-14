@@ -85,8 +85,10 @@ If you want to add a Create, Read, Update, or Delete (CRUD) endpoint for a resou
 
 #### Running the tests
 
-You will need to have python 3 installed along with all of the project dependencies listed in the Pipfile to run these tests locally.
-
+You will need to have python 3 installed along with all of the project and run the command:
+```
+pip install -r ./WEB/requirements.txt
+```
 All tests should be run from the WEB/ directory. They can be run all together with `python -m pytest` or you can run a single test by specifying the file (eg `python -m pytest tests/login_test.py`).
 
 #### Adding new tests
