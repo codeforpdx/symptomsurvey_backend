@@ -5,7 +5,7 @@ def add_routes(app):
   # TODO: remove this endpoint before this app goes into production
   @app.route('/')
   def hello_world():
-      return 'Hello, Bob!'
+      return 'Hello, World!'
 
   session.add_routes(app)
   users.add_routes(app)

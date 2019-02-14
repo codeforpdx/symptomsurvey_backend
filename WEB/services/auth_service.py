@@ -11,21 +11,10 @@ class AuthSession:
   instance = None
 
   class __AuthSession:
-    def __init__(self):
-      # Load the values from the constants file.  This file contains the parameters that are used for the
-      # hashing algorithim that is applied to the salted passwords.
-      with open('constants.json') as f:
-          self.__salt_constants = json.load(f)['salt']
-
-      # Read the private key from `./keys/token`. This file is gitignored so that our private key is not
-      # checked into version control.
-      with open('keys/token') as key:
-          self.__private_key = key.read()
-
-      # Read the private key from `./keys/token`. This file is gitignored so that our private key is not
-      # checked into version control.
-      with open('keys/token.pub') as key:
-          self.__public_key = key.read()
+    def __init__(self, salt_constants, private_key, public_key):
+      self.__salt_constants = salt_constants
+      self.__private_key = private_key
+      self.__public_key = public_key
 
     # Passwords will not be stored in the database.  Instead they will be encoded using a common
     # hashing algorithm and a "salt". Each user will have their own salt, which will be a uuid V4.
@@ -56,12 +45,12 @@ class AuthSession:
       return insufficientPermissionsResponse
 
     def compare_username_password(self, user, username, password):
-        return (username == user['profile']['username']) and (self.make_hash(password, user['password']['salt']) == bytes(user['password']['hash'], 'utf-8'))
+      return (username == user['profile']['username']) and (self.make_hash(password, user['password']['salt']) == bytes(user['password']['hash'], 'utf-8'))
 
-  def __init__(self):
+  def __init__(self, salt_constants = None, private_key = None, public_key = None):
     if not AuthSession.instance:
-      AuthSession.instance = AuthSession.__AuthSession()
-  
+      AuthSession.instance = AuthSession.__AuthSession(salt_constants, private_key, public_key)
+
   def validate_header(self, authorization_header, valid_permissions, mongo):
     return AuthSession.instance.validate_header(authorization_header, valid_permissions, mongo)
   
