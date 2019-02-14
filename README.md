@@ -1,4 +1,4 @@
-# symptomsurvey_backend
+# symptomsurvey_backend ![travisci badge](https://travis-ci.org/CodeForPortland/symptomsurvey_backend.svg?branch=master)
 
 This repository is the API for a website for use by Clackamas County.  These are developer notes.
 
