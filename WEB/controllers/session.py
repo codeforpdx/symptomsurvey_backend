@@ -5,9 +5,6 @@ from services import auth_service, database_service
 
 def add_routes(app):
   mongo = database_service.get_mongo_client()
-  # Login endpoint.  Checks a submitted username and password against the users in the users collection.
-  # If there is a match, the user's profile and role are put into a Json Web Token and that token is
-  # returned.
   @app.route('/login', methods=['POST'])
   def login():
     '''
@@ -16,13 +13,6 @@ def add_routes(app):
     returned.
     ---
     definitions:
-      Login:
-        type : object
-        properties:          
-          password:
-            type: string
-          username:
-            type: string
       Token:
         type: object
         properties:
@@ -34,12 +24,22 @@ def add_routes(app):
           error:
             type: string
     parameters:
-        - name: login
-          in: body
-          type: object
-          required: true
+    - name: body
+      in: body
+      required: true
+      description: user name and password
+      content:
+        application/json:
           schema:
-            $ref: '#/definitions/Login'
+            type: object
+            properties:
+              username:
+                type: string
+              password:
+                type: string
+            example:
+              username: bob
+              password: pw
     responses:
       200:
         description: Successfully authenticated
@@ -47,6 +47,8 @@ def add_routes(app):
           $ref: '#/definitions/Token'
         examples: 
           token: '*elided_token_value*'
+      400:
+        description: Bad Request
       401:
         description: Authentication failed
         schema:
