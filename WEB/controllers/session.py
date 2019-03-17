@@ -9,52 +9,34 @@ def add_routes(app):
   def login():
     '''
     Login endpoint.  Checks a submitted username and password against the users in the users collection.
-    If there is a match, the user's profile and role are put into a Json Web Token and that token is
+    If there is a match, the user's profile and role are put into a Json Web Token (JWT) and that token is
     returned.
     ---
-    definitions:
-      Token:
-        type: object
-        properties:
-          token:
-            type: string
-      Error:
-        type: object
-        properties:
-          error:
-            type: string
     parameters:
-    - name: body
-      in: body
-      required: true
-      description: user name and password
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              username:
-                type: string
-              password:
-                type: string
-            example:
-              username: bob
-              password: pw
+      - in: body
+        name: body
+        description: JSON name-value pair parameters consisting of username and password
+        schema:
+          properties:
+            username:
+              type: string
+              description: user name.
+              example: bob
+            password:
+              type: string
+              description: password.
+              example: pw
+    produces:
+      application/json
     responses:
       200:
         description: Successfully authenticated
-        schema:
-          $ref: '#/definitions/Token'
-        examples: 
-          token: '*elided_token_value*'
-      400:
-        description: Bad Request
+        examples:
+          application/json: {"token": "jwt token value elided"}
       401:
         description: Authentication failed
-        schema:
-          $ref: '#/definitions/Error'
         examples:
-          error: 'There is no user with this username and password.'      
+          application/json: { "error" : "There is no user with this username and password."}
     '''
     body = flask.request.get_json()
     username = body['username']
