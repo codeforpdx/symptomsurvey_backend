@@ -8,7 +8,7 @@ def add_routes(app):
   def load_tweets():
     tweets = tweets_service.get_tweets_from_twitter()
     try:
-      tweets_service.save_tweets(tweets)
+      tweets_service.save_tweets(tweets["statuses"])
+      return json.dumps(tweets), 200, {'Content-Type': 'application/json'}
     except Exception as ex:
-      return json.dumps(ex), 500, {'Content-Type': 'application/json'}
-    return json.dumps(tweets), 200, {'Content-Type': 'application/json'}
+      return json.dumps({'Exception': str(ex)}), 500, {'Content-Type': 'application/json'}

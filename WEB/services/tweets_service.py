@@ -1,5 +1,6 @@
 import requests
 import os
+import copy
 
 from services import database_service
 
@@ -19,4 +20,4 @@ def get_tweets_from_twitter():
 def save_tweets(tweets):
   mongo = database_service.get_mongo_client()
 
-  mongo.db.tweets.insert_many(tweets)
+  mongo.db.tweets.insert_many(copy.deepcopy(tweets))
