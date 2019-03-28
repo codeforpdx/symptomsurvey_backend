@@ -21,7 +21,7 @@ services:
       #End of debugging config
       FLASK_APP: app.py
       TWITTER_API_KEY: ${TWITTER_API_KEY}
-      TWITTER_API_KEY: ${TWITTER_API_ACCESS_KEY}
+      TWITTER_API_ACCESS_KEY: ${TWITTER_API_ACCESS_KEY}
       
     #Mounts the app image to the source, to allow dynamic updates of the flask app.
     #Should only be used for debugging.
