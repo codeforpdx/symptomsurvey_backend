@@ -1,1430 +1,1417 @@
-{
-  "statuses": [
-      {
-          "created_at": "Wed Mar 20 03:31:24 +0000 2019",
-          "id": 1108209395643633664,
-          "id_str": "1108209395643633664",
-          "text": "@suchaunique اذا قريب بشريه واذا بعيد ارجع ارقد",
-          "truncated": false,
-          "entities": {
-              "hashtags": [],
-              "symbols": [],
-              "user_mentions": [
-                  {
-                      "screen_name": "suchaunique",
-                      "name": "Uni",
-                      "id": 2852455447,
-                      "id_str": "2852455447",
-                      "indices": [
-                          0,
-                          12
-                      ]
-                  }
-              ],
-              "urls": []
-          },
-          "metadata": {
-              "iso_language_code": "ar",
-              "result_type": "recent"
-          },
-          "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
-          "in_reply_to_status_id": 1108209234360127488,
-          "in_reply_to_status_id_str": "1108209234360127488",
-          "in_reply_to_user_id": 2852455447,
-          "in_reply_to_user_id_str": "2852455447",
-          "in_reply_to_screen_name": "suchaunique",
-          "user": {
-              "id": 1066638866512310272,
-              "id_str": "1066638866512310272",
-              "name": "➕",
-              "screen_name": "_teacher911",
-              "location": "Boring",
-              "description": "",
-              "url": null,
-              "entities": {
-                  "description": {
-                      "urls": []
-                  }
-              },
-              "protected": false,
-              "followers_count": 25,
-              "friends_count": 152,
-              "listed_count": 0,
-              "created_at": "Sun Nov 25 10:24:57 +0000 2018",
-              "favourites_count": 142,
-              "utc_offset": null,
-              "time_zone": null,
-              "geo_enabled": false,
-              "verified": false,
-              "statuses_count": 363,
-              "lang": "ar",
-              "contributors_enabled": false,
-              "is_translator": false,
-              "is_translation_enabled": false,
-              "profile_background_color": "F5F8FA",
-              "profile_background_image_url": null,
-              "profile_background_image_url_https": null,
-              "profile_background_tile": false,
-              "profile_image_url": "http://pbs.twimg.com/profile_images/1107763319031713793/IcaOOp1w_normal.jpg",
-              "profile_image_url_https": "https://pbs.twimg.com/profile_images/1107763319031713793/IcaOOp1w_normal.jpg",
-              "profile_banner_url": "https://pbs.twimg.com/profile_banners/1066638866512310272/1547671507",
-              "profile_link_color": "1DA1F2",
-              "profile_sidebar_border_color": "C0DEED",
-              "profile_sidebar_fill_color": "DDEEF6",
-              "profile_text_color": "333333",
-              "profile_use_background_image": true,
-              "has_extended_profile": false,
-              "default_profile": true,
-              "default_profile_image": false,
-              "following": null,
-              "follow_request_sent": null,
-              "notifications": null,
-              "translator_type": "none"
-          },
-          "geo": null,
-          "coordinates": null,
-          "place": null,
-          "contributors": null,
-          "is_quote_status": false,
-          "retweet_count": 0,
-          "favorite_count": 0,
-          "favorited": false,
-          "retweeted": false,
-          "lang": "ar"
-      },
-      {
-          "created_at": "Wed Mar 20 03:31:23 +0000 2019",
-          "id": 1108209393160445952,
-          "id_str": "1108209393160445952",
-          "text": "@mcdonaldcomedy If it was this heart, I believe it @mcdonaldcomedy 😂 https://t.co/6GegCJZmGg",
-          "truncated": false,
-          "entities": {
-              "hashtags": [],
-              "symbols": [],
-              "user_mentions": [
-                  {
-                      "screen_name": "mcdonaldcomedy",
-                      "name": "Michael McDonald",
-                      "id": 85832891,
-                      "id_str": "85832891",
-                      "indices": [
-                          0,
-                          15
-                      ]
-                  },
-                  {
-                      "screen_name": "mcdonaldcomedy",
-                      "name": "Michael McDonald",
-                      "id": 85832891,
-                      "id_str": "85832891",
-                      "indices": [
-                          51,
-                          66
-                      ]
-                  }
-              ],
-              "urls": [],
-              "media": [
-                  {
-                      "id": 1108209387464646658,
-                      "id_str": "1108209387464646658",
-                      "indices": [
-                          69,
-                          92
-                      ],
-                      "media_url": "http://pbs.twimg.com/tweet_video_thumb/D2EmkPyVYAIQxjs.jpg",
-                      "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/D2EmkPyVYAIQxjs.jpg",
-                      "url": "https://t.co/6GegCJZmGg",
-                      "display_url": "pic.twitter.com/6GegCJZmGg",
-                      "expanded_url": "https://twitter.com/Tmacreactz/status/1108209393160445952/photo/1",
-                      "type": "photo",
-                      "sizes": {
-                          "thumb": {
-                              "w": 150,
-                              "h": 150,
-                              "resize": "crop"
-                          },
-                          "small": {
-                              "w": 450,
-                              "h": 336,
-                              "resize": "fit"
-                          },
-                          "medium": {
-                              "w": 450,
-                              "h": 336,
-                              "resize": "fit"
-                          },
-                          "large": {
-                              "w": 450,
-                              "h": 336,
-                              "resize": "fit"
-                          }
-                      }
-                  }
-              ]
-          },
-          "extended_entities": {
-              "media": [
-                  {
-                      "id": 1108209387464646658,
-                      "id_str": "1108209387464646658",
-                      "indices": [
-                          69,
-                          92
-                      ],
-                      "media_url": "http://pbs.twimg.com/tweet_video_thumb/D2EmkPyVYAIQxjs.jpg",
-                      "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/D2EmkPyVYAIQxjs.jpg",
-                      "url": "https://t.co/6GegCJZmGg",
-                      "display_url": "pic.twitter.com/6GegCJZmGg",
-                      "expanded_url": "https://twitter.com/Tmacreactz/status/1108209393160445952/photo/1",
-                      "type": "animated_gif",
-                      "sizes": {
-                          "thumb": {
-                              "w": 150,
-                              "h": 150,
-                              "resize": "crop"
-                          },
-                          "small": {
-                              "w": 450,
-                              "h": 336,
-                              "resize": "fit"
-                          },
-                          "medium": {
-                              "w": 450,
-                              "h": 336,
-                              "resize": "fit"
-                          },
-                          "large": {
-                              "w": 450,
-                              "h": 336,
-                              "resize": "fit"
-                          }
-                      },
-                      "video_info": {
-                          "aspect_ratio": [
-                              75,
-                              56
-                          ],
-                          "variants": [
-                              {
-                                  "bitrate": 0,
-                                  "content_type": "video/mp4",
-                                  "url": "https://video.twimg.com/tweet_video/D2EmkPyVYAIQxjs.mp4"
-                              }
-                          ]
-                      }
-                  }
-              ]
-          },
-          "metadata": {
-              "iso_language_code": "en",
-              "result_type": "recent"
-          },
-          "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
-          "in_reply_to_status_id": 1108208712215199744,
-          "in_reply_to_status_id_str": "1108208712215199744",
-          "in_reply_to_user_id": 85832891,
-          "in_reply_to_user_id_str": "85832891",
-          "in_reply_to_screen_name": "mcdonaldcomedy",
-          "user": {
-              "id": 980345512325820416,
-              "id_str": "980345512325820416",
-              "name": "Tyler Young",
-              "screen_name": "Tmacreactz",
-              "location": "Gladstone, OR",
-              "description": "GO DUCKS 🦆 and GO BLAZERS 🔴⚫️ Paranormal Researcher 👻 Family Man ♥️",
-              "url": "https://t.co/b6eXEhP6cJ",
-              "entities": {
-                  "url": {
-                      "urls": [
-                          {
-                              "url": "https://t.co/b6eXEhP6cJ",
-                              "expanded_url": "http://facebook.com/tyyoung21",
-                              "display_url": "facebook.com/tyyoung21",
-                              "indices": [
-                                  0,
-                                  23
-                              ]
-                          }
-                      ]
-                  },
-                  "description": {
-                      "urls": []
-                  }
-              },
-              "protected": false,
-              "followers_count": 211,
-              "friends_count": 1115,
-              "listed_count": 0,
-              "created_at": "Sun Apr 01 07:25:58 +0000 2018",
-              "favourites_count": 7314,
-              "utc_offset": null,
-              "time_zone": null,
-              "geo_enabled": false,
-              "verified": false,
-              "statuses_count": 1585,
-              "lang": "en",
-              "contributors_enabled": false,
-              "is_translator": false,
-              "is_translation_enabled": false,
-              "profile_background_color": "F5F8FA",
-              "profile_background_image_url": null,
-              "profile_background_image_url_https": null,
-              "profile_background_tile": false,
-              "profile_image_url": "http://pbs.twimg.com/profile_images/1066150031617478656/aM_ljlYV_normal.jpg",
-              "profile_image_url_https": "https://pbs.twimg.com/profile_images/1066150031617478656/aM_ljlYV_normal.jpg",
-              "profile_banner_url": "https://pbs.twimg.com/profile_banners/980345512325820416/1542556311",
-              "profile_link_color": "1DA1F2",
-              "profile_sidebar_border_color": "C0DEED",
-              "profile_sidebar_fill_color": "DDEEF6",
-              "profile_text_color": "333333",
-              "profile_use_background_image": true,
-              "has_extended_profile": true,
-              "default_profile": true,
-              "default_profile_image": false,
-              "following": null,
-              "follow_request_sent": null,
-              "notifications": null,
-              "translator_type": "none"
-          },
-          "geo": null,
-          "coordinates": null,
-          "place": null,
-          "contributors": null,
-          "is_quote_status": false,
-          "retweet_count": 0,
-          "favorite_count": 0,
-          "favorited": false,
-          "retweeted": false,
-          "possibly_sensitive": false,
-          "lang": "en"
-      },
-      {
-          "created_at": "Wed Mar 20 03:31:03 +0000 2019",
-          "id": 1108209307202383874,
-          "id_str": "1108209307202383874",
-          "text": "ASSAULT - COLD at 10500 BLOCK OF NE SISKIYOU ST, PORTLAND, OR [Portland Police #PP19000088383] 19:08 #pdx911",
-          "truncated": false,
-          "entities": {
-              "hashtags": [
-                  {
-                      "text": "PP19000088383",
-                      "indices": [
-                          79,
-                          93
-                      ]
-                  },
-                  {
-                      "text": "pdx911",
-                      "indices": [
-                          101,
-                          108
-                      ]
-                  }
-              ],
-              "symbols": [],
-              "user_mentions": [],
-              "urls": []
-          },
-          "metadata": {
-              "iso_language_code": "en",
-              "result_type": "recent"
-          },
-          "source": "<a href=\"http://www.portlandonline.com/cgis/metadata/viewer/display.cfm?Meta_layer_id=53215&Db_type=sde&City_Only=False\" rel=\"nofollow\">City of Portland 911 feed</a>",
-          "in_reply_to_status_id": null,
-          "in_reply_to_status_id_str": null,
-          "in_reply_to_user_id": null,
-          "in_reply_to_user_id_str": null,
-          "in_reply_to_screen_name": null,
-          "user": {
-              "id": 1602852614,
-              "id_str": "1602852614",
-              "name": "Portland Police log",
-              "screen_name": "pdxpolicelog",
-              "location": "Portland, Oregon",
-              "description": "Unofficial automated posting of calls for service minus traffic stops, created by @rosecitytransit; scanner feed: https://t.co/dMzXK1YIMh",
-              "url": "https://t.co/IwBmkSVhUj",
-              "entities": {
-                  "url": {
-                      "urls": [
-                          {
-                              "url": "https://t.co/IwBmkSVhUj",
-                              "expanded_url": "http://www.civicapps.org/datasets/911-dispatch-incidents-georss",
-                              "display_url": "civicapps.org/datasets/911-d…",
-                              "indices": [
-                                  0,
-                                  23
-                              ]
-                          }
-                      ]
-                  },
-                  "description": {
-                      "urls": [
-                          {
-                              "url": "https://t.co/dMzXK1YIMh",
-                              "expanded_url": "http://www.broadcastify.com/listen/feed/20613/",
-                              "display_url": "broadcastify.com/listen/feed/20…",
-                              "indices": [
-                                  114,
-                                  137
-                              ]
-                          }
-                      ]
-                  }
-              },
-              "protected": false,
-              "followers_count": 5137,
-              "friends_count": 10,
-              "listed_count": 168,
-              "created_at": "Thu Jul 18 07:49:09 +0000 2013",
-              "favourites_count": 0,
-              "utc_offset": null,
-              "time_zone": null,
-              "geo_enabled": true,
-              "verified": false,
-              "statuses_count": 998801,
-              "lang": "en",
-              "contributors_enabled": false,
-              "is_translator": false,
-              "is_translation_enabled": false,
-              "profile_background_color": "C0DEED",
-              "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
-              "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
-              "profile_background_tile": false,
-              "profile_image_url": "http://pbs.twimg.com/profile_images/378800000159851200/b612e8f794ac897d2c77c5d0e97e7e86_normal.png",
-              "profile_image_url_https": "https://pbs.twimg.com/profile_images/378800000159851200/b612e8f794ac897d2c77c5d0e97e7e86_normal.png",
-              "profile_link_color": "1DA1F2",
-              "profile_sidebar_border_color": "C0DEED",
-              "profile_sidebar_fill_color": "DDEEF6",
-              "profile_text_color": "333333",
-              "profile_use_background_image": true,
-              "has_extended_profile": false,
-              "default_profile": true,
-              "default_profile_image": false,
-              "following": null,
-              "follow_request_sent": null,
-              "notifications": null,
-              "translator_type": "none"
-          },
-          "geo": {
-              "type": "Point",
-              "coordinates": [
-                  45.544264,
-                  -122.554607
-              ]
-          },
-          "coordinates": {
-              "type": "Point",
-              "coordinates": [
-                  -122.554607,
-                  45.544264
-              ]
-          },
-          "place": {
-              "id": "ac88a4f17a51c7fc",
-              "url": "https://api.twitter.com/1.1/geo/id/ac88a4f17a51c7fc.json",
-              "place_type": "city",
-              "name": "Portland",
-              "full_name": "Portland, OR",
-              "country_code": "US",
-              "country": "United States",
-              "contained_within": [],
-              "bounding_box": {
-                  "type": "Polygon",
-                  "coordinates": [
-                      [
-                          [
-                              -122.7900653,
-                              45.421863
-                          ],
-                          [
-                              -122.471751,
-                              45.421863
-                          ],
-                          [
-                              -122.471751,
-                              45.6509405
-                          ],
-                          [
-                              -122.7900653,
-                              45.6509405
-                          ]
-                      ]
-                  ]
-              },
-              "attributes": {}
-          },
-          "contributors": null,
-          "is_quote_status": false,
-          "retweet_count": 0,
-          "favorite_count": 0,
-          "favorited": false,
-          "retweeted": false,
-          "lang": "en"
-      },
-      {
-          "created_at": "Wed Mar 20 03:31:02 +0000 2019",
-          "id": 1108209304778108928,
-          "id_str": "1108209304778108928",
-          "text": "GASINV - NATURAL GAS ODOR OR INVESTIGATION at 8900 BLOCK OF SE CLAY ST, PORTLAND, OR [Portland Fire #RP19000023719] 20:16 #pdx911",
-          "truncated": false,
-          "entities": {
-              "hashtags": [
-                  {
-                      "text": "RP19000023719",
-                      "indices": [
-                          100,
-                          114
-                      ]
-                  },
-                  {
-                      "text": "pdx911",
-                      "indices": [
-                          122,
-                          129
-                      ]
-                  }
-              ],
-              "symbols": [],
-              "user_mentions": [],
-              "urls": []
-          },
-          "metadata": {
-              "iso_language_code": "en",
-              "result_type": "recent"
-          },
-          "source": "<a href=\"http://www.portlandonline.com/cgis/metadata/viewer/display.cfm?Meta_layer_id=53215&Db_type=sde&City_Only=False\" rel=\"nofollow\">City of Portland Fire/EMS feed</a>",
-          "in_reply_to_status_id": null,
-          "in_reply_to_status_id_str": null,
-          "in_reply_to_user_id": null,
-          "in_reply_to_user_id_str": null,
-          "in_reply_to_screen_name": null,
-          "user": {
-              "id": 1606472113,
-              "id_str": "1606472113",
-              "name": "Mult Co Fire/EMS log",
-              "screen_name": "pdxfirelog",
-              "location": "Multnomah County, Oregon",
-              "description": "Unofficial automated posting of Portland, Oregon area calls for service, by @rosecitytransit; scanner feed: https://t.co/bC9rC2066l",
-              "url": "https://t.co/IwBmkSVhUj",
-              "entities": {
-                  "url": {
-                      "urls": [
-                          {
-                              "url": "https://t.co/IwBmkSVhUj",
-                              "expanded_url": "http://www.civicapps.org/datasets/911-dispatch-incidents-georss",
-                              "display_url": "civicapps.org/datasets/911-d…",
-                              "indices": [
-                                  0,
-                                  23
-                              ]
-                          }
-                      ]
-                  },
-                  "description": {
-                      "urls": [
-                          {
-                              "url": "https://t.co/bC9rC2066l",
-                              "expanded_url": "https://www.broadcastify.com/listen/feed/20766",
-                              "display_url": "broadcastify.com/listen/feed/20…",
-                              "indices": [
-                                  108,
-                                  131
-                              ]
-                          }
-                      ]
-                  }
-              },
-              "protected": false,
-              "followers_count": 2173,
-              "friends_count": 10,
-              "listed_count": 111,
-              "created_at": "Fri Jul 19 17:57:31 +0000 2013",
-              "favourites_count": 0,
-              "utc_offset": null,
-              "time_zone": null,
-              "geo_enabled": true,
-              "verified": false,
-              "statuses_count": 436322,
-              "lang": "en",
-              "contributors_enabled": false,
-              "is_translator": false,
-              "is_translation_enabled": false,
-              "profile_background_color": "000000",
-              "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
-              "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
-              "profile_background_tile": false,
-              "profile_image_url": "http://pbs.twimg.com/profile_images/378800000159869708/a7dca6309068564f8b338d4bd2301cb7_normal.png",
-              "profile_image_url_https": "https://pbs.twimg.com/profile_images/378800000159869708/a7dca6309068564f8b338d4bd2301cb7_normal.png",
-              "profile_link_color": "E81C4F",
-              "profile_sidebar_border_color": "000000",
-              "profile_sidebar_fill_color": "000000",
-              "profile_text_color": "000000",
-              "profile_use_background_image": false,
-              "has_extended_profile": false,
-              "default_profile": false,
-              "default_profile_image": false,
-              "following": null,
-              "follow_request_sent": null,
-              "notifications": null,
-              "translator_type": "none"
-          },
-          "geo": {
-              "type": "Point",
-              "coordinates": [
-                  45.511872,
-                  -122.571662
-              ]
-          },
-          "coordinates": {
-              "type": "Point",
-              "coordinates": [
-                  -122.571662,
-                  45.511872
-              ]
-          },
-          "place": {
-              "id": "ac88a4f17a51c7fc",
-              "url": "https://api.twitter.com/1.1/geo/id/ac88a4f17a51c7fc.json",
-              "place_type": "city",
-              "name": "Portland",
-              "full_name": "Portland, OR",
-              "country_code": "US",
-              "country": "United States",
-              "contained_within": [],
-              "bounding_box": {
-                  "type": "Polygon",
-                  "coordinates": [
-                      [
-                          [
-                              -122.7900653,
-                              45.421863
-                          ],
-                          [
-                              -122.471751,
-                              45.421863
-                          ],
-                          [
-                              -122.471751,
-                              45.6509405
-                          ],
-                          [
-                              -122.7900653,
-                              45.6509405
-                          ]
-                      ]
-                  ]
-              },
-              "attributes": {}
-          },
-          "contributors": null,
-          "is_quote_status": false,
-          "retweet_count": 0,
-          "favorite_count": 0,
-          "favorited": false,
-          "retweeted": false,
-          "lang": "en"
-      },
-      {
-          "created_at": "Wed Mar 20 03:31:00 +0000 2019",
-          "id": 1108209298000109568,
-          "id_str": "1108209298000109568",
-          "text": "@hmz1505 Sending lots of love &amp; good vibes! 💕",
-          "truncated": false,
-          "entities": {
-              "hashtags": [],
-              "symbols": [],
-              "user_mentions": [
-                  {
-                      "screen_name": "hmz1505",
-                      "name": "Heidi/YA Bibliophile 🦖",
-                      "id": 94374559,
-                      "id_str": "94374559",
-                      "indices": [
-                          0,
-                          8
-                      ]
-                  }
-              ],
-              "urls": []
-          },
-          "metadata": {
-              "iso_language_code": "en",
-              "result_type": "recent"
-          },
-          "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
-          "in_reply_to_status_id": 1108017056811749376,
-          "in_reply_to_status_id_str": "1108017056811749376",
-          "in_reply_to_user_id": 94374559,
-          "in_reply_to_user_id_str": "94374559",
-          "in_reply_to_screen_name": "hmz1505",
-          "user": {
-              "id": 95752280,
-              "id_str": "95752280",
-              "name": "Novel Novice",
-              "screen_name": "NovelNovice",
-              "location": "Portland, OR",
-              "description": "YA lit website focused on promoting literacy & reading. Reviews, features & more! Also featuring select Middle Grade & children's lit. Sara tweets here!",
-              "url": "http://t.co/NRnoHQ7AHt",
-              "entities": {
-                  "url": {
-                      "urls": [
-                          {
-                              "url": "http://t.co/NRnoHQ7AHt",
-                              "expanded_url": "http://novelnovice.com/",
-                              "display_url": "novelnovice.com",
-                              "indices": [
-                                  0,
-                                  22
-                              ]
-                          }
-                      ]
-                  },
-                  "description": {
-                      "urls": []
-                  }
-              },
-              "protected": false,
-              "followers_count": 8751,
-              "friends_count": 1231,
-              "listed_count": 419,
-              "created_at": "Wed Dec 09 22:53:18 +0000 2009",
-              "favourites_count": 3060,
-              "utc_offset": null,
-              "time_zone": null,
-              "geo_enabled": true,
-              "verified": false,
-              "statuses_count": 55416,
-              "lang": "en",
-              "contributors_enabled": false,
-              "is_translator": false,
-              "is_translation_enabled": false,
-              "profile_background_color": "000000",
-              "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
-              "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
-              "profile_background_tile": false,
-              "profile_image_url": "http://pbs.twimg.com/profile_images/935681089598668800/0PYLsGT7_normal.jpg",
-              "profile_image_url_https": "https://pbs.twimg.com/profile_images/935681089598668800/0PYLsGT7_normal.jpg",
-              "profile_banner_url": "https://pbs.twimg.com/profile_banners/95752280/1480639198",
-              "profile_link_color": "ABB8C2",
-              "profile_sidebar_border_color": "FFFFFF",
-              "profile_sidebar_fill_color": "D6F2FF",
-              "profile_text_color": "333333",
-              "profile_use_background_image": true,
-              "has_extended_profile": true,
-              "default_profile": false,
-              "default_profile_image": false,
-              "following": null,
-              "follow_request_sent": null,
-              "notifications": null,
-              "translator_type": "none"
-          },
-          "geo": null,
-          "coordinates": null,
-          "place": {
-              "id": "0834e7769aa05fce",
-              "url": "https://api.twitter.com/1.1/geo/id/0834e7769aa05fce.json",
-              "place_type": "city",
-              "name": "Milwaukie",
-              "full_name": "Milwaukie, OR",
-              "country_code": "US",
-              "country": "United States",
-              "contained_within": [],
-              "bounding_box": {
-                  "type": "Polygon",
-                  "coordinates": [
-                      [
-                          [
-                              -122.655374,
-                              45.424593
-                          ],
-                          [
-                              -122.5887907,
-                              45.424593
-                          ],
-                          [
-                              -122.5887907,
-                              45.4615366
-                          ],
-                          [
-                              -122.655374,
-                              45.4615366
-                          ]
-                      ]
-                  ]
-              },
-              "attributes": {}
-          },
-          "contributors": null,
-          "is_quote_status": false,
-          "retweet_count": 0,
-          "favorite_count": 0,
-          "favorited": false,
-          "retweeted": false,
-          "lang": "en"
-      },
-      {
-          "created_at": "Wed Mar 20 03:31:00 +0000 2019",
-          "id": 1108209296163000321,
-          "id_str": "1108209296163000321",
-          "text": "@ValerieInsinna This base is home to the 557th Weather Wing, the science headquarters for meteorology &amp; weather sup… https://t.co/AbKLQ8QkaR",
-          "truncated": true,
-          "entities": {
-              "hashtags": [],
-              "symbols": [],
-              "user_mentions": [
-                  {
-                      "screen_name": "ValerieInsinna",
-                      "name": "Valerie Insinna",
-                      "id": 158072303,
-                      "id_str": "158072303",
-                      "indices": [
-                          0,
-                          15
-                      ]
-                  }
-              ],
-              "urls": [
-                  {
-                      "url": "https://t.co/AbKLQ8QkaR",
-                      "expanded_url": "https://twitter.com/i/web/status/1108209296163000321",
-                      "display_url": "twitter.com/i/web/status/1…",
-                      "indices": [
-                          121,
-                          144
-                      ]
-                  }
-              ]
-          },
-          "metadata": {
-              "iso_language_code": "en",
-              "result_type": "recent"
-          },
-          "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
-          "in_reply_to_status_id": 1108106386003673088,
-          "in_reply_to_status_id_str": "1108106386003673088",
-          "in_reply_to_user_id": 158072303,
-          "in_reply_to_user_id_str": "158072303",
-          "in_reply_to_screen_name": "ValerieInsinna",
-          "user": {
-              "id": 2599222849,
-              "id_str": "2599222849",
-              "name": "Thomas Jenkins",
-              "screen_name": "Clim8Resilient",
-              "location": "Happy Valley, OR",
-              "description": "Meteorologist for Oregon Dept. of Forestry's Smoke Mgmt program. U.S. Navy Chief. UW alumnus.",
-              "url": "https://t.co/EZp6qFpHx1",
-              "entities": {
-                  "url": {
-                      "urls": [
-                          {
-                              "url": "https://t.co/EZp6qFpHx1",
-                              "expanded_url": "https://drive.google.com/drive/folders/1ZAWf4FdCw-g2GuY9dpf6L5jgQXmYXI-7",
-                              "display_url": "drive.google.com/drive/folders/…",
-                              "indices": [
-                                  0,
-                                  23
-                              ]
-                          }
-                      ]
-                  },
-                  "description": {
-                      "urls": []
-                  }
-              },
-              "protected": false,
-              "followers_count": 1333,
-              "friends_count": 2322,
-              "listed_count": 155,
-              "created_at": "Wed Jul 02 05:44:47 +0000 2014",
-              "favourites_count": 77116,
-              "utc_offset": null,
-              "time_zone": null,
-              "geo_enabled": true,
-              "verified": false,
-              "statuses_count": 44479,
-              "lang": "en",
-              "contributors_enabled": false,
-              "is_translator": false,
-              "is_translation_enabled": false,
-              "profile_background_color": "C0DEED",
-              "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
-              "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
-              "profile_background_tile": false,
-              "profile_image_url": "http://pbs.twimg.com/profile_images/1099565912162594816/S1DEHFzt_normal.jpg",
-              "profile_image_url_https": "https://pbs.twimg.com/profile_images/1099565912162594816/S1DEHFzt_normal.jpg",
-              "profile_banner_url": "https://pbs.twimg.com/profile_banners/2599222849/1519931057",
-              "profile_link_color": "1DA1F2",
-              "profile_sidebar_border_color": "C0DEED",
-              "profile_sidebar_fill_color": "DDEEF6",
-              "profile_text_color": "333333",
-              "profile_use_background_image": true,
-              "has_extended_profile": false,
-              "default_profile": true,
-              "default_profile_image": false,
-              "following": null,
-              "follow_request_sent": null,
-              "notifications": null,
-              "translator_type": "none"
-          },
-          "geo": null,
-          "coordinates": null,
-          "place": null,
-          "contributors": null,
-          "is_quote_status": false,
-          "retweet_count": 0,
-          "favorite_count": 0,
-          "favorited": false,
-          "retweeted": false,
-          "possibly_sensitive": false,
-          "lang": "en"
-      },
-      {
-          "created_at": "Wed Mar 20 03:30:56 +0000 2019",
-          "id": 1108209280795082752,
-          "id_str": "1108209280795082752",
-          "text": "I’m about convinced that rat lungworms are bent on conquering the world. New host: raw centipede snacks. https://t.co/cy8hYTM6Cc",
-          "truncated": false,
-          "entities": {
-              "hashtags": [],
-              "symbols": [],
-              "user_mentions": [],
-              "urls": [
-                  {
-                      "url": "https://t.co/cy8hYTM6Cc",
-                      "expanded_url": "https://www.sciencenews.org/article/medical-mystery-reveals-new-host-rat-lungworm-parasite?fbclid=IwAR3VEHlDh3iKBNgiPTxtGCyL04Y4-apd1-X9AB-ONX9PxBzjOGcGkp8X-HI",
-                      "display_url": "sciencenews.org/article/medica…",
-                      "indices": [
-                          105,
-                          128
-                      ]
-                  }
-              ]
-          },
-          "metadata": {
-              "iso_language_code": "en",
-              "result_type": "recent"
-          },
-          "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
-          "in_reply_to_status_id": null,
-          "in_reply_to_status_id_str": null,
-          "in_reply_to_user_id": null,
-          "in_reply_to_user_id_str": null,
-          "in_reply_to_screen_name": null,
-          "user": {
-              "id": 27129038,
-              "id_str": "27129038",
-              "name": "Robin Rosetta",
-              "screen_name": "PNWNurseryIPM",
-              "location": "Aurora, Oregon",
-              "description": "I'm an Oregon State University prof working with nursery pests. Sharing  my Shop of LIttle Horrors in tweets. Opinions? Yep, they're mine.",
-              "url": "http://t.co/3es2EwGRe7",
-              "entities": {
-                  "url": {
-                      "urls": [
-                          {
-                              "url": "http://t.co/3es2EwGRe7",
-                              "expanded_url": "http://oregonstate.edu/dept/nurspest/",
-                              "display_url": "oregonstate.edu/dept/nurspest/",
-                              "indices": [
-                                  0,
-                                  22
-                              ]
-                          }
-                      ]
-                  },
-                  "description": {
-                      "urls": []
-                  }
-              },
-              "protected": false,
-              "followers_count": 815,
-              "friends_count": 523,
-              "listed_count": 55,
-              "created_at": "Fri Mar 27 23:40:38 +0000 2009",
-              "favourites_count": 14336,
-              "utc_offset": null,
-              "time_zone": null,
-              "geo_enabled": false,
-              "verified": false,
-              "statuses_count": 7381,
-              "lang": "en",
-              "contributors_enabled": false,
-              "is_translator": false,
-              "is_translation_enabled": false,
-              "profile_background_color": "9AE4E8",
-              "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
-              "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
-              "profile_background_tile": true,
-              "profile_image_url": "http://pbs.twimg.com/profile_images/112387682/snails_and_slugs_normal.JPG",
-              "profile_image_url_https": "https://pbs.twimg.com/profile_images/112387682/snails_and_slugs_normal.JPG",
-              "profile_banner_url": "https://pbs.twimg.com/profile_banners/27129038/1398278655",
-              "profile_link_color": "0084B4",
-              "profile_sidebar_border_color": "BDDCAD",
-              "profile_sidebar_fill_color": "DDFFCC",
-              "profile_text_color": "333333",
-              "profile_use_background_image": true,
-              "has_extended_profile": false,
-              "default_profile": false,
-              "default_profile_image": false,
-              "following": null,
-              "follow_request_sent": null,
-              "notifications": null,
-              "translator_type": "none"
-          },
-          "geo": null,
-          "coordinates": null,
-          "place": null,
-          "contributors": null,
-          "is_quote_status": false,
-          "retweet_count": 0,
-          "favorite_count": 0,
-          "favorited": false,
-          "retweeted": false,
-          "possibly_sensitive": false,
-          "lang": "en"
-      },
-      {
-          "created_at": "Wed Mar 20 03:30:47 +0000 2019",
-          "id": 1108209240714424320,
-          "id_str": "1108209240714424320",
-          "text": "Hahha Wtf https://t.co/zDQxmrxyu0",
-          "truncated": false,
-          "entities": {
-              "hashtags": [],
-              "symbols": [],
-              "user_mentions": [],
-              "urls": [
-                  {
-                      "url": "https://t.co/zDQxmrxyu0",
-                      "expanded_url": "https://twitter.com/ryleeemlock/status/1108144971364868098",
-                      "display_url": "twitter.com/ryleeemlock/st…",
-                      "indices": [
-                          10,
-                          33
-                      ]
-                  }
-              ]
-          },
-          "metadata": {
-              "iso_language_code": "lv",
-              "result_type": "recent"
-          },
-          "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
-          "in_reply_to_status_id": null,
-          "in_reply_to_status_id_str": null,
-          "in_reply_to_user_id": null,
-          "in_reply_to_user_id_str": null,
-          "in_reply_to_screen_name": null,
-          "user": {
-              "id": 499399764,
-              "id_str": "499399764",
-              "name": "Fernanda🌻",
-              "screen_name": "Its_FernandaBoo",
-              "location": "Gresham, OR",
-              "description": "Fernanda Ventura, 24",
-              "url": null,
-              "entities": {
-                  "description": {
-                      "urls": []
-                  }
-              },
-              "protected": false,
-              "followers_count": 405,
-              "friends_count": 536,
-              "listed_count": 0,
-              "created_at": "Wed Feb 22 02:47:02 +0000 2012",
-              "favourites_count": 1016,
-              "utc_offset": null,
-              "time_zone": null,
-              "geo_enabled": true,
-              "verified": false,
-              "statuses_count": 7541,
-              "lang": "en",
-              "contributors_enabled": false,
-              "is_translator": false,
-              "is_translation_enabled": false,
-              "profile_background_color": "0099B9",
-              "profile_background_image_url": "http://abs.twimg.com/images/themes/theme10/bg.gif",
-              "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme10/bg.gif",
-              "profile_background_tile": true,
-              "profile_image_url": "http://pbs.twimg.com/profile_images/1093382029842894848/1mVHRqaq_normal.jpg",
-              "profile_image_url_https": "https://pbs.twimg.com/profile_images/1093382029842894848/1mVHRqaq_normal.jpg",
-              "profile_banner_url": "https://pbs.twimg.com/profile_banners/499399764/1552667055",
-              "profile_link_color": "0099B9",
-              "profile_sidebar_border_color": "C0DEED",
-              "profile_sidebar_fill_color": "DDEEF6",
-              "profile_text_color": "333333",
-              "profile_use_background_image": true,
-              "has_extended_profile": true,
-              "default_profile": false,
-              "default_profile_image": false,
-              "following": null,
-              "follow_request_sent": null,
-              "notifications": null,
-              "translator_type": "none"
-          },
-          "geo": null,
-          "coordinates": null,
-          "place": null,
-          "contributors": null,
-          "is_quote_status": true,
-          "quoted_status_id": 1108144971364868098,
-          "quoted_status_id_str": "1108144971364868098",
-          "quoted_status": {
-              "created_at": "Tue Mar 19 23:15:24 +0000 2019",
-              "id": 1108144971364868098,
-              "id_str": "1108144971364868098",
-              "text": "the shit I see on snapchat 😭 https://t.co/fjibjElu3Z",
-              "truncated": false,
-              "entities": {
-                  "hashtags": [],
-                  "symbols": [],
-                  "user_mentions": [],
-                  "urls": [],
-                  "media": [
-                      {
-                          "id": 1108144917069611009,
-                          "id_str": "1108144917069611009",
-                          "indices": [
-                              29,
-                              52
-                          ],
-                          "media_url": "http://pbs.twimg.com/ext_tw_video_thumb/1108144917069611009/pu/img/lIYOMDMCP7Ify81y.jpg",
-                          "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1108144917069611009/pu/img/lIYOMDMCP7Ify81y.jpg",
-                          "url": "https://t.co/fjibjElu3Z",
-                          "display_url": "pic.twitter.com/fjibjElu3Z",
-                          "expanded_url": "https://twitter.com/RyleeEmlock/status/1108144971364868098/video/1",
-                          "type": "photo",
-                          "sizes": {
-                              "thumb": {
-                                  "w": 150,
-                                  "h": 150,
-                                  "resize": "crop"
-                              },
-                              "large": {
-                                  "w": 620,
-                                  "h": 1080,
-                                  "resize": "fit"
-                              },
-                              "small": {
-                                  "w": 390,
-                                  "h": 680,
-                                  "resize": "fit"
-                              },
-                              "medium": {
-                                  "w": 620,
-                                  "h": 1080,
-                                  "resize": "fit"
-                              }
-                          }
-                      }
-                  ]
-              },
-              "extended_entities": {
-                  "media": [
-                      {
-                          "id": 1108144917069611009,
-                          "id_str": "1108144917069611009",
-                          "indices": [
-                              29,
-                              52
-                          ],
-                          "media_url": "http://pbs.twimg.com/ext_tw_video_thumb/1108144917069611009/pu/img/lIYOMDMCP7Ify81y.jpg",
-                          "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1108144917069611009/pu/img/lIYOMDMCP7Ify81y.jpg",
-                          "url": "https://t.co/fjibjElu3Z",
-                          "display_url": "pic.twitter.com/fjibjElu3Z",
-                          "expanded_url": "https://twitter.com/RyleeEmlock/status/1108144971364868098/video/1",
-                          "type": "video",
-                          "sizes": {
-                              "thumb": {
-                                  "w": 150,
-                                  "h": 150,
-                                  "resize": "crop"
-                              },
-                              "large": {
-                                  "w": 620,
-                                  "h": 1080,
-                                  "resize": "fit"
-                              },
-                              "small": {
-                                  "w": 390,
-                                  "h": 680,
-                                  "resize": "fit"
-                              },
-                              "medium": {
-                                  "w": 620,
-                                  "h": 1080,
-                                  "resize": "fit"
-                              }
-                          },
-                          "video_info": {
-                              "aspect_ratio": [
-                                  31,
-                                  54
-                              ],
-                              "duration_millis": 6983,
-                              "variants": [
-                                  {
-                                      "bitrate": 832000,
-                                      "content_type": "video/mp4",
-                                      "url": "https://video.twimg.com/ext_tw_video/1108144917069611009/pu/vid/360x626/bq2M6IC6cXKWsPeG.mp4?tag=8"
-                                  },
-                                  {
-                                      "bitrate": 632000,
-                                      "content_type": "video/mp4",
-                                      "url": "https://video.twimg.com/ext_tw_video/1108144917069611009/pu/vid/320x556/hw7-XVQrMa6zHaaL.mp4?tag=8"
-                                  },
-                                  {
-                                      "bitrate": 2176000,
-                                      "content_type": "video/mp4",
-                                      "url": "https://video.twimg.com/ext_tw_video/1108144917069611009/pu/vid/620x1080/4ALmeJc5Ckumii1K.mp4?tag=8"
-                                  },
-                                  {
-                                      "content_type": "application/x-mpegURL",
-                                      "url": "https://video.twimg.com/ext_tw_video/1108144917069611009/pu/pl/GrL3oNYOIlYbUdKo.m3u8?tag=8"
-                                  }
-                              ]
-                          },
-                          "additional_media_info": {
-                              "monetizable": false
-                          }
-                      }
-                  ]
-              },
-              "metadata": {
-                  "iso_language_code": "lv",
-                  "result_type": "recent"
-              },
-              "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
-              "in_reply_to_status_id": null,
-              "in_reply_to_status_id_str": null,
-              "in_reply_to_user_id": null,
-              "in_reply_to_user_id_str": null,
-              "in_reply_to_screen_name": null,
-              "user": {
-                  "id": 1090678826236022787,
-                  "id_str": "1090678826236022787",
-                  "name": "💛",
-                  "screen_name": "RyleeEmlock",
-                  "location": "check out my premium snap 💅🏻",
-                  "description": "I’ll only dm you if you’re cute... #BLM",
-                  "url": "https://t.co/6AJTfdtYZi",
-                  "entities": {
-                      "url": {
-                          "urls": [
-                              {
-                                  "url": "https://t.co/6AJTfdtYZi",
-                                  "expanded_url": "https://www.snapchat.com/add/ryleeemlock",
-                                  "display_url": "snapchat.com/add/ryleeemlock",
-                                  "indices": [
-                                      0,
-                                      23
-                                  ]
-                              }
-                          ]
-                      },
-                      "description": {
-                          "urls": []
-                      }
-                  },
-                  "protected": false,
-                  "followers_count": 1118,
-                  "friends_count": 25,
-                  "listed_count": 1,
-                  "created_at": "Wed Jan 30 18:31:10 +0000 2019",
-                  "favourites_count": 444,
-                  "utc_offset": null,
-                  "time_zone": null,
-                  "geo_enabled": false,
-                  "verified": false,
-                  "statuses_count": 246,
-                  "lang": "en",
-                  "contributors_enabled": false,
-                  "is_translator": false,
-                  "is_translation_enabled": false,
-                  "profile_background_color": "F5F8FA",
-                  "profile_background_image_url": null,
-                  "profile_background_image_url_https": null,
-                  "profile_background_tile": false,
-                  "profile_image_url": "http://pbs.twimg.com/profile_images/1100835379446464513/qslzjKUW_normal.jpg",
-                  "profile_image_url_https": "https://pbs.twimg.com/profile_images/1100835379446464513/qslzjKUW_normal.jpg",
-                  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1090678826236022787/1551294787",
-                  "profile_link_color": "1DA1F2",
-                  "profile_sidebar_border_color": "C0DEED",
-                  "profile_sidebar_fill_color": "DDEEF6",
-                  "profile_text_color": "333333",
-                  "profile_use_background_image": true,
-                  "has_extended_profile": false,
-                  "default_profile": true,
-                  "default_profile_image": false,
-                  "following": null,
-                  "follow_request_sent": null,
-                  "notifications": null,
-                  "translator_type": "none"
-              },
-              "geo": null,
-              "coordinates": null,
-              "place": null,
-              "contributors": null,
-              "is_quote_status": false,
-              "retweet_count": 637,
-              "favorite_count": 2578,
-              "favorited": false,
-              "retweeted": false,
-              "possibly_sensitive": false,
-              "lang": "en"
-          },
-          "retweet_count": 0,
-          "favorite_count": 0,
-          "favorited": false,
-          "retweeted": false,
-          "possibly_sensitive": false,
-          "lang": "lv"
-      },
-      {
-          "created_at": "Wed Mar 20 03:30:39 +0000 2019",
-          "id": 1108209208829177861,
-          "id_str": "1108209208829177861",
-          "text": "#TheOldMeWouldHave hit on you till you stopped me cold.\nThen I would have hit on your gal pals.\nThen your mother.\nZ… https://t.co/mmJDApmAaC",
-          "truncated": true,
-          "entities": {
-              "hashtags": [
-                  {
-                      "text": "TheOldMeWouldHave",
-                      "indices": [
-                          0,
-                          18
-                      ]
-                  }
-              ],
-              "symbols": [],
-              "user_mentions": [],
-              "urls": [
-                  {
-                      "url": "https://t.co/mmJDApmAaC",
-                      "expanded_url": "https://twitter.com/i/web/status/1108209208829177861",
-                      "display_url": "twitter.com/i/web/status/1…",
-                      "indices": [
-                          117,
-                          140
-                      ]
-                  }
-              ]
-          },
-          "metadata": {
-              "iso_language_code": "en",
-              "result_type": "recent"
-          },
-          "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
-          "in_reply_to_status_id": null,
-          "in_reply_to_status_id_str": null,
-          "in_reply_to_user_id": null,
-          "in_reply_to_user_id_str": null,
-          "in_reply_to_screen_name": null,
-          "user": {
-              "id": 383030956,
-              "id_str": "383030956",
-              "name": "Name cannot be blank",
-              "screen_name": "camaswaguy",
-              "location": "camas washington",
-              "description": "Man of the people, tired of the rhetoric, humorist, a friendly face in the sea of moodiness",
-              "url": null,
-              "entities": {
-                  "description": {
-                      "urls": []
-                  }
-              },
-              "protected": false,
-              "followers_count": 1765,
-              "friends_count": 4067,
-              "listed_count": 23,
-              "created_at": "Sat Oct 01 04:15:21 +0000 2011",
-              "favourites_count": 8679,
-              "utc_offset": null,
-              "time_zone": null,
-              "geo_enabled": true,
-              "verified": false,
-              "statuses_count": 11525,
-              "lang": "en",
-              "contributors_enabled": false,
-              "is_translator": false,
-              "is_translation_enabled": false,
-              "profile_background_color": "C0DEED",
-              "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
-              "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
-              "profile_background_tile": false,
-              "profile_image_url": "http://pbs.twimg.com/profile_images/1046203266978086912/RZcn5icJ_normal.jpg",
-              "profile_image_url_https": "https://pbs.twimg.com/profile_images/1046203266978086912/RZcn5icJ_normal.jpg",
-              "profile_banner_url": "https://pbs.twimg.com/profile_banners/383030956/1538269386",
-              "profile_link_color": "1DA1F2",
-              "profile_sidebar_border_color": "C0DEED",
-              "profile_sidebar_fill_color": "DDEEF6",
-              "profile_text_color": "333333",
-              "profile_use_background_image": true,
-              "has_extended_profile": true,
-              "default_profile": true,
-              "default_profile_image": false,
-              "following": null,
-              "follow_request_sent": null,
-              "notifications": null,
-              "translator_type": "none"
-          },
-          "geo": null,
-          "coordinates": null,
-          "place": {
-              "id": "219460d3060c1d2e",
-              "url": "https://api.twitter.com/1.1/geo/id/219460d3060c1d2e.json",
-              "place_type": "city",
-              "name": "Camas",
-              "full_name": "Camas, WA",
-              "country_code": "US",
-              "country": "United States",
-              "contained_within": [],
-              "bounding_box": {
-                  "type": "Polygon",
-                  "coordinates": [
-                      [
-                          [
-                              -122.4742247,
-                              45.57579
-                          ],
-                          [
-                              -122.367318,
-                              45.57579
-                          ],
-                          [
-                              -122.367318,
-                              45.6330389
-                          ],
-                          [
-                              -122.4742247,
-                              45.6330389
-                          ]
-                      ]
-                  ]
-              },
-              "attributes": {}
-          },
-          "contributors": null,
-          "is_quote_status": false,
-          "retweet_count": 0,
-          "favorite_count": 0,
-          "favorited": false,
-          "retweeted": false,
-          "possibly_sensitive": false,
-          "lang": "en"
-      }
-  ],
-  "search_metadata": {
-      "completed_in": 0.065,
-      "max_id": 1108209395643633664,
-      "max_id_str": "1108209395643633664",
-      "next_results": "?max_id=1108209208829177860&q=&geocode=45.209358%2C-122.246009%2C30mi&count=10&include_entities=1",
-      "query": "",
-      "refresh_url": "?since_id=1108209395643633664&q=&geocode=45.209358%2C-122.246009%2C30mi&include_entities=1",
-      "count": 10,
-      "since_id": 0,
-      "since_id_str": "0"
-  }
-}
+[
+    {
+        "created_at": "Wed Mar 20 03:31:24 +0000 2019",
+        "id": 1108209395643633664,
+        "id_str": "1108209395643633664",
+        "text": "@suchaunique اذا قريب بشريه واذا بعيد ارجع ارقد",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "suchaunique",
+                    "name": "Uni",
+                    "id": 2852455447,
+                    "id_str": "2852455447",
+                    "indices": [
+                        0,
+                        12
+                    ]
+                }
+            ],
+            "urls": []
+        },
+        "metadata": {
+            "iso_language_code": "ar",
+            "result_type": "recent"
+        },
+        "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+        "in_reply_to_status_id": 1108209234360127488,
+        "in_reply_to_status_id_str": "1108209234360127488",
+        "in_reply_to_user_id": 2852455447,
+        "in_reply_to_user_id_str": "2852455447",
+        "in_reply_to_screen_name": "suchaunique",
+        "user": {
+            "id": 1066638866512310272,
+            "id_str": "1066638866512310272",
+            "name": "➕",
+            "screen_name": "_teacher911",
+            "location": "Boring",
+            "description": "",
+            "url": null,
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 25,
+            "friends_count": 152,
+            "listed_count": 0,
+            "created_at": "Sun Nov 25 10:24:57 +0000 2018",
+            "favourites_count": 142,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": false,
+            "statuses_count": 363,
+            "lang": "ar",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "F5F8FA",
+            "profile_background_image_url": null,
+            "profile_background_image_url_https": null,
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1107763319031713793/IcaOOp1w_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1107763319031713793/IcaOOp1w_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/1066638866512310272/1547671507",
+            "profile_link_color": "1DA1F2",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 0,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "ar"
+    },
+    {
+        "created_at": "Wed Mar 20 03:31:23 +0000 2019",
+        "id": 1108209393160445952,
+        "id_str": "1108209393160445952",
+        "text": "@mcdonaldcomedy If it was this heart, I believe it @mcdonaldcomedy 😂 https://t.co/6GegCJZmGg",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "mcdonaldcomedy",
+                    "name": "Michael McDonald",
+                    "id": 85832891,
+                    "id_str": "85832891",
+                    "indices": [
+                        0,
+                        15
+                    ]
+                },
+                {
+                    "screen_name": "mcdonaldcomedy",
+                    "name": "Michael McDonald",
+                    "id": 85832891,
+                    "id_str": "85832891",
+                    "indices": [
+                        51,
+                        66
+                    ]
+                }
+            ],
+            "urls": [],
+            "media": [
+                {
+                    "id": 1108209387464646658,
+                    "id_str": "1108209387464646658",
+                    "indices": [
+                        69,
+                        92
+                    ],
+                    "media_url": "http://pbs.twimg.com/tweet_video_thumb/D2EmkPyVYAIQxjs.jpg",
+                    "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/D2EmkPyVYAIQxjs.jpg",
+                    "url": "https://t.co/6GegCJZmGg",
+                    "display_url": "pic.twitter.com/6GegCJZmGg",
+                    "expanded_url": "https://twitter.com/Tmacreactz/status/1108209393160445952/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "small": {
+                            "w": 450,
+                            "h": 336,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 450,
+                            "h": 336,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 450,
+                            "h": 336,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 1108209387464646658,
+                    "id_str": "1108209387464646658",
+                    "indices": [
+                        69,
+                        92
+                    ],
+                    "media_url": "http://pbs.twimg.com/tweet_video_thumb/D2EmkPyVYAIQxjs.jpg",
+                    "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/D2EmkPyVYAIQxjs.jpg",
+                    "url": "https://t.co/6GegCJZmGg",
+                    "display_url": "pic.twitter.com/6GegCJZmGg",
+                    "expanded_url": "https://twitter.com/Tmacreactz/status/1108209393160445952/photo/1",
+                    "type": "animated_gif",
+                    "sizes": {
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "small": {
+                            "w": 450,
+                            "h": 336,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 450,
+                            "h": 336,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 450,
+                            "h": 336,
+                            "resize": "fit"
+                        }
+                    },
+                    "video_info": {
+                        "aspect_ratio": [
+                            75,
+                            56
+                        ],
+                        "variants": [
+                            {
+                                "bitrate": 0,
+                                "content_type": "video/mp4",
+                                "url": "https://video.twimg.com/tweet_video/D2EmkPyVYAIQxjs.mp4"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "iso_language_code": "en",
+            "result_type": "recent"
+        },
+        "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+        "in_reply_to_status_id": 1108208712215199744,
+        "in_reply_to_status_id_str": "1108208712215199744",
+        "in_reply_to_user_id": 85832891,
+        "in_reply_to_user_id_str": "85832891",
+        "in_reply_to_screen_name": "mcdonaldcomedy",
+        "user": {
+            "id": 980345512325820416,
+            "id_str": "980345512325820416",
+            "name": "Tyler Young",
+            "screen_name": "Tmacreactz",
+            "location": "Gladstone, OR",
+            "description": "GO DUCKS 🦆 and GO BLAZERS 🔴⚫️ Paranormal Researcher 👻 Family Man ♥️",
+            "url": "https://t.co/b6eXEhP6cJ",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "https://t.co/b6eXEhP6cJ",
+                            "expanded_url": "http://facebook.com/tyyoung21",
+                            "display_url": "facebook.com/tyyoung21",
+                            "indices": [
+                                0,
+                                23
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 211,
+            "friends_count": 1115,
+            "listed_count": 0,
+            "created_at": "Sun Apr 01 07:25:58 +0000 2018",
+            "favourites_count": 7314,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": false,
+            "statuses_count": 1585,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "F5F8FA",
+            "profile_background_image_url": null,
+            "profile_background_image_url_https": null,
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1066150031617478656/aM_ljlYV_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1066150031617478656/aM_ljlYV_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/980345512325820416/1542556311",
+            "profile_link_color": "1DA1F2",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": true,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 0,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Wed Mar 20 03:31:03 +0000 2019",
+        "id": 1108209307202383874,
+        "id_str": "1108209307202383874",
+        "text": "ASSAULT - COLD at 10500 BLOCK OF NE SISKIYOU ST, PORTLAND, OR [Portland Police #PP19000088383] 19:08 #pdx911",
+        "truncated": false,
+        "entities": {
+            "hashtags": [
+                {
+                    "text": "PP19000088383",
+                    "indices": [
+                        79,
+                        93
+                    ]
+                },
+                {
+                    "text": "pdx911",
+                    "indices": [
+                        101,
+                        108
+                    ]
+                }
+            ],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": []
+        },
+        "metadata": {
+            "iso_language_code": "en",
+            "result_type": "recent"
+        },
+        "source": "<a href=\"http://www.portlandonline.com/cgis/metadata/viewer/display.cfm?Meta_layer_id=53215&Db_type=sde&City_Only=False\" rel=\"nofollow\">City of Portland 911 feed</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 1602852614,
+            "id_str": "1602852614",
+            "name": "Portland Police log",
+            "screen_name": "pdxpolicelog",
+            "location": "Portland, Oregon",
+            "description": "Unofficial automated posting of calls for service minus traffic stops, created by @rosecitytransit; scanner feed: https://t.co/dMzXK1YIMh",
+            "url": "https://t.co/IwBmkSVhUj",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "https://t.co/IwBmkSVhUj",
+                            "expanded_url": "http://www.civicapps.org/datasets/911-dispatch-incidents-georss",
+                            "display_url": "civicapps.org/datasets/911-d…",
+                            "indices": [
+                                0,
+                                23
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": [
+                        {
+                            "url": "https://t.co/dMzXK1YIMh",
+                            "expanded_url": "http://www.broadcastify.com/listen/feed/20613/",
+                            "display_url": "broadcastify.com/listen/feed/20…",
+                            "indices": [
+                                114,
+                                137
+                            ]
+                        }
+                    ]
+                }
+            },
+            "protected": false,
+            "followers_count": 5137,
+            "friends_count": 10,
+            "listed_count": 168,
+            "created_at": "Thu Jul 18 07:49:09 +0000 2013",
+            "favourites_count": 0,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 998801,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/378800000159851200/b612e8f794ac897d2c77c5d0e97e7e86_normal.png",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/378800000159851200/b612e8f794ac897d2c77c5d0e97e7e86_normal.png",
+            "profile_link_color": "1DA1F2",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": {
+            "type": "Point",
+            "coordinates": [
+                45.544264,
+                -122.554607
+            ]
+        },
+        "coordinates": {
+            "type": "Point",
+            "coordinates": [
+                -122.554607,
+                45.544264
+            ]
+        },
+        "place": {
+            "id": "ac88a4f17a51c7fc",
+            "url": "https://api.twitter.com/1.1/geo/id/ac88a4f17a51c7fc.json",
+            "place_type": "city",
+            "name": "Portland",
+            "full_name": "Portland, OR",
+            "country_code": "US",
+            "country": "United States",
+            "contained_within": [],
+            "bounding_box": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -122.7900653,
+                            45.421863
+                        ],
+                        [
+                            -122.471751,
+                            45.421863
+                        ],
+                        [
+                            -122.471751,
+                            45.6509405
+                        ],
+                        [
+                            -122.7900653,
+                            45.6509405
+                        ]
+                    ]
+                ]
+            },
+            "attributes": {}
+        },
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 0,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Wed Mar 20 03:31:02 +0000 2019",
+        "id": 1108209304778108928,
+        "id_str": "1108209304778108928",
+        "text": "GASINV - NATURAL GAS ODOR OR INVESTIGATION at 8900 BLOCK OF SE CLAY ST, PORTLAND, OR [Portland Fire #RP19000023719] 20:16 #pdx911",
+        "truncated": false,
+        "entities": {
+            "hashtags": [
+                {
+                    "text": "RP19000023719",
+                    "indices": [
+                        100,
+                        114
+                    ]
+                },
+                {
+                    "text": "pdx911",
+                    "indices": [
+                        122,
+                        129
+                    ]
+                }
+            ],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": []
+        },
+        "metadata": {
+            "iso_language_code": "en",
+            "result_type": "recent"
+        },
+        "source": "<a href=\"http://www.portlandonline.com/cgis/metadata/viewer/display.cfm?Meta_layer_id=53215&Db_type=sde&City_Only=False\" rel=\"nofollow\">City of Portland Fire/EMS feed</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 1606472113,
+            "id_str": "1606472113",
+            "name": "Mult Co Fire/EMS log",
+            "screen_name": "pdxfirelog",
+            "location": "Multnomah County, Oregon",
+            "description": "Unofficial automated posting of Portland, Oregon area calls for service, by @rosecitytransit; scanner feed: https://t.co/bC9rC2066l",
+            "url": "https://t.co/IwBmkSVhUj",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "https://t.co/IwBmkSVhUj",
+                            "expanded_url": "http://www.civicapps.org/datasets/911-dispatch-incidents-georss",
+                            "display_url": "civicapps.org/datasets/911-d…",
+                            "indices": [
+                                0,
+                                23
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": [
+                        {
+                            "url": "https://t.co/bC9rC2066l",
+                            "expanded_url": "https://www.broadcastify.com/listen/feed/20766",
+                            "display_url": "broadcastify.com/listen/feed/20…",
+                            "indices": [
+                                108,
+                                131
+                            ]
+                        }
+                    ]
+                }
+            },
+            "protected": false,
+            "followers_count": 2173,
+            "friends_count": 10,
+            "listed_count": 111,
+            "created_at": "Fri Jul 19 17:57:31 +0000 2013",
+            "favourites_count": 0,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 436322,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "000000",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/378800000159869708/a7dca6309068564f8b338d4bd2301cb7_normal.png",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/378800000159869708/a7dca6309068564f8b338d4bd2301cb7_normal.png",
+            "profile_link_color": "E81C4F",
+            "profile_sidebar_border_color": "000000",
+            "profile_sidebar_fill_color": "000000",
+            "profile_text_color": "000000",
+            "profile_use_background_image": false,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": {
+            "type": "Point",
+            "coordinates": [
+                45.511872,
+                -122.571662
+            ]
+        },
+        "coordinates": {
+            "type": "Point",
+            "coordinates": [
+                -122.571662,
+                45.511872
+            ]
+        },
+        "place": {
+            "id": "ac88a4f17a51c7fc",
+            "url": "https://api.twitter.com/1.1/geo/id/ac88a4f17a51c7fc.json",
+            "place_type": "city",
+            "name": "Portland",
+            "full_name": "Portland, OR",
+            "country_code": "US",
+            "country": "United States",
+            "contained_within": [],
+            "bounding_box": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -122.7900653,
+                            45.421863
+                        ],
+                        [
+                            -122.471751,
+                            45.421863
+                        ],
+                        [
+                            -122.471751,
+                            45.6509405
+                        ],
+                        [
+                            -122.7900653,
+                            45.6509405
+                        ]
+                    ]
+                ]
+            },
+            "attributes": {}
+        },
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 0,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Wed Mar 20 03:31:00 +0000 2019",
+        "id": 1108209298000109568,
+        "id_str": "1108209298000109568",
+        "text": "@hmz1505 Sending lots of love &amp; good vibes! 💕",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "hmz1505",
+                    "name": "Heidi/YA Bibliophile 🦖",
+                    "id": 94374559,
+                    "id_str": "94374559",
+                    "indices": [
+                        0,
+                        8
+                    ]
+                }
+            ],
+            "urls": []
+        },
+        "metadata": {
+            "iso_language_code": "en",
+            "result_type": "recent"
+        },
+        "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+        "in_reply_to_status_id": 1108017056811749376,
+        "in_reply_to_status_id_str": "1108017056811749376",
+        "in_reply_to_user_id": 94374559,
+        "in_reply_to_user_id_str": "94374559",
+        "in_reply_to_screen_name": "hmz1505",
+        "user": {
+            "id": 95752280,
+            "id_str": "95752280",
+            "name": "Novel Novice",
+            "screen_name": "NovelNovice",
+            "location": "Portland, OR",
+            "description": "YA lit website focused on promoting literacy & reading. Reviews, features & more! Also featuring select Middle Grade & children's lit. Sara tweets here!",
+            "url": "http://t.co/NRnoHQ7AHt",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://t.co/NRnoHQ7AHt",
+                            "expanded_url": "http://novelnovice.com/",
+                            "display_url": "novelnovice.com",
+                            "indices": [
+                                0,
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 8751,
+            "friends_count": 1231,
+            "listed_count": 419,
+            "created_at": "Wed Dec 09 22:53:18 +0000 2009",
+            "favourites_count": 3060,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 55416,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "000000",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/935681089598668800/0PYLsGT7_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/935681089598668800/0PYLsGT7_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/95752280/1480639198",
+            "profile_link_color": "ABB8C2",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "D6F2FF",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": {
+            "id": "0834e7769aa05fce",
+            "url": "https://api.twitter.com/1.1/geo/id/0834e7769aa05fce.json",
+            "place_type": "city",
+            "name": "Milwaukie",
+            "full_name": "Milwaukie, OR",
+            "country_code": "US",
+            "country": "United States",
+            "contained_within": [],
+            "bounding_box": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -122.655374,
+                            45.424593
+                        ],
+                        [
+                            -122.5887907,
+                            45.424593
+                        ],
+                        [
+                            -122.5887907,
+                            45.4615366
+                        ],
+                        [
+                            -122.655374,
+                            45.4615366
+                        ]
+                    ]
+                ]
+            },
+            "attributes": {}
+        },
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 0,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Wed Mar 20 03:31:00 +0000 2019",
+        "id": 1108209296163000321,
+        "id_str": "1108209296163000321",
+        "text": "@ValerieInsinna This base is home to the 557th Weather Wing, the science headquarters for meteorology &amp; weather sup… https://t.co/AbKLQ8QkaR",
+        "truncated": true,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "ValerieInsinna",
+                    "name": "Valerie Insinna",
+                    "id": 158072303,
+                    "id_str": "158072303",
+                    "indices": [
+                        0,
+                        15
+                    ]
+                }
+            ],
+            "urls": [
+                {
+                    "url": "https://t.co/AbKLQ8QkaR",
+                    "expanded_url": "https://twitter.com/i/web/status/1108209296163000321",
+                    "display_url": "twitter.com/i/web/status/1…",
+                    "indices": [
+                        121,
+                        144
+                    ]
+                }
+            ]
+        },
+        "metadata": {
+            "iso_language_code": "en",
+            "result_type": "recent"
+        },
+        "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+        "in_reply_to_status_id": 1108106386003673088,
+        "in_reply_to_status_id_str": "1108106386003673088",
+        "in_reply_to_user_id": 158072303,
+        "in_reply_to_user_id_str": "158072303",
+        "in_reply_to_screen_name": "ValerieInsinna",
+        "user": {
+            "id": 2599222849,
+            "id_str": "2599222849",
+            "name": "Thomas Jenkins",
+            "screen_name": "Clim8Resilient",
+            "location": "Happy Valley, OR",
+            "description": "Meteorologist for Oregon Dept. of Forestry's Smoke Mgmt program. U.S. Navy Chief. UW alumnus.",
+            "url": "https://t.co/EZp6qFpHx1",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "https://t.co/EZp6qFpHx1",
+                            "expanded_url": "https://drive.google.com/drive/folders/1ZAWf4FdCw-g2GuY9dpf6L5jgQXmYXI-7",
+                            "display_url": "drive.google.com/drive/folders/…",
+                            "indices": [
+                                0,
+                                23
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 1333,
+            "friends_count": 2322,
+            "listed_count": 155,
+            "created_at": "Wed Jul 02 05:44:47 +0000 2014",
+            "favourites_count": 77116,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 44479,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1099565912162594816/S1DEHFzt_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1099565912162594816/S1DEHFzt_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/2599222849/1519931057",
+            "profile_link_color": "1DA1F2",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 0,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Wed Mar 20 03:30:56 +0000 2019",
+        "id": 1108209280795082752,
+        "id_str": "1108209280795082752",
+        "text": "I’m about convinced that rat lungworms are bent on conquering the world. New host: raw centipede snacks. https://t.co/cy8hYTM6Cc",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [
+                {
+                    "url": "https://t.co/cy8hYTM6Cc",
+                    "expanded_url": "https://www.sciencenews.org/article/medical-mystery-reveals-new-host-rat-lungworm-parasite?fbclid=IwAR3VEHlDh3iKBNgiPTxtGCyL04Y4-apd1-X9AB-ONX9PxBzjOGcGkp8X-HI",
+                    "display_url": "sciencenews.org/article/medica…",
+                    "indices": [
+                        105,
+                        128
+                    ]
+                }
+            ]
+        },
+        "metadata": {
+            "iso_language_code": "en",
+            "result_type": "recent"
+        },
+        "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 27129038,
+            "id_str": "27129038",
+            "name": "Robin Rosetta",
+            "screen_name": "PNWNurseryIPM",
+            "location": "Aurora, Oregon",
+            "description": "I'm an Oregon State University prof working with nursery pests. Sharing  my Shop of LIttle Horrors in tweets. Opinions? Yep, they're mine.",
+            "url": "http://t.co/3es2EwGRe7",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://t.co/3es2EwGRe7",
+                            "expanded_url": "http://oregonstate.edu/dept/nurspest/",
+                            "display_url": "oregonstate.edu/dept/nurspest/",
+                            "indices": [
+                                0,
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 815,
+            "friends_count": 523,
+            "listed_count": 55,
+            "created_at": "Fri Mar 27 23:40:38 +0000 2009",
+            "favourites_count": 14336,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": false,
+            "statuses_count": 7381,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "9AE4E8",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": true,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/112387682/snails_and_slugs_normal.JPG",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/112387682/snails_and_slugs_normal.JPG",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/27129038/1398278655",
+            "profile_link_color": "0084B4",
+            "profile_sidebar_border_color": "BDDCAD",
+            "profile_sidebar_fill_color": "DDFFCC",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 0,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Wed Mar 20 03:30:47 +0000 2019",
+        "id": 1108209240714424320,
+        "id_str": "1108209240714424320",
+        "text": "Hahha Wtf https://t.co/zDQxmrxyu0",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [
+                {
+                    "url": "https://t.co/zDQxmrxyu0",
+                    "expanded_url": "https://twitter.com/ryleeemlock/status/1108144971364868098",
+                    "display_url": "twitter.com/ryleeemlock/st…",
+                    "indices": [
+                        10,
+                        33
+                    ]
+                }
+            ]
+        },
+        "metadata": {
+            "iso_language_code": "lv",
+            "result_type": "recent"
+        },
+        "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 499399764,
+            "id_str": "499399764",
+            "name": "Fernanda🌻",
+            "screen_name": "Its_FernandaBoo",
+            "location": "Gresham, OR",
+            "description": "Fernanda Ventura, 24",
+            "url": null,
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 405,
+            "friends_count": 536,
+            "listed_count": 0,
+            "created_at": "Wed Feb 22 02:47:02 +0000 2012",
+            "favourites_count": 1016,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 7541,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "0099B9",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme10/bg.gif",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme10/bg.gif",
+            "profile_background_tile": true,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1093382029842894848/1mVHRqaq_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1093382029842894848/1mVHRqaq_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/499399764/1552667055",
+            "profile_link_color": "0099B9",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": true,
+        "quoted_status_id": 1108144971364868098,
+        "quoted_status_id_str": "1108144971364868098",
+        "quoted_status": {
+            "created_at": "Tue Mar 19 23:15:24 +0000 2019",
+            "id": 1108144971364868098,
+            "id_str": "1108144971364868098",
+            "text": "the shit I see on snapchat 😭 https://t.co/fjibjElu3Z",
+            "truncated": false,
+            "entities": {
+                "hashtags": [],
+                "symbols": [],
+                "user_mentions": [],
+                "urls": [],
+                "media": [
+                    {
+                        "id": 1108144917069611009,
+                        "id_str": "1108144917069611009",
+                        "indices": [
+                            29,
+                            52
+                        ],
+                        "media_url": "http://pbs.twimg.com/ext_tw_video_thumb/1108144917069611009/pu/img/lIYOMDMCP7Ify81y.jpg",
+                        "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1108144917069611009/pu/img/lIYOMDMCP7Ify81y.jpg",
+                        "url": "https://t.co/fjibjElu3Z",
+                        "display_url": "pic.twitter.com/fjibjElu3Z",
+                        "expanded_url": "https://twitter.com/RyleeEmlock/status/1108144971364868098/video/1",
+                        "type": "photo",
+                        "sizes": {
+                            "thumb": {
+                                "w": 150,
+                                "h": 150,
+                                "resize": "crop"
+                            },
+                            "large": {
+                                "w": 620,
+                                "h": 1080,
+                                "resize": "fit"
+                            },
+                            "small": {
+                                "w": 390,
+                                "h": 680,
+                                "resize": "fit"
+                            },
+                            "medium": {
+                                "w": 620,
+                                "h": 1080,
+                                "resize": "fit"
+                            }
+                        }
+                    }
+                ]
+            },
+            "extended_entities": {
+                "media": [
+                    {
+                        "id": 1108144917069611009,
+                        "id_str": "1108144917069611009",
+                        "indices": [
+                            29,
+                            52
+                        ],
+                        "media_url": "http://pbs.twimg.com/ext_tw_video_thumb/1108144917069611009/pu/img/lIYOMDMCP7Ify81y.jpg",
+                        "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1108144917069611009/pu/img/lIYOMDMCP7Ify81y.jpg",
+                        "url": "https://t.co/fjibjElu3Z",
+                        "display_url": "pic.twitter.com/fjibjElu3Z",
+                        "expanded_url": "https://twitter.com/RyleeEmlock/status/1108144971364868098/video/1",
+                        "type": "video",
+                        "sizes": {
+                            "thumb": {
+                                "w": 150,
+                                "h": 150,
+                                "resize": "crop"
+                            },
+                            "large": {
+                                "w": 620,
+                                "h": 1080,
+                                "resize": "fit"
+                            },
+                            "small": {
+                                "w": 390,
+                                "h": 680,
+                                "resize": "fit"
+                            },
+                            "medium": {
+                                "w": 620,
+                                "h": 1080,
+                                "resize": "fit"
+                            }
+                        },
+                        "video_info": {
+                            "aspect_ratio": [
+                                31,
+                                54
+                            ],
+                            "duration_millis": 6983,
+                            "variants": [
+                                {
+                                    "bitrate": 832000,
+                                    "content_type": "video/mp4",
+                                    "url": "https://video.twimg.com/ext_tw_video/1108144917069611009/pu/vid/360x626/bq2M6IC6cXKWsPeG.mp4?tag=8"
+                                },
+                                {
+                                    "bitrate": 632000,
+                                    "content_type": "video/mp4",
+                                    "url": "https://video.twimg.com/ext_tw_video/1108144917069611009/pu/vid/320x556/hw7-XVQrMa6zHaaL.mp4?tag=8"
+                                },
+                                {
+                                    "bitrate": 2176000,
+                                    "content_type": "video/mp4",
+                                    "url": "https://video.twimg.com/ext_tw_video/1108144917069611009/pu/vid/620x1080/4ALmeJc5Ckumii1K.mp4?tag=8"
+                                },
+                                {
+                                    "content_type": "application/x-mpegURL",
+                                    "url": "https://video.twimg.com/ext_tw_video/1108144917069611009/pu/pl/GrL3oNYOIlYbUdKo.m3u8?tag=8"
+                                }
+                            ]
+                        },
+                        "additional_media_info": {
+                            "monetizable": false
+                        }
+                    }
+                ]
+            },
+            "metadata": {
+                "iso_language_code": "lv",
+                "result_type": "recent"
+            },
+            "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 1090678826236022787,
+                "id_str": "1090678826236022787",
+                "name": "💛",
+                "screen_name": "RyleeEmlock",
+                "location": "check out my premium snap 💅🏻",
+                "description": "I’ll only dm you if you’re cute... #BLM",
+                "url": "https://t.co/6AJTfdtYZi",
+                "entities": {
+                    "url": {
+                        "urls": [
+                            {
+                                "url": "https://t.co/6AJTfdtYZi",
+                                "expanded_url": "https://www.snapchat.com/add/ryleeemlock",
+                                "display_url": "snapchat.com/add/ryleeemlock",
+                                "indices": [
+                                    0,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 1118,
+                "friends_count": 25,
+                "listed_count": 1,
+                "created_at": "Wed Jan 30 18:31:10 +0000 2019",
+                "favourites_count": 444,
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": false,
+                "verified": false,
+                "statuses_count": 246,
+                "lang": "en",
+                "contributors_enabled": false,
+                "is_translator": false,
+                "is_translation_enabled": false,
+                "profile_background_color": "F5F8FA",
+                "profile_background_image_url": null,
+                "profile_background_image_url_https": null,
+                "profile_background_tile": false,
+                "profile_image_url": "http://pbs.twimg.com/profile_images/1100835379446464513/qslzjKUW_normal.jpg",
+                "profile_image_url_https": "https://pbs.twimg.com/profile_images/1100835379446464513/qslzjKUW_normal.jpg",
+                "profile_banner_url": "https://pbs.twimg.com/profile_banners/1090678826236022787/1551294787",
+                "profile_link_color": "1DA1F2",
+                "profile_sidebar_border_color": "C0DEED",
+                "profile_sidebar_fill_color": "DDEEF6",
+                "profile_text_color": "333333",
+                "profile_use_background_image": true,
+                "has_extended_profile": false,
+                "default_profile": true,
+                "default_profile_image": false,
+                "following": null,
+                "follow_request_sent": null,
+                "notifications": null,
+                "translator_type": "none"
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "is_quote_status": false,
+            "retweet_count": 637,
+            "favorite_count": 2578,
+            "favorited": false,
+            "retweeted": false,
+            "possibly_sensitive": false,
+            "lang": "en"
+        },
+        "retweet_count": 0,
+        "favorite_count": 0,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "lv"
+    },
+    {
+        "created_at": "Wed Mar 20 03:30:39 +0000 2019",
+        "id": 1108209208829177861,
+        "id_str": "1108209208829177861",
+        "text": "#TheOldMeWouldHave hit on you till you stopped me cold.\nThen I would have hit on your gal pals.\nThen your mother.\nZ… https://t.co/mmJDApmAaC",
+        "truncated": true,
+        "entities": {
+            "hashtags": [
+                {
+                    "text": "TheOldMeWouldHave",
+                    "indices": [
+                        0,
+                        18
+                    ]
+                }
+            ],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [
+                {
+                    "url": "https://t.co/mmJDApmAaC",
+                    "expanded_url": "https://twitter.com/i/web/status/1108209208829177861",
+                    "display_url": "twitter.com/i/web/status/1…",
+                    "indices": [
+                        117,
+                        140
+                    ]
+                }
+            ]
+        },
+        "metadata": {
+            "iso_language_code": "en",
+            "result_type": "recent"
+        },
+        "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 383030956,
+            "id_str": "383030956",
+            "name": "Name cannot be blank",
+            "screen_name": "camaswaguy",
+            "location": "camas washington",
+            "description": "Man of the people, tired of the rhetoric, humorist, a friendly face in the sea of moodiness",
+            "url": null,
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 1765,
+            "friends_count": 4067,
+            "listed_count": 23,
+            "created_at": "Sat Oct 01 04:15:21 +0000 2011",
+            "favourites_count": 8679,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 11525,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1046203266978086912/RZcn5icJ_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1046203266978086912/RZcn5icJ_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/383030956/1538269386",
+            "profile_link_color": "1DA1F2",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": true,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": {
+            "id": "219460d3060c1d2e",
+            "url": "https://api.twitter.com/1.1/geo/id/219460d3060c1d2e.json",
+            "place_type": "city",
+            "name": "Camas",
+            "full_name": "Camas, WA",
+            "country_code": "US",
+            "country": "United States",
+            "contained_within": [],
+            "bounding_box": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -122.4742247,
+                            45.57579
+                        ],
+                        [
+                            -122.367318,
+                            45.57579
+                        ],
+                        [
+                            -122.367318,
+                            45.6330389
+                        ],
+                        [
+                            -122.4742247,
+                            45.6330389
+                        ]
+                    ]
+                ]
+            },
+            "attributes": {}
+        },
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 0,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+    }
+]
