@@ -1,0 +1,63 @@
+#docker-compose version
+version: '2.4'
+
+
+services:
+  web: #defines the main flask application enclosure
+    build:
+      context: ./
+      dockerfile: ./WEB/Dockerfile
+    ports:
+      #restricts to localhost, remove the ip prefix to allow public access
+      - 5000:5000
+    depends_on:
+      - mongo
+      - manage
+    environment:
+      MONGO_HOST: mongo
+      MONGO_PORT: 27017
+      #Should only be used for debugging.
+      FLASK_DEBUG: 1
+      #End of debugging config
+      FLASK_APP: app.py
+      
+    #Mounts the app image to the source, to allow dynamic updates of the flask app.
+    #Should only be used for debugging.
+    #volumes:
+    #  - ./WEB:/usr/src/app
+    #End of debugging config
+
+
+  manage: #defines a node enclosure for interacting with the mongo database
+    build: 
+      context: ./
+      dockerfile: ./MANAGE/Dockerfile
+    depends_on:
+      - mongo
+    environment:
+      MONGO_HOST: mongo
+      MONGO_PORT: 27017
+
+    #Mounts the migration folder of the image to the source, to allow for dynamic updates of the migration code.
+    #Should only be used for debugging.
+    volumes:
+      - ./MANAGE/migrations:/usr/src/app/migrations
+    #End of debugging config
+
+    #Causes this service to remain idle, allowing the user to use it as a proxy for pushing database updates
+    command: tail -F anything
+
+
+
+  mongo: #defines the mongoDB enclosure
+    image: mongo:4.0.5
+    restart: always
+    volumes:
+      #allows the database to persist when shutdown / across builds
+      - symptomsurvey_db_volume:/data/db
+      #- type: volume
+      #  target: /data/db
+      #  source: symptomsurvey_db_volume   
+
+volumes:
+  symptomsurvey_db_volume:

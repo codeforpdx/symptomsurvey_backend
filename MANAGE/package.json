@@ -4,10 +4,9 @@
   "description": "A node module that runs database migrations for the Symptom Survey Code for PDX project.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "up": "migrate-mongo up",
+    "create": "migrate-mongo create",
     "down": "migrate-mongo down",
-    "create": "migrate-mongo create"
+    "up": "migrate-mongo up"
   },
   "repository": {
     "type": "git",
@@ -20,6 +19,8 @@
   },
   "homepage": "https://github.com/CodeForPortland/symptomsurvey_backend#readme",
   "dependencies": {
-    "migrate-mongo": "4.1.2"
+    "lodash": "^4.17.11",
+    "migrate-mongo": "4.1.2",
+    "uuid": "^3.3.2"
   }
 }
