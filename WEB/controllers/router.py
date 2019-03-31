@@ -5,7 +5,17 @@ def add_routes(app):
   # TODO: remove this endpoint before this app goes into production
   @app.route('/')
   def hello_world():
-      return 'Hello, World!'
+    '''
+    Default Route 
+    Added to ensure that the site is available and successfully installed      
+    ---
+    responses:
+      200:
+        description: Should return 'Hello, World!' 
+        examples:
+          string: "Hello, World!"
+    '''
+    return 'Hello, World!'
 
   session.add_routes(app)
   users.add_routes(app)

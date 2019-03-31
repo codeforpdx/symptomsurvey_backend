@@ -81,6 +81,10 @@ The migrations folder is synced between the repo and container, so any new migra
 
 If you want to add a Create, Read, Update, or Delete (CRUD) endpoint for a resource, then it should be added to the controllers directory. To add a new resource create a python file with the resource name, expose a method from it called `add_routes`, and call that method in the `add_routes` method in controllers/routes.
 
+### API Documentation
+
+The API documentation is available at http://localhost:5000/apidocs/
+
 ### Testing
 
 #### Running the tests
