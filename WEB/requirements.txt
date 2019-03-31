@@ -3,4 +3,4 @@ pyjwt == 1.7.1
 flask-pymongo == 2.2.0
 cryptography == 2.4.2
 pytest == 4.2.1
-flasgger == 0.9.2
+requests == 2.21.0
