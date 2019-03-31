@@ -27,6 +27,10 @@ The private key is intentionally not checked into version control so that it wil
 
 Get the private key for the app from me and create a file to contain it at `WEB/keys/token`.
 
+### Environment Variables
+
+There are two environment variables that are required for access to Twitter. TWITTER_API_KEY and TWITTER_API_ACCESS_KEY are defined in the docker-compose.yml file. An easy platform-agnostic way to ensure the variables are set appropriately is to add a .env file at the project root with the variables defined on separate lines like so: TWITTER_API_ACCESS_KEY=value. The actual values can be provided by David H.
+
 ### Building the container
 
 From the cloned repo directory and with docker running, run
