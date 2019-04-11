@@ -2,15 +2,40 @@ import flask
 import flask_cors
 import json
 
+from flasgger import APISpec, Schema, Swagger, fields
 from controllers import router
 from services import database_service
 from services import auth_service
 
+
+
 # configure flask app
 def create_app(testconfig = None):
+
+  appInfo = {
+              "swagger": "2.0",
+              "info": {
+                "title": "Clackamas County Health Department Symptom Surveyor",
+                "description": "Data gathered from various sources related to disease symptoms",
+                #"contact": {
+                  #"responsibleOrganization": "ME",
+                  #"responsibleDeveloper": "Me",
+                  #"email": "me@me.com",
+                  #"url": "www.me.com",
+                #},
+                "version": "0.0.1"
+              },
+              #"host": "mysite.com",  # overrides localhost:500
+              "schemes": [
+                "http",
+                "https"
+              ]
+            }
+
+ 
   app = flask.Flask(__name__)
   flask_cors.CORS(app)
-
+  Swagger(app, template=appInfo)
   # Create a mongo client that works with the flask configuration.
   if testconfig is None:
     # Load the values from the constants file.  This file contains the parameters that are used for the
