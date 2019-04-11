@@ -14,7 +14,7 @@ If you are running a version of Windows other than Windows 10 Professional or En
 
 ### Cloning the repository
 
-Navigate to a repository where you would like to store the source code.  Then run
+Navigate to a directory where you would like to store the source code.  Then run
 
 ```bash
 git clone https://github.com/codeforportland/symptomsurvey_backend.git

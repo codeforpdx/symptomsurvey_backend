@@ -6,47 +6,43 @@ Created on Sat Nov  3 16:17:25 2018
 @author: meganporter
 """
 class DataStorage:
-    def __init__(self, restaurant_name, key_words, count, date_range):
-        self.restaurant_name = restaurant_name
-        self.key_words = key_words
-        self.count = count 
-        self.date_range = date_range
+    def __init__(self, date, time, text, hashtags, web_address):
+        self.date = date
+        self.time = time
+        self.text = text 
+        self.hashtags = hashtags
+        self.web_address = web_address
         
-    def get_restaurant_name(self):
-        return self.restaurant_name
-    def get_key_words(self):
-        return self.key_words
-    def get_count(self):
-        return self.count
-    def get_date_range(self):
-        return self.date_range
+    def get_date(self):
+        return self.date
+    def get_time(self):
+        return self.time
+    def get_text(self):
+        return self.text
+    def get_hashtags(self):
+        return self.hashtags
+    def get_web_address(self):
+        return self.web_address    
     
-    def set_restaurant_name(self, a_restaurant_name):
-        self.restaurant_name = a_restaurant_name
-    def set_key_words(self, key_words_list):
-        self.key_words = key_words_list
-    def set_count(self, new_count):
-        self.count = new_count
-    def set_date_range(self, select_range):
-        self.date_range = select_range
+    def set_date(self, a_date):
+        self.date = tweet_date
+    def set_time(self, time_list):
+        self.time = tweet_time
+    def set_text(self, new_text):
+        self.text = tweet_text
+    def set_hashtags(self, select_range):
+        self.hashtags = tweet_hashtags
+    def set_web_address = a_web_address    
         
         
-    def harvest_key_words(self, word_harvest):
+    def harvest_time(self, word_harvest):
         sorted_list = []
         for word in word_harvest:
             if word in key_word_list:
                 sorted_list.append(word)
-    def machine_count(self, machine_data):
+    def machine_text(self, machine_data):
         """ Machine Learning Algorithm goes here
-        So far K means seems like a good candidate but I'm only familiar with 
-        K Means and K Nearest Neighbor.  I'm almost finished with algorithms, then
-        I can go back to my machine learning class and investigate more options
+        Do we need this?"""
         
-        The goal of this algorithm would be to sort key_word data and classify 
-        whether a given location can be classified as being the center of a 
-        new Hepatitis A outbreat."""
-        
-    def when_key_words(self, select_range):
-        """Search algorithm goes here.  I'm a few days away from working on the 
-        search algorithm practice problems.  I'm starting the videos in the next
-        two days."""
+    def when_time(self, select_range):
+        """Search algorithm goes here.  Do we need this?"""
