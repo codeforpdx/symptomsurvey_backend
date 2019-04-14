@@ -6,9 +6,9 @@ This repository is the API for a website for use by Clackamas County.  These are
 
 ### Installing Docker
 
-Download Docker for your system at https://www.docker.com/ and install.
+Download Docker for your system at <https://www.docker.com/> and install.
 
-If your OS does not support native docker, you can install docker-toolbox at https://docs.docker.com/toolbox/toolbox_install_windows/. In this case, all commands will be run from the docker-toolbox command line, access to the site is done through `192.168.99.100` instead of `localhost`.
+If your OS does not support native docker, you can install docker-toolbox at <https://docs.docker.com/toolbox/toolbox_install_windows/.> In this case, all commands will be run from the docker-toolbox command line, access to the site is done through `192.168.99.100` instead of `localhost`.
 
 If you are running a version of Windows other than Windows 10 Professional or Enterprise, follow the instructions [here](https://github.com/CodeForPortland/symptomsurvey_backend/wiki/How-to-set-up-docker-on-windows)
 
@@ -64,16 +64,23 @@ docker-compose down
 ### Adding migrations
 
 While the project is running, you can manage mongodb through the MANAGE service, which runs idle with the appropriate node files. You can access this via
+
 ```bash
+
 docker-compose exec manage sh
+
 ```
+
 which will open a shell running in the container.
 
 You can then run migrations with either
+
 ```bash
+
 npm run up
 npm run down
 npm run create <migration-name>
+
 ```
 
 which will perform migrations as per usual.
