@@ -91,7 +91,7 @@ New pytest tests should be added to the WEB/tests/ directory using file names th
 
 You should start all test files with
 
-```
+```python
 from test_app import client
 ```
 
