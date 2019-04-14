@@ -83,21 +83,7 @@ The migrations folder is synced between the repo and container, so any new migra
 
 #### Adding Controllers and Routes
 
-If you want to add a Create, Read, Update, or Delete (CRUD) endpoint for a resource, then it should be added to the controllers directory. To add a new resource create a python file with the resource name, expose a method from it called `add_routes`, and call that method in the `add_routes` method in controllers/routes.
-
-### API Documentation
-
-The API documentation is available at http://localhost:5000/apidocs/
-
-### Testing
-
-#### Running the tests
-
-You will need to have python 3 installed along with all of the project and run the command:
-```
-pip install -r ./WEB/requirements.txt
-```
-All tests should be run from the WEB/ directory. They can be run all together with `python -m pytest` or you can run a single test by specifying the file (eg `python -m pytest tests/login_test.py`).
+If you want to add a Create, Read, Update, or Delete (CRUD) endp())`).
 
 #### Adding new tests
 
