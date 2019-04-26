@@ -38,11 +38,12 @@ class AuthSession:
       if role == None or role['permissions'] == None:
         return insufficientPermissionsResponse
 
-      for permission in role['permissions']:
-        if permission in valid_permissions:
-          return {'valid': True}
+      for permission in valid_permissions:
+        if not permission in role['permissions']:
+          return insufficientPermissionsResponse
+          
+      return {'valid': True}
 
-      return insufficientPermissionsResponse
 
     def compare_username_password(self, user, username, password):
       return (username == user['profile']['username']) and (self.make_hash(password, user['password']['salt']) == bytes(user['password']['hash'], 'utf-8'))
