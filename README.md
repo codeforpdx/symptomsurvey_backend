@@ -2,6 +2,10 @@
 
 This repository is the API for a website for use by Clackamas County.  These are developer notes.
 
+### API Documentation
+
+The API documentation is available at http://localhost:5000/apidocs/
+
 ## setting up your development environment
 
 ### Installing Docker
