@@ -4,7 +4,6 @@ from services import auth_service, tweets_service
 
 def add_routes(app):
   @app.route('/tweets/load', endpoint='load_tweets')
-  # @auth_service.require_permission([])
   def load_tweets():
     '''
     Load tweets. Retrieve 100 tweets by users located within a given radius of the given latitude/longitude. 
