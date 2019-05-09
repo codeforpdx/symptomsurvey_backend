@@ -4,3 +4,5 @@ WEB/keys/token
 .vscode/settings.json
 .DS_Store
 Notes
+.env
+.vs

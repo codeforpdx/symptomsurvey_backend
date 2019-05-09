@@ -1,4 +1,4 @@
-from controllers import session, users
+from controllers import session, users, tweets
 
 def add_routes(app):
   # Example route
@@ -19,3 +19,4 @@ def add_routes(app):
 
   session.add_routes(app)
   users.add_routes(app)
+  tweets.add_routes(app)

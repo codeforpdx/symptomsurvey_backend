@@ -11,6 +11,7 @@ pyjwt = "*"
 flask-pymongo = "*"
 cryptography = "*"
 pytest = "*"
+requests = "*"
 
 [requires]
 python_version = "3.6"
