@@ -55,6 +55,8 @@ docker-compose up -d --build
 
 This will build all services on the site, as well as launch them. If the site is already running, it will rebuild any services who's source has changed, as well as relaunch it.
 
+Depending on what kind of docker you have, the site will be running at either `localhost:5000` or `192.168.99.100:5000` so check both of those.
+
 ### Stopping the site
 
 From the cloned repo directory and with docker running, run
