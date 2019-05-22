@@ -4,13 +4,18 @@ import copy
 
 from services import database_service
 
-data = {
+DATA = {
   'grant_type': 'client_credentials'
 }
+CLACKAMAS_GEO = {
+  'latitude': '45.209358',
+  'longitude': '-122.246009',
+  'radius': '30mi'
+}
 
-def get_tweets_from_twitter(search_text = ''):
-  auth_response = requests.post('https://api.twitter.com/oauth2/token', data=data, auth=(os.environ['TWITTER_API_KEY'], os.environ['TWITTER_API_ACCESS_KEY']))
-  tweet_search_params = {'q': format_search_text(search_text), 'geocode': '45.209358,-122.246009,30mi', 'count': 100}
+def get_tweets_from_twitter(search_text = '', geolocation = CLACKAMAS_GEO):
+  auth_response = requests.post('https://api.twitter.com/oauth2/token', data=DATA, auth=(os.environ['TWITTER_API_KEY'], os.environ['TWITTER_API_ACCESS_KEY']))
+  tweet_search_params = {'q': format_search_text(search_text), 'geocode': format_geolocation(geolocation if geolocation is not None else CLACKAMAS_GEO), 'count': 100}
   tweet_headers = {'Authorization': 'Bearer {}'.format(auth_response.json()['access_token'])}
   print(tweet_headers)
   print(tweet_search_params)
@@ -19,8 +24,15 @@ def get_tweets_from_twitter(search_text = ''):
 
 def save_tweets(tweets):
   mongo = database_service.get_mongo_client()
-
   mongo.db.tweets.insert_many(copy.deepcopy(tweets))
 
 def format_search_text(search_text = ''):
   return search_text.replace(' && ', ' ').replace(' || ',  ' OR ')
+
+def format_geolocation(geolocation):
+  latitude,longitude,radius = [geolocation.get(k) for k in ('latitude', 'longitude', 'radius')]
+  if latitude is not None and longitude is not None and radius is not None:
+    parsed_radius = radius if 'mi' in radius or 'km' in radius else radius + 'mi'
+    return f'${latitude},${longitude},${parsed_radius}'
+  else:
+    return ''

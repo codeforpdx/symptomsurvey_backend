@@ -33,5 +33,5 @@ def add_routes(app):
   def getTweets():
     body = request.get_json()
     search_text = body.get('search', '')
-    tweets = tweets_service.get_tweets_from_twitter(search_text)
+    tweets = tweets_service.get_tweets_from_twitter(search_text, body.get('geolocation'))
     return json.dumps(tweets), 200, JSON_CONTENT_TYPE
