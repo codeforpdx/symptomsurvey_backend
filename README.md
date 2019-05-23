@@ -29,7 +29,7 @@ cd symptomsurvey_backend
 
 The private key is intentionally not checked into version control so that it will remain a secret.
 
-Get the private key for the app from me and create a file to contain it at `WEB/keys/token`.
+Get the private key for the app from me and create a file named `token` inside the `./WEB/keys/` directory-- this must not have a file extension. Then paste the private key inside and save this file.
 
 ### Environment Variables
 
