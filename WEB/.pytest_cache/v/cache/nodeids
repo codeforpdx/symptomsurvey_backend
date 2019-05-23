@@ -1,0 +1,3 @@
+[
+  "tests/test_tweet_model.py::test_create_tweet_instance"
+]
