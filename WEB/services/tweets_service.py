@@ -34,7 +34,7 @@ def format_geolocation(geolocation):
     latitude,longitude,radius = [geolocation.get(k) for k in ('latitude', 'longitude', 'radius')]
     if latitude is not None and longitude is not None and radius is not None:
       parsed_radius = radius if 'mi' in radius or 'km' in radius else radius + 'mi'
-      return f'${latitude},${longitude},${parsed_radius}'
+      return f'{latitude},{longitude},{parsed_radius}'
     
     # If you wound up here then we don't have any valid input, just return empty string
     return ''
