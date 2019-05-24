@@ -21,23 +21,27 @@ class Tweet:
         'Stafford':[45.357342,-122.722595],'Barlow':[45.252257,-122.721223],
         }
 
-        
-    #timestamp = tweet['created_at']
+    def tweet_create_timestamp(self, tweet):
+        self.timestamp = tweet['created_at']
+        return self.timestamp
+
     def tweet_user_location(self, tweet):
         if tweet['user']['location'] in self.clackamas_lat_long:
-            self.user_coordinates = self.clackamas_lat_long[tweet['user']['location']]
-            return self.user_coordinates                   
-        # def tweet_stated_location(self, tweet):
-        #     if tweet['coordinates'] != None:
-        #         stated_coordinates = tweet['geo']['coordinates']   
-        # def tweet_bounding_location(self, tweet):
-        #     if tweet['place'] != None:
-        #         bounding_coordinates = tweet['place']['bounding_box']['coordinates']      
+            self.user_coordinates = self.clackamas_lat_long[tweet['user']['location']] 
 
-        # tweet_info = {'timestamp': timestamp, 'user_coordinates':self.user_coordinates,'stated_coordinates':self.stated_coordinates,'bounding_coordinates':self.bounding_coordinates,} 
+    def tweet_stated_location(self, tweet):
+        if tweet['coordinates'] != None:
+            self.stated_coordinates = tweet['geo']['coordinates'] 
+              
+    def tweet_bounding_location(self, tweet):
+        if tweet['place'] != None:
+            self.bounding_coordinates = tweet['place']['bounding_box']['coordinates']      
 
+    def tweet_location_dictionary(self, tweet):
+        self.tweet_location_dictionary = {'timestamp': self.timestamp, 'user_coordinates':self.user_coordinates,'stated_coordinates':self.stated_coordinates,'bounding_coordinates':self.bounding_coordinates,} 
+    
         #     #Convert back into JSON
         # with open("data_file.json", "w") as write_file:
-        #     json.dump(tweet_info, write_file)
+        #     json.dump(tweet_location_dictionary, write_file)
 
 
