@@ -9,7 +9,8 @@ with open(my_dir + "/../../MANAGE/seeds/tweets.json", "r") as tweets_json:
 
 # assert tests if statements are true, write
 
-tweet = tweet_grab[0]    
+tweet = tweet_grab[0]  
+
 def test_create_tweet_instance():
     tweet_model.Tweet(tweet)
 
@@ -25,7 +26,7 @@ def test_stated_location():
 def test_bounding_location():
     tweet_model.Tweet(tweet).tweet_bounding_location(tweet) 
 
-def test_tweet_location_dictionary():
-    tweet_model.Tweet(tweet).tweet_location_dictionary(tweet)            
+# def test_tweet_location_dictionary():
+#     tweet_model.Tweet(tweet).tweet_location_dictionary(tweet_location_dictionary)            
 
 
