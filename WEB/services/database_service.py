@@ -28,9 +28,13 @@ class MongoSession:
     # TODO: add a password to the mongo database so that its contents are hidden behind this API
     app.config['MONGO_URI'] = 'mongodb://{0}:{1}/{2}'.format(mongo_host, mongo_port, database_name)
     MongoSession.instance.mongo = flask_pymongo.PyMongo(app)
+    self.create_indexes()
 
   def get_mongo_client(self):
     return MongoSession.instance.mongo
+
+  def create_indexes(self):
+    MongoSession.instance.mongo.db.tweets.create_index([('text', 'text')])
 
 def get_mongo_client():
   return MongoSession().get_mongo_client()

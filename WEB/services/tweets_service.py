@@ -3,6 +3,7 @@ import os
 import copy
 
 from services import database_service
+from bson.json_util import dumps
 
 DATA = {
   'grant_type': 'client_credentials'
@@ -22,6 +23,11 @@ def get_tweets_from_twitter(search_text = '', geolocation = CLACKAMAS_GEO):
   tweets_response = requests.get('https://api.twitter.com/1.1/search/tweets.json', params=tweet_search_params, headers=tweet_headers)
   return tweets_response.json()
 
+def get_tweets_from_db(search_text):
+  mongo = database_service.get_mongo_client()
+  matching_tweets = mongo.db.tweets.find(format_db_search(search_text))
+  return dumps(list(matching_tweets))
+
 def save_tweets(tweets):
   mongo = database_service.get_mongo_client()
   mongo.db.tweets.insert_many(copy.deepcopy(tweets))
@@ -38,3 +44,10 @@ def format_geolocation(geolocation):
     
     # If you wound up here then we don't have any valid input, just return empty string
     return ''
+
+
+def format_db_search(search_text):
+  if search_text is not None:
+    return { '$text': { '$search': search_text } }
+  else:
+    return {}

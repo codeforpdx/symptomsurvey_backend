@@ -29,9 +29,16 @@ def add_routes(app):
     except Exception as ex:
       return json.dumps({'Exception': str(ex)}), 500, JSON_CONTENT_TYPE
 
-  @app.route('/tweets', methods=['POST'])
-  def getTweets():
+  @app.route('/tweets/realtime', methods=['POST'])
+  def getLiveTweets():
     body = request.get_json()
     search_text = body.get('search', '')
     tweets = tweets_service.get_tweets_from_twitter(search_text, body.get('geolocation'))
     return json.dumps(tweets), 200, JSON_CONTENT_TYPE
+
+  @app.route('/tweets', methods=['POST'])
+  def getTweets():
+    body = request.get_json()
+    search_text = body.get('search')
+    tweets = tweets_service.get_tweets_from_db(search_text)
+    return tweets, 200, JSON_CONTENT_TYPE
