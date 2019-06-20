@@ -1,6 +1,9 @@
 import json
 
+from flask import request
 from services import auth_service, tweets_service
+
+JSON_CONTENT_TYPE = {'Content-Type': 'application/json'}
 
 def add_routes(app):
   @app.route('/tweets/load', endpoint='load_tweets')
@@ -24,4 +27,11 @@ def add_routes(app):
       tweets_service.save_tweets(tweets["statuses"])
       return json.dumps(tweets), 200, {'Content-Type': 'application/json'}
     except Exception as ex:
-      return json.dumps({'Exception': str(ex)}), 500, {'Content-Type': 'application/json'}
+      return json.dumps({'Exception': str(ex)}), 500, JSON_CONTENT_TYPE
+
+  @app.route('/tweets', methods=['POST'])
+  def getTweets():
+    body = request.get_json()
+    search_text = body.get('search')
+    tweets = tweets_service.get_tweets_from_db(search_text)
+    return tweets, 200, JSON_CONTENT_TYPE
