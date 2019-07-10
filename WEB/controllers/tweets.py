@@ -30,7 +30,7 @@ def add_routes(app):
       return json.dumps({'Exception': str(ex)}), 500, JSON_CONTENT_TYPE
 
   @app.route('/tweets', methods=['POST'])
-  def getTweets():
+  def searchTweets():
     '''
     Retrieve tweets from the database based on provided search criteria.
     ---
@@ -58,3 +58,20 @@ def add_routes(app):
     search_text = body.get('search')
     tweets = tweets_service.get_tweets_from_db(search_text)
     return tweets, 200, JSON_CONTENT_TYPE
+
+  @app.route('/tweets', methods=['GET'])
+  def getTweets():
+    '''
+    Retrieve all tweets from the database. Largely for testing purposes.
+    ---
+    produces:
+      application/json
+    responses:
+      200:
+        description: Successfully retrieved the tweets
+        examples:
+          application/json: {"statuses": [{"created_at": "Sun Mar 31 18:32:35 +0000 2019","id": 1112422454528524300...example tweet elided}]}
+      500:
+        description: Server error occurred
+    '''
+    return tweets_service.get_tweets_from_db(), 200, JSON_CONTENT_TYPE

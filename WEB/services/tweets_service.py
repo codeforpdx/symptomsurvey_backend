@@ -18,7 +18,7 @@ def get_tweets_from_twitter():
   tweets_response = requests.get('https://api.twitter.com/1.1/search/tweets.json', params=tweet_search_params, headers=tweet_headers)
   return tweets_response.json()
 
-def get_tweets_from_db(search_text):
+def get_tweets_from_db(search_text = None):
   mongo = database_service.get_mongo_client()
   matching_tweets = mongo.db.tweets.find(format_db_search(search_text))
   return dumps(list(matching_tweets))
