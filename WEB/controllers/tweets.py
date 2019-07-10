@@ -61,4 +61,17 @@ def add_routes(app):
 
   @app.route('/tweets', methods=['GET'])
   def getTweets():
+    '''
+    Retrieve all tweets from the database. Largely for testing purposes.
+    ---
+    produces:
+      application/json
+    responses:
+      200:
+        description: Successfully retrieved the tweets
+        examples:
+          application/json: {"statuses": [{"created_at": "Sun Mar 31 18:32:35 +0000 2019","id": 1112422454528524300...example tweet elided}]}
+      500:
+        description: Server error occurred
+    '''
     return tweets_service.get_tweets_from_db(), 200, JSON_CONTENT_TYPE
