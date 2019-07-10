@@ -11,13 +11,13 @@ def add_routes(app):
     '''
     Load tweets. Retrieve 100 tweets by users located within a given radius of the given latitude/longitude. 
     The location is preferentially taking from the Geotagging API, but will fall back to their Twitter profile. 
-    The parameter value is specified by " latitude,longitude,radius ", where radius units 
+    The parameter value is specified by " latitude,longitude,radius ", where radius units
     must be specified as either " mi " (miles) or " km " (kilometers).
     ---
     responses:
       200:
         description: Successfully retrieved the tweets
-        examples: 
+        examples:
           application/json: {"statuses": [{"created_at": "Sun Mar 31 18:32:35 +0000 2019","id": 1112422454528524300...example tweet elided}]}
       500:
         description: Server error occurred
@@ -31,6 +31,29 @@ def add_routes(app):
 
   @app.route('/tweets', methods=['POST'])
   def searchTweets():
+    '''
+    Retrieve tweets from the database based on provided search criteria.
+    ---
+    parameters:
+      - in: body
+        name: body
+        description: JSON name-value pair parameter consisting of search text
+        schema:
+          properties:
+            search:
+              type: string
+              description: search text
+              example: Clackamas
+    produces:
+      application/json
+    responses:
+      200:
+        description: Successfully retrieved the tweets
+        examples:
+          application/json: {"statuses": [{"created_at": "Sun Mar 31 18:32:35 +0000 2019","id": 1112422454528524300...example tweet elided}]}
+      500:
+        description: Server error occurred
+    '''
     body = request.get_json()
     search_text = body.get('search')
     tweets = tweets_service.get_tweets_from_db(search_text)
