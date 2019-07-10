@@ -6,7 +6,7 @@ from services import auth_service, database_service
 def add_routes(app):
   mongo = database_service.get_mongo_client()
   @app.route('/login', methods=['POST'])
-  def login():
+  def login():  # pylint: disable=unused-variable
     '''
     Login endpoint.  Checks a submitted username and password against the users in the users collection.
     If there is a match, the user's profile and role are put into a Json Web Token (JWT) and that token is

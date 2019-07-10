@@ -7,10 +7,10 @@ JSON_CONTENT_TYPE = {'Content-Type': 'application/json'}
 
 def add_routes(app):
   @app.route('/tweets/load', endpoint='load_tweets')
-  def load_tweets():
+  def load_tweets():  # pylint: disable=unused-variable
     '''
-    Load tweets. Retrieve 100 tweets by users located within a given radius of the given latitude/longitude. 
-    The location is preferentially taking from the Geotagging API, but will fall back to their Twitter profile. 
+    Load tweets. Retrieve 100 tweets by users located within a given radius of the given latitude/longitude.
+    The location is preferentially taking from the Geotagging API, but will fall back to their Twitter profile.
     The parameter value is specified by " latitude,longitude,radius ", where radius units
     must be specified as either " mi " (miles) or " km " (kilometers).
     ---
@@ -25,12 +25,12 @@ def add_routes(app):
     tweets = tweets_service.get_tweets_from_twitter()
     try:
       tweets_service.save_tweets(tweets["statuses"])
-      return json.dumps(tweets), 200, {'Content-Type': 'application/json'}
+      return json.dumps(tweets), 200, JSON_CONTENT_TYPE
     except Exception as ex:
       return json.dumps({'Exception': str(ex)}), 500, JSON_CONTENT_TYPE
 
   @app.route('/tweets', methods=['POST'])
-  def getTweets():
+  def getTweets():  # pylint: disable=unused-variable
     '''
     Retrieve tweets from the database based on provided search criteria.
     ---
