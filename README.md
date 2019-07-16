@@ -1,4 +1,4 @@
-# symptomsurvey_backend ![travisci badge](https://travis-ci.org/CodeForPortland/symptomsurvey_backend.svg?branch=master)
+# symptomsurvey_backend ![travisci badge](https://travis-ci.org/codeForPDX/symptomsurvey_backend.svg?branch=master)
 
 This repository is the API for a website for use by Clackamas County.  These are developer notes.
 
@@ -14,14 +14,14 @@ Download Docker for your system at <https://www.docker.com/> and install.
 
 If your OS does not support native docker, you can install docker-toolbox at <https://docs.docker.com/toolbox/toolbox_install_windows/.> In this case, all commands will be run from the docker-toolbox command line, access to the site is done through `192.168.99.100` instead of `localhost`.
 
-If you are running a version of Windows other than Windows 10 Professional or Enterprise, follow the instructions [here](https://github.com/CodeForPortland/symptomsurvey_backend/wiki/How-to-set-up-docker-on-windows)
+If you are running a version of Windows other than Windows 10 Professional or Enterprise, follow the instructions [here](https://github.com/codeForPDX/symptomsurvey_backend/wiki/How-to-set-up-docker-on-windows)
 
 ### Cloning the repository
 
 Navigate to a repository where you would like to store the source code.  Then run
 
 ```bash
-git clone https://github.com/codeforportland/symptomsurvey_backend.git
+git clone https://github.com/codeForPDX/symptomsurvey_backend.git
 cd symptomsurvey_backend
 ```
 
