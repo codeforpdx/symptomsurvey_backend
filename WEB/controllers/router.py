@@ -18,8 +18,17 @@ def add_routes(app):
     '''
     return 'Hello, World!'
 
+  # TODO: remove this endpoint before this app goes into production
   @app.route('/python')
   def howdy():  # pylint: disable=unused-variable
+    '''
+    Interactive Web Shell
+    Provide a development/debug shell within the web browser at this endpoint.
+    ---
+    responses:
+      200:
+        description: "Interactive shell"
+    '''
     utilities.debug()
     return "Interactive shell"
 
