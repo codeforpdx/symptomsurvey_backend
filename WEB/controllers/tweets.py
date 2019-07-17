@@ -1,18 +1,23 @@
 import json
 
 from flask import request
-from services import auth_service, tweets_service
+from services import tweets_service
 
 JSON_CONTENT_TYPE = {'Content-Type': 'application/json'}
+
 
 def add_routes(app):
   @app.route('/tweets/load', endpoint='load_tweets')
   def load_tweets():  # pylint: disable=unused-variable
     '''
-    Load tweets. Retrieve 100 tweets by users located within a given radius of the given latitude/longitude.
-    The location is preferentially taking from the Geotagging API, but will fall back to their Twitter profile.
-    The parameter value is specified by " latitude,longitude,radius ", where radius units
-    must be specified as either " mi " (miles) or " km " (kilometers).
+    Load tweets.
+    Retrieve 100 tweets by users located within a given radius of the given
+    latitude/longitude.
+    The location is preferentially taking from the Geotagging API, but will
+    fall back to their Twitter profile.
+    The parameter value is specified by " latitude,longitude,radius ",
+    where radius units must be specified as either " mi " (miles) or
+    " km " (kilometers).
     ---
     responses:
       200:
