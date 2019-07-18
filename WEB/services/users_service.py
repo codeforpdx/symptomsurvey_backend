@@ -1,5 +1,6 @@
 from services import database_service
 
+
 def get_all():
   mongo = database_service.get_mongo_client()
   users = []
