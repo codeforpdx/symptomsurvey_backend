@@ -28,9 +28,23 @@ def add_routes(app):
         description: Server error occurred
     '''
     tweets = tweets_service.get_tweets_from_twitter()
+    # Parses raw JSON to filter out unneeded information.
+    data = []
+    for tweet in tweets["statuses"]:
+      parsed_tweet = {
+        "created_at": tweet["created_at"],
+        "id": tweet["id"],
+        "text": tweet["text"],
+      #  "entities": tweet["entities"],
+      #  "user": tweet["user"],
+        "geo": tweet["geo"],
+        "coordinates": tweet["coordinates"],
+        "place": tweet["place"]
+      }
+      data.append(parsed_tweet)
     try:
       tweets_service.save_tweets(tweets["statuses"])
-      return json.dumps(tweets), 200, JSON_CONTENT_TYPE
+      return json.dumps(data), 200, JSON_CONTENT_TYPE
     except Exception as ex:
       return json.dumps({'Exception': str(ex)}), 500, JSON_CONTENT_TYPE
 
