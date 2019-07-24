@@ -29,7 +29,7 @@ def add_routes(app):
     tweets = tweets_service.get_tweets_from_twitter()
     data = filter_tweets(tweets)
     try:
-      tweets_service.save_tweets(tweets["statuses"])
+      tweets_service.save_tweets(data)
       return json.dumps(data), 200, JSON_CONTENT_TYPE
     except Exception as ex:
       return json.dumps({'Exception': str(ex)}), 500, JSON_CONTENT_TYPE
@@ -67,7 +67,7 @@ def add_routes(app):
 # Takes a JSON object with tweets to extract data we need.
 def filter_tweets(tweets):
   data = []
-  for tweet in tweets["statuses"]:
+  for tweet in tweets.get("statuses", []):
     parsed_tweet = {
       "created_at": tweet.get("created_at"),
       "id": tweet.get("id"),
