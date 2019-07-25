@@ -5,7 +5,6 @@ from services import tweets_service
 
 JSON_CONTENT_TYPE = {'Content-Type': 'application/json'}
 
-
 def add_routes(app):
   @app.route('/tweets/load', endpoint='load_tweets')
   def load_tweets():  # pylint: disable=unused-variable
@@ -28,9 +27,10 @@ def add_routes(app):
         description: Server error occurred
     '''
     tweets = tweets_service.get_tweets_from_twitter()
+    data = filter_tweets(tweets)
     try:
-      tweets_service.save_tweets(tweets["statuses"])
-      return json.dumps(tweets), 200, JSON_CONTENT_TYPE
+      tweets_service.save_tweets(data)
+      return json.dumps(data), 200, JSON_CONTENT_TYPE
     except Exception as ex:
       return json.dumps({'Exception': str(ex)}), 500, JSON_CONTENT_TYPE
 
@@ -63,3 +63,21 @@ def add_routes(app):
     search_text = body.get('search')
     tweets = tweets_service.get_tweets_from_db(search_text)
     return tweets, 200, JSON_CONTENT_TYPE
+
+# Takes a JSON object with tweets to extract data we need.
+def filter_tweets(tweets):
+  data = []
+  for tweet in tweets.get("statuses", []):
+    parsed_tweet = {
+      "created_at": tweet.get("created_at"),
+      "id": tweet.get("id"),
+      "text": tweet.get("text"),
+    #  "entities": tweet.get("entities"),
+    #  "user": tweet.get("user"),
+      "geo": tweet.get("geo"),
+      "coordinates": tweet.get("coordinates"),
+      "place": tweet.get("place")
+    }
+    data.append(parsed_tweet)
+  
+  return data
