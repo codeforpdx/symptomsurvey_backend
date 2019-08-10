@@ -79,5 +79,5 @@ def filter_tweets(tweets):
       "place": tweet.get("place")
     }
     data.append(parsed_tweet)
-  
+
   return data

@@ -2,83 +2,75 @@
 Routines to get latest tweets and write them to a queue
 
 """
-from IPython import embed
 import atexit
-import json
+import os
 import requests
 from apscheduler.schedulers.background import BackgroundScheduler
 # from dateutil.parser import parse
 #  import dateutil
 
 
+def get_access_keys():
+    # Check that TWITTER_API keys are set and return them if so.
+    twitter_keys = dict()
+    msg = ""
+    for env in ['TWITTER_API_ACCESS_KEY', 'TWITTER_API_KEY']:
+        try:
+            twitter_keys[env] = os.environ[env]
+            _ = twitter_keys[env][20]  # Also fail if not long enough
+        except KeyError:
+            msg += "'{}' not set.\n".format(env)
+        except IndexError:
+            msg += "'{}' not valid:{}\n".format(env, twitter_keys[env])
+    if msg:
+        msg = "\nFailed to read TWITTER API environment variables\n" + msg
+        raise EnvironmentError(msg)
+    return twitter_keys
+
+
 class TwitterReader():
     _one_instance_poision = False  # Only allow one instantiation
 
-    def __init__(self, write_queue, **kwargs):
+    def __init__(self, app, write_queue, settings, latest_tweet_function):
         if TwitterReader._one_instance_poision:
             raise ValueError("Only one instance of TwitterReader allowed")
         TwitterReader._one_instance_poision = True
-        self.access_key = kwargs.setdefault('TWITTER_API_ACCESS_KEY', None)
-        self.key = kwargs.setdefault('TWITTER_API_KEY', None)
-        self.geocode = kwargs.setdefault('geocode', None)
-        self.get_interval_in_seconds = kwargs.setdefault(
-            'get_interval_in_seconds',
-            60
-        )
-        self.raw_data_database_name = kwargs.setdefault(
-            'raw_data_database_name',
-            'raw_tweets'
-        )
-        self.max_tweets_per_get = kwargs.setdefault(
-            'max_tweets_per_get',
-            15
-        )
-        self.max_historical_tweets = kwargs.setdefault(
-            'max_historical_tweets',
-            200
-        )
-
-        self.write_queue = write_queue  # Tweets get written to a queue
-        self.runtime_filename = '../SHARED/twitter_runtime.json'
-        self.load_runtime_state()
+        self.app = app  # Flask application id
+        self.write_queue = write_queue  # Tweets get written to this queue
+        # Callable to retrieve currently largest Tweet
+        self.settings = settings
+        self.latest_tweet_function = latest_tweet_function
+        self.keys = get_access_keys()
 
         # Set up scheduled searches to Twitter
         self.scheduler = BackgroundScheduler()
         self.scheduler.add_job(
             func=self.get_tweets,
             trigger="interval",
-            seconds=self.get_interval_in_seconds,
+            seconds=self.settings['get_interval_in_seconds'],
             max_instances=1)
         atexit.register(lambda: self.scheduler.shutdown())
         self.scheduler.start()
         return
 
-    def load_runtime_state(self):
-        " Load runtime variables from .json file "
-        try:
-            with open(self.runtime_filename) as f:
-                runtime = json.load(f)
-        except Exception:
-            runtime = dict()
-            runtime['latest_id'] = 0
-        self.runtime = runtime
-
-    def save_runtime_state(self):
-        with open(self.runtime_filename, 'w') as f:
-            json.dump(self.runtime, f, sort_keys=True, indent=4)
-
     def get_tweets_from_twitter(self, max_id=None, since_id=None):
         auth_response = requests.post(
             'https://api.twitter.com/oauth2/token',
             data={'grant_type': 'client_credentials'},
-            auth=(self.key, self.access_key)
+            auth=(
+                self.keys['TWITTER_API_KEY'],
+                self.keys['TWITTER_API_ACCESS_KEY']
+            )
         )
+        as_json = auth_response.json()
+        if 'errors' in as_json:
+            raise EnvironmentError(as_json['errors'])
         access_token = auth_response.json()['access_token']
 
         tweet_search_params = {
             'q': '',
-            'geocode': self.geocode,
-            'count': self.max_tweets_per_get}
+            'geocode': self.settings['geocode'],
+            'count': self.settings['max_tweets_per_get']}
         if since_id is not None:
             tweet_search_params['since_id'] = since_id
         if max_id is not None:
@@ -102,10 +94,12 @@ class TwitterReader():
         are no longer any tweets.
 
         """
+        print("in get tweets")
         tweets_received = 0  # Number of total Tweets during this call
         max_id_for_next_batch = None  # Used for batch search below
-        since_id = self.runtime['latest_id']
-        latest_id = self.runtime['latest_id']
+        since_id = self.latest_tweet_function()['id']
+        print("since_id (latest tweet) is ", since_id)
+        latest_id = 0
         while True:
             # Get next batch of tweets
             kwargs = {
@@ -129,10 +123,12 @@ class TwitterReader():
             max_id_for_next_batch = min(ids) - 1
             latest_id = max(latest_id, max(ids))
             tweets_received += num_tweets_in_response
-            if tweets_received > self.max_historical_tweets:
+            print("Most recent tweets:")
+            for tweet in tweets[:5]:
+                print(tweet['id'], tweet['text'][:80])
+            if tweets_received > self.settings['max_historical_tweets']:
                 print("Warning:  Not all tweets were collected")
                 print("We hit the max_historical_tweets limit")
                 break
         print("twitter.py found {} tweets".format(tweets_received))
-        self.runtime['latest_id'] = latest_id
-        self.save_runtime_state()
+        self.latest_tweet_id = latest_id

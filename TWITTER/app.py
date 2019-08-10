@@ -10,11 +10,29 @@ TODO:  Put mongodb host and port in constants.json
 import flask
 # import flask_cors
 import json
-import logging
-import os
 import queue
 import twitter as twitter_lib
 import mongo as mongo_lib
+
+
+def read_settings():
+    """ Read in Twitter constants """
+    try:
+        with open('../SHARED/constants.json') as f:
+            constants = json.load(f)
+        settings = constants['twitter']
+    except Exception:
+        settings = dict()
+    defaults = {
+        'geocode': None,
+        'get_interval_in_seconds': 60,
+        'raw_data_database_name': 'raw_tweets',
+        'max_tweets_per_get': 15,
+        'max_historical_tweets': 200
+    }
+    for key, default_value in defaults.items():
+        settings[key] = settings.setdefault(key, default_value)
+    return settings
 
 
 def add_routes(app):
@@ -30,13 +48,17 @@ def add_routes(app):
         200:
             description: Should return funny text
         '''
-        msg = 'Hello.  The Twitter service is at least somewhat alive!'
-        #with open('../SHARED/constants.json') as f:
-        #    constants = json.load(f)
-        #kwargs = constants['twitter']
-        qqw = db_sess.db.tweets.find({})
-        msg += str(qqw)
-        #msg += str(db_sess)
+        msg = '<p>Hello.  The Twitter service is at least somewhat alive!</p>'
+        qqw = mongo.session.db.tweets.find().sort('id', -1).limit(20)
+        msg += '<table>'
+        row_fmt = '<tr><th>{}</th><th>{}</th></tr>'
+        msg += row_fmt.format('ID', 'Message')
+        for m in qqw:
+            msg += row_fmt.format(m['id'], m['text'])
+        msg += '</table>'
+        # print("foo")
+        #embed()
+        msg += "<p>That was all!</p>"
         return msg
 
 
@@ -64,42 +86,28 @@ def create_app():
     add_routes(app)
     return app
 
+
 #  logging.basicConfig(level=logging.INFO)
 app = create_app()
-
-# Read in run parameters from several sources
-with open('../SHARED/constants.json') as f:
-    constants = json.load(f)
-kwargs = constants['twitter']
-kwargs['TWITTER_API_ACCESS_KEY'] = os.environ.setdefault(
-    'TWITTER_API_ACCESS_KEY',
-    None
-)
-kwargs['TWITTER_API_KEY'] = os.environ.setdefault(
-    'TWITTER_API_KEY',
-    None
-)
-
 app.logger.info("************ in app.py *************")
-
-db_sess = mongo_lib.create_session(
-    app,
-    kwargs['raw_data_database_name'],
-    host='localhost',
-    port=27017
-)
-
+settings = read_settings()
+# Set up communication from TwitterReader to MongoWriter
 tweet_queue = queue.Queue()
 
-twitter = twitter_lib.TwitterReader(
-    tweet_queue,
-    **kwargs)
 mongo = mongo_lib.MongoWriter(
-    tweet_queue,
     app,
-    kwargs['raw_data_database_name'],
-    host='localhost',
-    port=27017)
+    tweet_queue,
+    settings['raw_data_database_name']
+)
 
-app.logger.info("Starting server")
-app.run()
+twitter = twitter_lib.TwitterReader(
+    app,
+    tweet_queue,
+    settings,
+    mongo.latest_tweet
+)
+
+print("*******STARTING UP********")
+#if __name__ == "__main__":
+#    app.logger.info("Starting server")
+#    app.run()

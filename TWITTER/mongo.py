@@ -4,48 +4,54 @@ Routines to pull tweets off a queue and write them to a mongo database
 
 import atexit
 import flask_pymongo
+import os
 from apscheduler.schedulers.background import BackgroundScheduler
 
 
-def create_session(app, database_name, host='localhost', port=27017):
+def get_host_and_port():
+    """
+    Returns host and port of mongodb that we should connect to.
+    Within the container, docker-compose has send the environment
+    variables.  On the host, we should not.  This is because to
+    the host, the mongod is at 'localhost' and inside other
+    containers, it is at 'mongo'
+    """
+    mongo_host = os.environ.setdefault('MONGO_HOST', 'localhost')
+    mongo_port = os.environ.get('MONGO_PORT', 27017)
+    return mongo_host, mongo_port
+
+
+def create_session(app, database_name, host=None, port=None):
+    if host is None or port is None:
+        host, port = get_host_and_port()
+        msg = "mongodb host and port set to {}:{}"
+        print(msg.format(host, port))
     fmt = 'mongodb://{0}:{1}/{2}'
     url = fmt.format(host, port, database_name)
     app.config['MONGO_URI'] = url
-    return flask_pymongo.PyMongo(app)
-
-class xxMongoSessionManager():
-    # Store any number of sessions within the class
-    sessions = dict()
-
-    @classmethod
-    def get_session(cls, database_name):
-        if database_name in cls.sessions:
-            return cls.sessions[database_name].session
-        else:
-            raise ValueError("Session {} not found".format(database_name))
-
-    def __init__(self, app, database_name, host='localhost', port=27017):
-        self.database_name = database_name
-        if database_name in MongoSessionManager.sessions:
-            self.session = MongoSessionManager.sessions[database_name].session
-            return
-        fmt = 'mongodb://{0}:{1}/{2}'
-        url = fmt.format(host, port, database_name)
-        app.config['MONGO_URI'] = url
-        self.session = flask_pymongo.PyMongo(app)
-        MongoSessionManager.sessions[database_name] = self
-        return
+    sess = flask_pymongo.PyMongo(app, serverSelectionTimeoutMS=5000)
+    SSTE = flask_pymongo.pymongo.errors.ServerSelectionTimeoutError
+    try:
+        print("Confirming connection...", end='', flush=True)
+        print(sess.cx.server_info())
+    except SSTE as e:
+        msg = str(e)
+        msg += "\n\nCannot connect to mongodb.\n"
+        msg += "Tried using MONGO_URI of {}\n".format(url)
+        raise SSTE(msg) from None
+    print("Connected!", flush=True)
+    return sess
 
 
 class MongoWriter():
     def __init__(
             self,
-            read_queue,
             app,
+            read_queue,
             database_name,
-            host='localhost',
-            port=27017):
-
+            host=None,
+            port=None):
+        self.app = app
         self.database_name = database_name
         self.session = create_session(
             app,
@@ -65,6 +71,12 @@ class MongoWriter():
         self.scheduler.start()
         return
 
+    def latest_tweet(self):
+        # print("hello")
+        # embed()
+        lid = self.session.db.tweets.find().sort('id', -1).limit(1)[0]
+        return lid
+
     def write_tweets(self):
         count = 0
         while not self.read_queue.empty():
@@ -72,3 +84,9 @@ class MongoWriter():
             self.session.db.tweets.insert(tweet)
             count += 1
         print("mongo.py wrote {} tweets to mongodb".format(count))
+
+
+if __name__ == '__main__':
+    print("What host/port does mongo.py think mongodb is on...")
+    host, port = get_host_and_port()
+    print('{}:{}'.format(host, port))
