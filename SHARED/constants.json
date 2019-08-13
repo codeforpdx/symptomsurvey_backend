@@ -4,7 +4,11 @@
     "key_length": 256,
     "algorithm": "sha256"
   },
+<<<<<<< HEAD
   "database_name": "raw_tweets",
+=======
+  "database_name": "social_media_scraper",
+>>>>>>> b08cf8e459538ad9ac0b9c25d37638e081da949f
   "twitter": {
     "geocode": "45.209358,-122.246009,30mi",
     "get_interval_in_seconds": 20,

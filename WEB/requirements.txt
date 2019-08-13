@@ -6,4 +6,7 @@ pytest == 4.2.1
 requests == 2.21.0
 flasgger == 0.9.2
 ipython == 7.2.0
+<<<<<<< HEAD
 python-dateutil == 2.7.5
+=======
+>>>>>>> b08cf8e459538ad9ac0b9c25d37638e081da949f
