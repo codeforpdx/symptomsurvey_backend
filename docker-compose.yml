@@ -22,7 +22,6 @@ services:
       #End of debugging config
       TWITTER_API_KEY: ${TWITTER_API_KEY}
       TWITTER_API_ACCESS_KEY: ${TWITTER_API_ACCESS_KEY}
-<<<<<<< HEAD
     #Mounts the app image to the source, to allow dynamic updates of the flask app.
     #Should only be used for debugging.
     #volumes:
@@ -55,42 +54,6 @@ services:
     #  - ./TWITTER:/usr/src/app/TWITTER
     #  - ./SHARED:/usr/src/app/SHARED
     #End of debugging config
-=======
-
-    #Mounts the app image to the source, to allow dynamic updates of the flask app.
-    #Should only be used for debugging.
-    # volumes:
-    #  - ./WEB:/usr/src/app/WEB
-    #   - ./SHARED:/usr/src/app/SHARED
-    #End of debugging config
-  twitter: #defines the main flask application enclosure
-    container_name: sms-twitter
-    build:
-      context: ./
-      dockerfile: ./TWITTER/Dockerfile
-    ports:
-      #restricts to localhost, remove the ip prefix to allow public access
-      - 5001:5001
-    depends_on:
-      - mongo
-      - manage
-    environment:
-      MONGO_HOST: mongo
-      MONGO_PORT: 27017
-      #Should only be used for debugging.
-      # FLASK_DEBUG: 1
-      PYTHONUNBUFFERED: 1
-      #End of debugging config
-      TWITTER_API_KEY: ${TWITTER_API_KEY}
-      TWITTER_API_ACCESS_KEY: ${TWITTER_API_ACCESS_KEY}
-
-    #Mounts the app image to the source, to allow dynamic updates of the flask app.
-    #Should only be used for debugging.
-    # volumes:
-    #  - ./TWITTER:/usr/src/app/TWITTER
-    #  - ./SHARED:/usr/src/app/SHARED
-    #End of debugging config
->>>>>>> b08cf8e459538ad9ac0b9c25d37638e081da949f
 
   manage: #defines a node enclosure for interacting with the mongo database
     container_name: sms-mongodb-manager
