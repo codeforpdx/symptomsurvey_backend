@@ -22,12 +22,11 @@ services:
       #End of debugging config
       TWITTER_API_KEY: ${TWITTER_API_KEY}
       TWITTER_API_ACCESS_KEY: ${TWITTER_API_ACCESS_KEY}
-
     #Mounts the app image to the source, to allow dynamic updates of the flask app.
     #Should only be used for debugging.
-    # volumes:
+    #volumes:
     #  - ./WEB:/usr/src/app/WEB
-    #   - ./SHARED:/usr/src/app/SHARED
+    #  - ./SHARED:/usr/src/app/SHARED
     #End of debugging config
   twitter: #defines the main flask application enclosure
     container_name: sms-twitter
@@ -49,7 +48,6 @@ services:
       #End of debugging config
       TWITTER_API_KEY: ${TWITTER_API_KEY}
       TWITTER_API_ACCESS_KEY: ${TWITTER_API_ACCESS_KEY}
-
     #Mounts the app image to the source, to allow dynamic updates of the flask app.
     #Should only be used for debugging.
     # volumes:
