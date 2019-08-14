@@ -10,10 +10,12 @@ TODO:  Put mongodb host and port in constants.json
 import flask
 # import flask_cors
 import json
+import json2html
 import queue
 import twitter as twitter_lib
 import mongo as mongo_lib
-
+from IPython import embed
+from collections import OrderedDict
 
 def read_settings():
     """ Read in Twitter constants """
@@ -35,6 +37,18 @@ def read_settings():
     return settings
 
 
+def tweet_to_table(json_of_tweet):
+    filtered = OrderedDict()
+    keys = ['id', 'created_at', 'text', ]
+    for key in keys:
+        filtered[key] = json_of_tweet[key]
+    user = json_of_tweet['user']
+    # embed()
+    filtered['screen_name'] = user['screen_name']
+    value = json2html.json2html.convert(json=filtered)
+    return value
+
+
 def add_routes(app):
     # Example route
     # TODO: remove this endpoint before this app goes into production
@@ -46,19 +60,16 @@ def add_routes(app):
         ---
         responses:
         200:
-            description: Should return funny text
+            description: A simple web page of basic stats
         '''
         msg = '<p>Hello.  The Twitter service is at least somewhat alive!</p>'
-        qqw = mongo.session.db.tweets.find().sort('id', -1).limit(20)
-        msg += '<table>'
-        row_fmt = '<tr><th>{}</th><th>{}</th></tr>'
-        msg += row_fmt.format('ID', 'Message')
-        for m in qqw:
-            msg += row_fmt.format(m['id'], m['text'])
-        msg += '</table>'
-        # print("foo")
-        #embed()
-        msg += "<p>That was all!</p>"
+        msg += '<p>Last Tweet</p>'
+        latest_tweet = mongo.latest_tweet()
+        msg += tweet_to_table(latest_tweet)
+        msg += '<p>Mongodb server_info</p>'
+        si = mongo.server_info()
+        msg += json2html.json2html.convert(json=si)
+
         return msg
 
 

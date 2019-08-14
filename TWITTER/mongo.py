@@ -44,6 +44,10 @@ def create_session(app, database_name, host=None, port=None):
 
 
 class MongoWriter():
+    """
+    Periodically check the input queue for new Tweets, then write
+    any found to the mongo db
+    """
     def __init__(
             self,
             app,
@@ -72,10 +76,11 @@ class MongoWriter():
         return
 
     def latest_tweet(self):
-        # print("hello")
-        # embed()
         lid = self.session.db.tweets.find().sort('id', -1).limit(1)[0]
         return lid
+
+    def server_info(self):
+        return self.session.cx.server_info()
 
     def write_tweets(self):
         count = 0
