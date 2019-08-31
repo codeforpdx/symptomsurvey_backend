@@ -11,17 +11,20 @@ from apscheduler.schedulers.background import BackgroundScheduler
 
 
 def get_access_keys():
-    # Check that TWITTER_API keys are set and return them if so.
+    """
+    Read TWITTER_API environment variables and return
+    them in a dictionary
+    """
     twitter_keys = dict()
     msg = ""
     for env in ['TWITTER_API_ACCESS_KEY', 'TWITTER_API_KEY']:
-        try:
-            twitter_keys[env] = os.environ[env]
-            _ = twitter_keys[env][20]  # Also fail if not long enough
-        except KeyError:
+        if env not in os.environ:
             msg += f"'{env}' not set.\n"
-        except IndexError:
+            continue
+        twitter_keys[env] = os.environ[env]
+        if len(twitter_keys[env]) < 20:
             msg += f"'{env}' not valid:{twitter_keys[env]}\n"
+            continue
     if msg:
         msg = "\nFailed to read TWITTER API environment variables\n" + msg
         raise EnvironmentError(msg)
@@ -131,4 +134,3 @@ class TwitterReader():
                 print("We hit the max_historical_tweets limit")
                 break
         print(f"twitter.py found {tweets_received} tweets")
-        self.latest_tweet_id = latest_id

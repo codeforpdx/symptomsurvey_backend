@@ -32,8 +32,7 @@ def create_session(app, database_name, host=None, port=None):
     sess = flask_pymongo.PyMongo(app, serverSelectionTimeoutMS=5000)
     SSTE = flask_pymongo.pymongo.errors.ServerSelectionTimeoutError
     try:
-        print("Confirming connection...", end='', flush=True)
-        print(sess.cx.server_info())
+        print("Confirming connection to mongodb...", end='', flush=True)
     except SSTE as e:
         msg = textwrap.dedent(f"""\
             {str(e)}
