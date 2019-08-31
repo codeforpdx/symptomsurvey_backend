@@ -1,5 +1,0 @@
-export TWITTER_API_ACCESS_KEY=hRTXM8FvV8CEIadsRkX5PZFuYn4WqKJcjisjpbw7BrjyLj1GL9
-export TWITTER_API_KEY=oEWjxPVvVvQa4PzagFolpugpe
-export MONGO_HOST=localhost # mongo
-export MONGO_PORT=27017
-export FLASK_DEBUG=1
