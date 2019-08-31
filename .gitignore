@@ -4,3 +4,4 @@ WEB/keys/token
 .vscode/settings.json
 .env
 .vs
+env_*

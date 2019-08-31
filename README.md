@@ -73,7 +73,7 @@ While the project is running, you can manage mongodb through the MANAGE service,
 
 ```bash
 
-docker-compose exec manage bash
+docker-compose exec sms-mongodb-manager bash
 
 ```
 
