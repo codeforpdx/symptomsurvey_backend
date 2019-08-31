@@ -5,7 +5,9 @@ Routines to pull tweets off a queue and write them to a mongo database
 import atexit
 import flask_pymongo
 import os
+import textwrap
 from apscheduler.schedulers.background import BackgroundScheduler
+from IPython import embed
 
 
 def get_host_and_port():
@@ -24,10 +26,8 @@ def get_host_and_port():
 def create_session(app, database_name, host=None, port=None):
     if host is None or port is None:
         host, port = get_host_and_port()
-        msg = "mongodb host and port set to {}:{}"
-        print(msg.format(host, port))
-    fmt = 'mongodb://{0}:{1}/{2}'
-    url = fmt.format(host, port, database_name)
+        print(f"mongodb host and port set to {host}:{port}")
+    url = f"mongodb://{host}:{port}/{database_name}"
     app.config['MONGO_URI'] = url
     sess = flask_pymongo.PyMongo(app, serverSelectionTimeoutMS=5000)
     SSTE = flask_pymongo.pymongo.errors.ServerSelectionTimeoutError
@@ -35,9 +35,12 @@ def create_session(app, database_name, host=None, port=None):
         print("Confirming connection...", end='', flush=True)
         print(sess.cx.server_info())
     except SSTE as e:
-        msg = str(e)
-        msg += "\n\nCannot connect to mongodb.\n"
-        msg += "Tried using MONGO_URI of {}\n".format(url)
+        msg = textwrap.dedent(f"""\
+            {str(e)}
+
+            Cannot connect to mongodb.
+            Tried using MONGO_URI of {url}
+            """)
         raise SSTE(msg) from None
     print("Connected!", flush=True)
     return sess
@@ -46,7 +49,7 @@ def create_session(app, database_name, host=None, port=None):
 class MongoWriter():
     """
     Periodically check the input queue for new Tweets, then write
-    any found to the mongo db
+    any found to the mongo db.
     """
     def __init__(
             self,
@@ -86,12 +89,14 @@ class MongoWriter():
         count = 0
         while not self.read_queue.empty():
             tweet = self.read_queue.get(block=False)
+            # print("In write_tweets")
+            # embed()
             self.session.db.tweets.insert(tweet)
             count += 1
-        print("mongo.py wrote {} tweets to mongodb".format(count))
+        print(f"mongo.py wrote {count} tweets to mongodb")
 
 
 if __name__ == '__main__':
     print("What host/port does mongo.py think mongodb is on...")
     host, port = get_host_and_port()
-    print('{}:{}'.format(host, port))
+    print(f"{host}:{port}")

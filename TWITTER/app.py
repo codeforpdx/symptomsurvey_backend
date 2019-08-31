@@ -4,7 +4,9 @@ Query Twitter to get tweets and save them to a database.
 This query happens periodically.  Parameters are specified
 in constants.json
 
-TODO:  Put mongodb host and port in constants.json
+TODO: Consider putting mongodb host and port in constants.json
+TODO: Put the mongodb interval as a parameter in constants.json
+TODO: twitter.py, Does it need to authenticate each time?
 """
 
 import flask
@@ -12,10 +14,12 @@ import flask
 import json
 import json2html
 import queue
+import textwrap
 import twitter as twitter_lib
 import mongo as mongo_lib
 from IPython import embed
 from collections import OrderedDict
+
 
 def read_settings():
     """ Read in Twitter constants """
@@ -51,17 +55,16 @@ def tweet_to_table(json_of_tweet):
 
 def add_routes(app):
     # Example route
-    # TODO: remove this endpoint before this app goes into production
     @app.route('/')
     def hello_world():  # pylint: disable=unused-variable
-        '''
+        """
         Default Route
         Added to ensure that the site is available and successfully installed
         ---
         responses:
         200:
             description: A simple web page of basic stats
-        '''
+        """
         msg = '<p>Hello.  The Twitter service is at least somewhat alive!</p>'
         msg += '<p>Last Tweet</p>'
         latest_tweet = mongo.latest_tweet()
@@ -100,7 +103,7 @@ def create_app():
 
 #  logging.basicConfig(level=logging.INFO)
 app = create_app()
-app.logger.info("************ in app.py *************")
+app.logger.info("In app.py")
 settings = read_settings()
 # Set up communication from TwitterReader to MongoWriter
 tweet_queue = queue.Queue()
@@ -118,7 +121,6 @@ twitter = twitter_lib.TwitterReader(
     mongo.latest_tweet
 )
 
-print("*******STARTING UP********")
 #if __name__ == "__main__":
 #    app.logger.info("Starting server")
 #    app.run()

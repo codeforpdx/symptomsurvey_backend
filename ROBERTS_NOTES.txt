@@ -70,3 +70,7 @@ apt-cache search things
 apt-get install procps
 apt-get install iputils-ping
 apt-get install htop
+
+*** Convert date strings to ISODATE
+
+type(tweet)

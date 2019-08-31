@@ -9,7 +9,7 @@ JSON_CONTENT_TYPE = {'Content-Type': 'application/json'}
 def add_routes(app):
     @app.route('/tweets/load', endpoint='load_tweets')
     def load_tweets():  # pylint: disable=unused-variable
-        '''
+        """
         Load tweets.
         Retrieve 100 tweets by users located within a given radius of the given
         latitude/longitude.
@@ -26,7 +26,7 @@ def add_routes(app):
                     application/json: {"statuses": [{"created_at": "Sun Mar 31 18:32:35 +0000 2019","id": 1112422454528524300...example tweet elided}]}
             500:
                 description: Server error occurred
-        '''
+        """
         tweets = tweets_service.get_tweets_from_db()
         data = filter_tweets(tweets)
         msg = '<h1>Most recent tweets</h1>'
@@ -42,7 +42,7 @@ def add_routes(app):
 
     @app.route('/tweets', methods=['POST'])
     def getTweets():  # pylint: disable=unused-variable
-        '''
+        """
         Retrieve tweets from the database based on provided search criteria.
         ---
         parameters:
@@ -64,7 +64,7 @@ def add_routes(app):
             application/json: {"statuses": [{"created_at": "Sun Mar 31 18:32:35 +0000 2019","id": 1112422454528524300...example tweet elided}]}
         500:
             description: Server error occurred
-        '''
+        """
         body = request.get_json()
         search_text = body.get('search')
         tweets = tweets_service.get_tweets_from_db(search_text)
@@ -87,4 +87,3 @@ def filter_tweets(tweets):
         }
         data.append(parsed_tweet)
     return data
-

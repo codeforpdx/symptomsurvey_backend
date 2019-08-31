@@ -19,9 +19,9 @@ def get_access_keys():
             twitter_keys[env] = os.environ[env]
             _ = twitter_keys[env][20]  # Also fail if not long enough
         except KeyError:
-            msg += "'{}' not set.\n".format(env)
+            msg += f"'{env}' not set.\n"
         except IndexError:
-            msg += "'{}' not valid:{}\n".format(env, twitter_keys[env])
+            msg += f"'{env}' not valid:{twitter_keys[env]}\n"
     if msg:
         msg = "\nFailed to read TWITTER API environment variables\n" + msg
         raise EnvironmentError(msg)
@@ -76,7 +76,7 @@ class TwitterReader():
         if max_id is not None:
             tweet_search_params['max_id'] = max_id
         tweet_headers = {
-            'Authorization': 'Bearer {}'.format(access_token)
+            'Authorization': f'Bearer {access_token}'
         }
         tweets_response = requests.get(
             'https://api.twitter.com/1.1/search/tweets.json',
@@ -130,5 +130,5 @@ class TwitterReader():
                 print("Warning:  Not all tweets were collected")
                 print("We hit the max_historical_tweets limit")
                 break
-        print("twitter.py found {} tweets".format(tweets_received))
+        print(f"twitter.py found {tweets_received} tweets")
         self.latest_tweet_id = latest_id
