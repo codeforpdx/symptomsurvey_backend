@@ -9,7 +9,7 @@ JSON_CONTENT_TYPE = {'Content-Type': 'application/json'}
 def add_routes(app):
   @app.route('/login', methods=['POST'])
   def login():  # pylint: disable=unused-variable
-    '''
+    """
     Login endpoint.  Checks a submitted username and password against the
     users in the users collection.
     If there is a match, the user's profile and role are put into a JSON
@@ -40,7 +40,7 @@ def add_routes(app):
         description: Authentication failed
         examples:
           application/json: { "error" : "There is no user with this username and password."}
-    '''
+    """
     body = flask.request.get_json()
     username = body['username']
     password = body['password']
