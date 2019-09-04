@@ -27,8 +27,8 @@ class MongoSession:
 
     # TODO: add a password to the mongo database so that its contents are
     # TODO: hidden behind this API
-    fmt = 'mongodb://{0}:{1}/{2}'
-    app.config['MONGO_URI'] = fmt.format(mongo_host, mongo_port, database_name)
+    uri = f"mongodb://{mongo_host}:{mongo_port}/{database_name}"
+    app.config['MONGO_URI'] = uri
     MongoSession.instance.mongo = flask_pymongo.PyMongo(app)
 
   def get_mongo_client(self):
