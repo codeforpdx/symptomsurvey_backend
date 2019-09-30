@@ -53,11 +53,24 @@ services:
     #  - ./SHARED:/usr/src/app/SHARED
     #End of debugging config
 
+  mongo: #defines the mongoDB enclosure
+    image: mongo:4.0.5
+    container_name: sms-mongodb
+    restart: always
+    volumes:
+      #allows the database to persist when shutdown / across builds
+      - symptomsurvey_db_volume:/data/db
+      #- type: volume
+      #  target: /data/db
+      #  source: symptomsurvey_db_volume
+    ports:
+      - 27017:27017
+
   manage: #defines a node enclosure for interacting with the mongo database
     container_name: sms-mongodb-manager
     build:
-      context: ./
-      dockerfile: ./MANAGE/Dockerfile
+      context: ./DB
+      dockerfile: ./Dockerfile
     depends_on:
       - mongo
     environment:
@@ -71,22 +84,7 @@ services:
     #End of debugging config
 
     #Causes this service to remain idle, allowing the user to use it as a proxy for pushing database updates
-    command: tail -F anything
-
-
-
-  mongo: #defines the mongoDB enclosure
-    image: mongo:4.0.5
-    container_name: sms-mongodb
-    restart: always
-    volumes:
-      #allows the database to persist when shutdown / across builds
-      - symptomsurvey_db_volume:/data/db
-      #- type: volume
-      #  target: /data/db
-      #  source: symptomsurvey_db_volume
-    ports:
-      - 27017:27017
+    # command: tail -F anything
 
 volumes:
   symptomsurvey_db_volume:

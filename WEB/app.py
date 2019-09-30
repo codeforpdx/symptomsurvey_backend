@@ -38,7 +38,7 @@ def create_app(testconfig=None):
     # Load the values from the constants file.  This file contains the
     # parameters that are used for the hashing algorithim that is
     # applied to the salted passwords.
-    with open('../SHARED/constants.json') as f:
+    with open('../SHARED/json/constants.json') as f:
       constants = json.load(f)
 
     # Read the private key from `./keys/token`. This file is gitignored so
