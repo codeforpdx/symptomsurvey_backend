@@ -1,6 +1,7 @@
 import binascii
 import hashlib
 
+#TODO: how does CodeForPDX handle shared python modules?
 def make_hash(algorithm, iterations, key_length, password = None, salt = None):
     def hash_it_out(password, salt):
         dk = hashlib.pbkdf2_hmac(
