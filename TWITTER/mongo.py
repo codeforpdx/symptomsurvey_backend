@@ -15,7 +15,7 @@ def get_host_and_port():
     Returns host and port of mongodb that we should connect to.
     Within the container, docker-compose has send the environment
     variables.  On the host, we should not.  This is because to
-    the host, the mongod is at 'localhost' and inside other
+    the host, the mongodb is at 'localhost' and inside other
     containers, it is at 'mongo'
     """
     mongo_host = os.environ.setdefault('MONGO_HOST', 'localhost')

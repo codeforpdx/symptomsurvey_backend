@@ -24,7 +24,7 @@ from collections import OrderedDict
 def read_settings():
     """ Read in Twitter constants """
     try:
-        with open('../SHARED/constants.json') as f:
+        with open('../SHARED/json/constants.json') as f:
             constants = json.load(f)
         settings = constants['twitter']
     except Exception:

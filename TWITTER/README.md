@@ -22,7 +22,7 @@ writer.  They communicate through a shared in-memory queue.
 File Layout
 -----------
 app.py - The main Flask app, which:
-    Reads the ../SHARED/constants.json file for parameters
+    Reads the ../SHARED/json/constants.json file for parameters
     Creates a queue.Queue() for communication
     Starts the mongo manager which triggers every 12 seconds
     Starts the twitter manager which triggers every

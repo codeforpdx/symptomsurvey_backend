@@ -11,5 +11,5 @@
     "raw_data_database_name": "raw_tweets",
     "max_tweets_per_get": 100,
     "max_historical_tweets": 5000
-}
+  }
 }

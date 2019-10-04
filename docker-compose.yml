@@ -53,28 +53,6 @@ services:
     #  - ./SHARED:/usr/src/app/SHARED
     #End of debugging config
 
-  manage: #defines a node enclosure for interacting with the mongo database
-    container_name: sms-mongodb-manager
-    build:
-      context: ./
-      dockerfile: ./MANAGE/Dockerfile
-    depends_on:
-      - mongo
-    environment:
-      MONGO_HOST: mongo
-      MONGO_PORT: 27017
-
-    #Mounts the migration folder of the image to the source, to allow for dynamic updates of the migration code.
-    #Should only be used for debugging.
-    # volumes:
-    #   - ./MANAGE/migrations:/usr/src/app/migrations
-    #End of debugging config
-
-    #Causes this service to remain idle, allowing the user to use it as a proxy for pushing database updates
-    command: tail -F anything
-
-
-
   mongo: #defines the mongoDB enclosure
     image: mongo:4.0.5
     container_name: sms-mongodb
@@ -87,6 +65,18 @@ services:
       #  source: symptomsurvey_db_volume
     ports:
       - 27017:27017
+
+  manage: #defines a node enclosure for interacting with the mongo database
+    container_name: sms-mongodb-manager
+    build:
+      context: ./
+      dockerfile: ./MANAGE/Dockerfile
+    depends_on:
+      - mongo
+    environment:
+      MONGO_HOST: mongo
+      MONGO_PORT: 27017
+      ADD_DEBUG_RECORDS: "True" # True for debugging, inserts test users
 
 volumes:
   symptomsurvey_db_volume:
